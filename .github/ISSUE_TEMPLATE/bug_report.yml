@@ -1,0 +1,24 @@
+name: Palette or port defect
+description: Report a reproducible rendering or contrast problem.
+title: "fix: "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Release and application version
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description:
+        Use synthetic input. Include the variant, role, and background.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true

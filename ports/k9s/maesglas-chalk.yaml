@@ -1,0 +1,147 @@
+{
+  "k9s": {
+    "body": {
+      "fgColor": "#14231E",
+      "bgColor": "#F1F5F0",
+      "logoColor": "#654C75",
+      "logoColorMsg": "#14231E",
+      "logoColorInfo": "#366F72",
+      "logoColorWarn": "#795A2A",
+      "logoColorError": "#662B24"
+    },
+    "prompt": {
+      "fgColor": "#14231E",
+      "bgColor": "#E9F0E9",
+      "suggestColor": "#366F72",
+      "border": {
+        "command": "#366F72",
+        "default": "#53655E"
+      }
+    },
+    "help": {
+      "fgColor": "#14231E",
+      "bgColor": "#F1F5F0",
+      "sectionColor": "#366F72",
+      "keyColor": "#366F72",
+      "numKeyColor": "#795A2A"
+    },
+    "info": {
+      "sectionColor": "#366F72",
+      "fgColor": "#14231E",
+      "cpuColor": "#366F72",
+      "memColor": "#795A2A",
+      "k9sRevColor": "#654C75"
+    },
+    "dialog": {
+      "fgColor": "#14231E",
+      "bgColor": "#E9F0E9",
+      "buttonFgColor": "#14231E",
+      "buttonBgColor": "#D9EBE2",
+      "buttonFocusFgColor": "#14231E",
+      "buttonFocusBgColor": "#D9EBE2",
+      "labelFgColor": "#366F72",
+      "fieldFgColor": "#14231E"
+    },
+    "frame": {
+      "border": {
+        "fgColor": "#53655E",
+        "focusColor": "#366F72"
+      },
+      "menu": {
+        "fgColor": "#14231E",
+        "keyColor": "#366F72",
+        "numKeyColor": "#795A2A",
+        "fgStyle": "b"
+      },
+      "crumbs": {
+        "fgColor": "#14231E",
+        "bgColor": "#E9F0E9",
+        "activeColor": "#D9EBE2"
+      },
+      "status": {
+        "newColor": "#366F72",
+        "modifyColor": "#795A2A",
+        "addColor": "#38573C",
+        "pendingColor": "#795A2A",
+        "errorColor": "#662B24",
+        "highlightColor": "#366F72",
+        "killColor": "#662B24",
+        "completedColor": "#38573C"
+      },
+      "title": {
+        "fgColor": "#14231E",
+        "bgColor": "#E9F0E9",
+        "highlightColor": "#366F72",
+        "counterColor": "#404D44",
+        "filterColor": "#795A2A"
+      }
+    },
+    "views": {
+      "table": {
+        "fgColor": "#14231E",
+        "bgColor": "#F1F5F0",
+        "cursorFgColor": "#14231E",
+        "cursorBgColor": "#D9EBE2",
+        "markColor": "#795A2A",
+        "header": {
+          "fgColor": "#14231E",
+          "bgColor": "#E9F0E9",
+          "sorterColor": "#366F72",
+          "selectedSortColumnColor": "#366F72"
+        }
+      },
+      "xray": {
+        "fgColor": "#14231E",
+        "bgColor": "#F1F5F0",
+        "cursorColor": "#D9EBE2",
+        "cursorTextColor": "#14231E",
+        "graphicColor": "#53655E"
+      },
+      "charts": {
+        "bgColor": "#F1F5F0",
+        "dialBgColor": "#F1F5F0",
+        "chartBgColor": "#F1F5F0",
+        "focusFgColor": "#14231E",
+        "focusBgColor": "#D9EBE2",
+        "defaultDialColors": [
+          "#38573C",
+          "#662B24"
+        ],
+        "defaultChartColors": [
+          "#38573C",
+          "#662B24"
+        ],
+        "resourceColors": {
+          "cpu": [
+            "#366F72",
+            "#404D44"
+          ],
+          "mem": [
+            "#795A2A",
+            "#404D44"
+          ]
+        }
+      },
+      "yaml": {
+        "keyColor": "#366F72",
+        "valueColor": "#14231E",
+        "colonColor": "#404D44"
+      },
+      "picker": {
+        "mainColor": "#14231E",
+        "focusColor": "#366F72",
+        "shortcutColor": "#366F72"
+      },
+      "logs": {
+        "fgColor": "#14231E",
+        "bgColor": "#F1F5F0",
+        "indicator": {
+          "fgColor": "#14231E",
+          "bgColor": "#E9F0E9",
+          "toggleOnColor": "#38573C",
+          "toggleOffColor": "#404D44"
+        }
+      }
+    }
+  }
+}

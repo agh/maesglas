@@ -1,0 +1,16 @@
+[colors]
+foreground = "#14231E"
+background = "#F1F5F0"
+cursor_bg = "#366F72"
+cursor_fg = "#F1F5F0"
+cursor_border = "#366F72"
+selection_fg = "#14231E"
+selection_bg = "#D9EBE2"
+split = "#53655E"
+compose_cursor = "#795A2A"
+scrollbar_thumb = "#53655E"
+ansi = ["#14231E", "#662B24", "#38573C", "#795A2A", "#2D475A", "#654C75", "#366F72", "#404D44"]
+brights = ["#47514A", "#662B24", "#38573C", "#795A2A", "#2D475A", "#654C75", "#366F72", "#14231E"]
+
+[metadata]
+name = "Maesglas Chalk"

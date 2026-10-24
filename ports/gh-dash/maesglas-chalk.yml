@@ -1,0 +1,32 @@
+{
+  "theme": {
+    "colors": {
+      "text": {
+        "primary": "#14231E",
+        "secondary": "#404D44",
+        "inverted": "#14231E",
+        "faint": "#404D44",
+        "warning": "#795A2A",
+        "success": "#38573C",
+        "error": "#662B24",
+        "actor": "#654C75"
+      },
+      "background": {
+        "selected": "#D9EBE2"
+      },
+      "border": {
+        "primary": "#53655E",
+        "secondary": "#53655E",
+        "faint": "#53655E"
+      },
+      "icon": {
+        "newcontributor": "#404D44",
+        "contributor": "#404D44",
+        "collaborator": "#404D44",
+        "member": "#404D44",
+        "owner": "#404D44",
+        "unknownrole": "#404D44"
+      }
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "k9s": {
+    "body": {
+      "fgColor": "#F1F6F0",
+      "bgColor": "#0D1613",
+      "logoColor": "#DECCEA",
+      "logoColorMsg": "#F1F6F0",
+      "logoColorInfo": "#C9EDEE",
+      "logoColorWarn": "#FBDCB2",
+      "logoColorError": "#E99E92"
+    },
+    "prompt": {
+      "fgColor": "#F1F6F0",
+      "bgColor": "#121D19",
+      "suggestColor": "#C9EDEE",
+      "border": {
+        "command": "#C9EDEE",
+        "default": "#90A49C"
+      }
+    },
+    "help": {
+      "fgColor": "#F1F6F0",
+      "bgColor": "#0D1613",
+      "sectionColor": "#C9EDEE",
+      "keyColor": "#C9EDEE",
+      "numKeyColor": "#FBDCB2"
+    },
+    "info": {
+      "sectionColor": "#C9EDEE",
+      "fgColor": "#F1F6F0",
+      "cpuColor": "#C9EDEE",
+      "memColor": "#FBDCB2",
+      "k9sRevColor": "#DECCEA"
+    },
+    "dialog": {
+      "fgColor": "#F1F6F0",
+      "bgColor": "#121D19",
+      "buttonFgColor": "#F1F6F0",
+      "buttonBgColor": "#212F2A",
+      "buttonFocusFgColor": "#F1F6F0",
+      "buttonFocusBgColor": "#212F2A",
+      "labelFgColor": "#C9EDEE",
+      "fieldFgColor": "#F1F6F0"
+    },
+    "frame": {
+      "border": {
+        "fgColor": "#90A49C",
+        "focusColor": "#C9EDEE"
+      },
+      "menu": {
+        "fgColor": "#F1F6F0",
+        "keyColor": "#C9EDEE",
+        "numKeyColor": "#FBDCB2",
+        "fgStyle": "b"
+      },
+      "crumbs": {
+        "fgColor": "#F1F6F0",
+        "bgColor": "#121D19",
+        "activeColor": "#212F2A"
+      },
+      "status": {
+        "newColor": "#C9EDEE",
+        "modifyColor": "#FBDCB2",
+        "addColor": "#B2D8B6",
+        "pendingColor": "#FBDCB2",
+        "errorColor": "#E99E92",
+        "highlightColor": "#C9EDEE",
+        "killColor": "#E99E92",
+        "completedColor": "#B2D8B6"
+      },
+      "title": {
+        "fgColor": "#F1F6F0",
+        "bgColor": "#121D19",
+        "highlightColor": "#C9EDEE",
+        "counterColor": "#CDD7D0",
+        "filterColor": "#FBDCB2"
+      }
+    },
+    "views": {
+      "table": {
+        "fgColor": "#F1F6F0",
+        "bgColor": "#0D1613",
+        "cursorFgColor": "#F1F6F0",
+        "cursorBgColor": "#212F2A",
+        "markColor": "#FBDCB2",
+        "header": {
+          "fgColor": "#F1F6F0",
+          "bgColor": "#121D19",
+          "sorterColor": "#C9EDEE",
+          "selectedSortColumnColor": "#C9EDEE"
+        }
+      },
+      "xray": {
+        "fgColor": "#F1F6F0",
+        "bgColor": "#0D1613",
+        "cursorColor": "#212F2A",
+        "cursorTextColor": "#F1F6F0",
+        "graphicColor": "#90A49C"
+      },
+      "charts": {
+        "bgColor": "#0D1613",
+        "dialBgColor": "#0D1613",
+        "chartBgColor": "#0D1613",
+        "focusFgColor": "#F1F6F0",
+        "focusBgColor": "#212F2A",
+        "defaultDialColors": [
+          "#B2D8B6",
+          "#E99E92"
+        ],
+        "defaultChartColors": [
+          "#B2D8B6",
+          "#E99E92"
+        ],
+        "resourceColors": {
+          "cpu": [
+            "#C9EDEE",
+            "#CDD7D0"
+          ],
+          "mem": [
+            "#FBDCB2",
+            "#CDD7D0"
+          ]
+        }
+      },
+      "yaml": {
+        "keyColor": "#C9EDEE",
+        "valueColor": "#F1F6F0",
+        "colonColor": "#CDD7D0"
+      },
+      "picker": {
+        "mainColor": "#F1F6F0",
+        "focusColor": "#C9EDEE",
+        "shortcutColor": "#C9EDEE"
+      },
+      "logs": {
+        "fgColor": "#F1F6F0",
+        "bgColor": "#0D1613",
+        "indicator": {
+          "fgColor": "#F1F6F0",
+          "bgColor": "#121D19",
+          "toggleOnColor": "#B2D8B6",
+          "toggleOffColor": "#CDD7D0"
+        }
+      }
+    }
+  }
+}

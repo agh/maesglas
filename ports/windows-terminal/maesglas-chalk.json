@@ -1,0 +1,23 @@
+{
+  "name": "Maesglas Chalk",
+  "background": "#F1F5F0",
+  "foreground": "#14231E",
+  "cursorColor": "#366F72",
+  "selectionBackground": "#D9EBE2",
+  "black": "#14231E",
+  "red": "#662B24",
+  "green": "#38573C",
+  "yellow": "#795A2A",
+  "blue": "#2D475A",
+  "purple": "#654C75",
+  "cyan": "#366F72",
+  "white": "#404D44",
+  "brightBlack": "#47514A",
+  "brightRed": "#662B24",
+  "brightGreen": "#38573C",
+  "brightYellow": "#795A2A",
+  "brightBlue": "#2D475A",
+  "brightPurple": "#654C75",
+  "brightCyan": "#366F72",
+  "brightWhite": "#14231E"
+}

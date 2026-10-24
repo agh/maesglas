@@ -1,0 +1,24 @@
+name: Port or design proposal
+description: Propose a scoped addition with a validation path.
+title: "feat: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal and alternatives
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Validation
+      description:
+        Give the application version, public source, and date checked.
+    validations:
+      required: true

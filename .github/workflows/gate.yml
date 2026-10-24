@@ -1,0 +1,64 @@
+name: Gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-24.04
+    container:
+      image: python:3.14.6-bookworm@sha256:bfa96428c199ebe1bd16b04afef6380d7ab1ded83ffff04099e80d164c4d2f4b
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
+    env:
+      DO_NOT_TRACK: "1"
+      IMPECCABLE_NO_TELEMETRY: "1"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Read runtime pins
+        id: pins
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          pins = json.load(open("tools.lock"))
+          for name in ("python", "node", "uv", "go"):
+              print(f"{name}={pins[name]}")
+          PY
+      - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c # v6.0.0
+        with:
+          python-version: ${{ steps.pins.outputs.python }}
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: ${{ steps.pins.outputs.node }}
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+        with:
+          version: ${{ steps.pins.outputs.uv }}
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: ${{ steps.pins.outputs.go }}
+          cache: false
+      - name: Install build prerequisites
+        run: |
+          apt-get update -qq
+          apt-get install -y --no-install-recommends libncurses-dev libevent-dev zlib1g-dev bison zsh
+      - name: Install pinned checks
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          uv sync --locked
+          npm ci --ignore-scripts --no-audit --no-fund
+          python3 scripts/bootstrap.py
+          python3 scripts/bootstrap_ports.py
+          echo "$PWD/.cache/tools/bin" >> "$GITHUB_PATH"
+          PLAYWRIGHT_BROWSERS_PATH="$PWD/.cache/browsers" npx --no-install playwright install --with-deps chromium
+      - run: scripts/gate.sh

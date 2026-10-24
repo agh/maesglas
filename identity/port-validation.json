@@ -1,0 +1,297 @@
+{
+  "Darwin": {
+    "date": "2026-10-24",
+    "checks": {
+      "alacritty/chalk": "PASS",
+      "fast-syntax-highlighting/chalk": "PASS",
+      "gh-dash/chalk": "PASS",
+      "helix/chalk": "PASS",
+      "iterm2/chalk": "PASS",
+      "k9s/chalk": "PASS",
+      "kitty/chalk": "PASS",
+      "neovim/chalk": "PASS",
+      "vscode/chalk": "PASS",
+      "wezterm/chalk": "PASS",
+      "windows-terminal/chalk": "PASS",
+      "zed/chalk": "PASS",
+      "alacritty/shale": "PASS",
+      "fast-syntax-highlighting/shale": "PASS",
+      "gh-dash/shale": "PASS",
+      "helix/shale": "PASS",
+      "iterm2/shale": "PASS",
+      "k9s/shale": "PASS",
+      "kitty/shale": "PASS",
+      "neovim/shale": "PASS",
+      "vscode/shale": "PASS",
+      "wezterm/shale": "PASS",
+      "windows-terminal/shale": "PASS",
+      "zed/shale": "PASS"
+    },
+    "methods": {
+      "alacritty": "Native `migrate --dry-run` TOML loader",
+      "kitty": "Native `+runpy` and `kitty.config.load_config`; every color queried",
+      "wezterm": "Native `show-keys` with `color.load_scheme` and exact Lua assertions",
+      "neovim": "`--headless` colorscheme load; every authored highlight and ANSI slot queried",
+      "helix": "Published theme keys and native PTY theme loading",
+      "vscode": "Official color-theme schema evaluated from pinned source, plus color registry",
+      "zed": "Published theme schema 0.2.0; unknown properties rejected",
+      "iterm2": "`plutil -lint`, upstream preset keys, and exact sRGB round-trip",
+      "windows-terminal": "Microsoft settings schema, with the scheme in `schemes`",
+      "k9s": "Upstream `NewStyles().Load` parser and embedded schema; all colors queried",
+      "gh-dash": "Upstream `ParseConfig` and theme initialization; all theme fields queried",
+      "fast-syntax-highlighting": "Pinned plugin loaded in isolated Zsh; active and recursive styles"
+    },
+    "claude_roles": [
+      "autoAccept",
+      "autoAcceptShimmer",
+      "background",
+      "bashBorder",
+      "bashMessageBackgroundColor",
+      "blue_FOR_SUBAGENTS_ONLY",
+      "briefLabelClaude",
+      "briefLabelYou",
+      "chromeYellow",
+      "claude",
+      "claudeBlueShimmer_FOR_SYSTEM_SPINNER",
+      "claudeBlue_FOR_SYSTEM_SPINNER",
+      "claudeShimmer",
+      "clawd_background",
+      "clawd_body",
+      "composerSidebarBackground",
+      "cyan_FOR_SUBAGENTS_ONLY",
+      "diffAdded",
+      "diffAddedDimmed",
+      "diffAddedWord",
+      "diffRemoved",
+      "diffRemovedDimmed",
+      "diffRemovedWord",
+      "effortUltra",
+      "error",
+      "fastMode",
+      "fastModeShimmer",
+      "green_FOR_SUBAGENTS_ONLY",
+      "ide",
+      "inactive",
+      "inactiveShimmer",
+      "inverseText",
+      "memoryBackgroundColor",
+      "merged",
+      "orange_FOR_SUBAGENTS_ONLY",
+      "permission",
+      "permissionShimmer",
+      "pink_FOR_SUBAGENTS_ONLY",
+      "planMode",
+      "professionalBlue",
+      "promptBorder",
+      "promptBorderShimmer",
+      "purple_FOR_SUBAGENTS_ONLY",
+      "rainbow_blue",
+      "rainbow_blue_shimmer",
+      "rainbow_green",
+      "rainbow_green_shimmer",
+      "rainbow_indigo",
+      "rainbow_indigo_shimmer",
+      "rainbow_orange",
+      "rainbow_orange_shimmer",
+      "rainbow_red",
+      "rainbow_red_shimmer",
+      "rainbow_violet",
+      "rainbow_violet_shimmer",
+      "rainbow_yellow",
+      "rainbow_yellow_shimmer",
+      "rate_limit_empty",
+      "rate_limit_fill",
+      "red_FOR_SUBAGENTS_ONLY",
+      "remember",
+      "selectionBg",
+      "skill",
+      "subtle",
+      "success",
+      "suggestion",
+      "text",
+      "userMessageBackground",
+      "userMessageBackgroundHover",
+      "warning",
+      "warningShimmer",
+      "yellow_FOR_SUBAGENTS_ONLY"
+    ],
+    "rejections": {
+      "claude-code": {
+        "version": "2.1.310",
+        "overridden_tokens": 72,
+        "method": "All six installed base registries and shared renderer roles inspected; all accepted foregrounds overridden and audited. Counter foregrounds and word backgrounds use the same two tokens; inline word text inherits the normal text role, with no independent theme override.",
+        "unoverridable_role": "word-diff text independent of the normal text role",
+        "bounds": {
+          "chalk": {
+            "ink_canvas_contrast": 14.787262301132403,
+            "maximum_simultaneous_contrast": 3.845420952396812,
+            "candidate_counter_contrast": {
+              "diffAddedWord": 7.33990719146835,
+              "diffRemovedWord": 9.844809013985056
+            },
+            "candidate_word_text_contrast": {
+              "diffAddedWord": 2.01463886605005,
+              "diffRemovedWord": 1.5020364823864372
+            }
+          },
+          "shale": {
+            "ink_canvas_contrast": 16.806314175301434,
+            "maximum_simultaneous_contrast": 4.099550484541132,
+            "candidate_counter_contrast": {
+              "diffAddedWord": 11.733157833360753,
+              "diffRemovedWord": 8.561031025699624
+            },
+            "candidate_word_text_contrast": {
+              "diffAddedWord": 1.432377746382669,
+              "diffRemovedWord": 1.9631180081990172
+            }
+          }
+        }
+      }
+    },
+    "inputs": {
+      "ports/alacritty/maesglas-chalk.toml": "996aec379278400318e3fb6d1f486d5be37d6dae46bf27d68eae997e0d7b4b32",
+      "ports/alacritty/maesglas-shale.toml": "9eb3c6847eab9ac98face65a07dbc25c0df05bcaef5599f6d23fc1bd5757e52c",
+      "ports/fast-syntax-highlighting/maesglas-chalk.zsh": "aecc03d84b25ffe930ddc62aa8011528b33f114e9bb6e2081c8fe7e345a91483",
+      "ports/fast-syntax-highlighting/maesglas-shale.zsh": "bf9e45a0498e4e8b8d0f17b90c4e2201e4112686b80d3d077c14cabf3bd0d980",
+      "ports/gh-dash/maesglas-chalk.yml": "f25e307ecc4324e7409071350b66a14f2f0701d5ae1a342c72916e3d3bd046e9",
+      "ports/gh-dash/maesglas-shale.yml": "2549ddbff783b4b4a849feaf575c9fa600aaa3a4117d09b146f9a0d128451a2f",
+      "ports/helix/maesglas-chalk.toml": "e1f9c58b7ba063e894f5bdb132dfa7c4b58f7427a6384062f9bf9725e3785b08",
+      "ports/helix/maesglas-shale.toml": "f15ed81a1f2b63c27c9df634be703fe39383b736e2b2e585b476e314299a345b",
+      "ports/iterm2/maesglas-chalk.itermcolors": "1a6820e9ff60773d516a90da2dc52ef53e8a76fbda6654431bea9caed351e830",
+      "ports/iterm2/maesglas-shale.itermcolors": "0ef5b199b1e1e6907e690d7f3ea18aa92732bd22f6276eba4cda8df5f7951687",
+      "ports/k9s/maesglas-chalk.yaml": "97f4e70b315ed180fbc9332e76b582f8a75b1a7d740441219f02ffcf249a94de",
+      "ports/k9s/maesglas-shale.yaml": "d7bb05dc1e9c3a31ade122c7d6484389ba60704102ad6cccc919a12a88d446a1",
+      "ports/kitty/maesglas-chalk.conf": "f92d2c537714de47b7518e8ce660c0271a4af4a7766ece0a814855d262654db4",
+      "ports/kitty/maesglas-shale.conf": "122410a4b6f88eb999f35f456a17ad8f691a26c718874098f509223904240269",
+      "ports/neovim/maesglas-chalk.lua": "2922b46e509c2ee3e0ed0e4188b1881d015b0c9a064e8d93de7644c4bd2309b7",
+      "ports/neovim/maesglas-shale.lua": "d0b97e11943da80d5e90f6f36b05163dcf2ced41f2b07102a0d7a5043eb1a772",
+      "ports/vscode/LICENSE": "25b8f9feeba970a004c644cc308b0ac5bdfb86f4d1e09c6a8042915b32d2af81",
+      "ports/vscode/maesglas-chalk.json": "42e3240fcb6db90de715d4075793e7fa2c106e4b509ec801c79cd38d30f40400",
+      "ports/vscode/maesglas-shale.json": "ee02c93006096f621a67f8fbd0df610606b7e0a0d8c66b194ec5d9b6130322e1",
+      "ports/vscode/package.json": "513c2eb1d9d5e3c7f834d6d1490160fa76d908cfc3423010ca5f0867c506a182",
+      "ports/wezterm/maesglas-chalk.toml": "8151228efb961396726af8b4fbfb6e82f6a142eac49743561f53e014cf419792",
+      "ports/wezterm/maesglas-shale.toml": "d264360bddf1f6715a12f064a68fad54004fe974ddb64a40fa83cb6c93f1ee5c",
+      "ports/windows-terminal/maesglas-chalk.json": "0a30c175aa22687c03eec128e795a69523e4fb863e9a622f3ad17c24d528eacc",
+      "ports/windows-terminal/maesglas-shale.json": "1b59362329e958452ae018e8ebadbe174f69ee35170a90b1db8e989b4fc9b9b2",
+      "ports/zed/maesglas-chalk.json": "a8564b0f210f94d918d7c8fc31b7f9dd420755c5006dfd115dbd88c4026b37f5",
+      "ports/zed/maesglas-shale.json": "76d8dd034ef88efa6b62b57c6f9dedfa6e667c1242e1053416b1dabf9fc8b5df",
+      "scripts/bootstrap_ports.py": "aa46575a9d55c5884de7a65beb0276f8ac9756f1c4db2ebc64b768da9b532862",
+      "scripts/probes/gh_dash.go": "a9200cb0371238b5ec1edd30e0e8f6974486461875f4366c6504f24f2ebc5554",
+      "scripts/probes/k9s.go": "77c68dd59f44064ceacf26857941080f8de0d58e9321a1a46b666f5d8cae2f86",
+      "scripts/validate_extended.py": "75bf74afd2b2844ef6c3b0feeddb390f6bac80e81e0ca1cef91f8152ac3d5018",
+      "scripts/vscode_schema.mjs": "34cc3b4425b6049303029b5f4e30418d22603667c38e04a32cacf6f803b1020c"
+    },
+    "executables": {
+      "apps/alacritty/Alacritty/Alacritty.app/Contents/MacOS/alacritty": "444055799f1211d6adbe9f18ab2660c57155de4f0e88d42458d6ae4fb539dcda",
+      "tools/bin/maesglas-gh-dash-validate": "61bcf4600639c8692933fb2c295f44c3ba89aecc6d2803e4def2272562986d35",
+      "apps/helix/helix-25.07.1-aarch64-macos/hx": "b328088631e9075284f8147a09ff80ea0fe289de82d9a6bcc2e0044adc69e848",
+      "tools/bin/maesglas-k9s-validate": "93bd5efb4d9d025521afc44d5d331e2cefffc3128a203c4e5668d1ec559d7644",
+      "apps/kitty/kitty.app/Contents/MacOS/kitty": "0c06e98053133d29dcf32731e86bc0e72089bef8ae47877d475060db4f37d0cd",
+      "apps/neovim/nvim-macos-arm64/bin/nvim": "8edbda120babd8c8963ecc28b69a76cc7e5cf0897bc688645133a2bf5588abe6",
+      "apps/wezterm/WezTerm-macos-20240203-110809-5046fc22/WezTerm.app/Contents/MacOS/wezterm": "ab71a230b6c65d52b611deadcb7188a79fb4b87831d88647c75b641afebfa920",
+      "installed:claude-code": "ffb64331bc0ee1b69efb7c2c428bd3ab516bc31b75bf60886b356c97c1c25ffd"
+    },
+    "versions": {
+      "alacritty": "0.17.0",
+      "kitty": "0.49.2",
+      "wezterm": "20240203-110809-5046fc22",
+      "neovim": "0.12.6",
+      "helix": "25.07.1",
+      "vscode": "1.143.1",
+      "zed": "schema 0.2.0",
+      "iterm2": "3.6.6",
+      "windows-terminal": "1.25.2733.0",
+      "k9s": "0.51.0",
+      "gh-dash": "4.26.0",
+      "fast-syntax-highlighting": "1.67"
+    },
+    "sources": {
+      "downloads/Alacritty-v0.17.0.dmg": {
+        "version": "0.17.0",
+        "url": "https://github.com/alacritty/alacritty/releases/download/v0.17.0/Alacritty-v0.17.0.dmg",
+        "sha256": "ad8d7de35fb38e43184776cac6dfee05ca325caa0b6639a06a55e54e4b026620"
+      },
+      "downloads/kitty-0.49.2.dmg": {
+        "version": "0.49.2",
+        "url": "https://github.com/kovidgoyal/kitty/releases/download/v0.49.2/kitty-0.49.2.dmg",
+        "sha256": "e524b894145d89cb76b584e3a9691196ae56bfa31d51384a44aa774252b7cef7"
+      },
+      "downloads/WezTerm-macos-20240203-110809-5046fc22.zip": {
+        "version": "20240203-110809-5046fc22",
+        "url": "https://github.com/wezterm/wezterm/releases/download/20240203-110809-5046fc22/WezTerm-macos-20240203-110809-5046fc22.zip",
+        "sha256": "e77388cad55f2e9da95a220a89206a6c58f865874a629b7c3ea3c162f5692224"
+      },
+      "downloads/nvim-macos-arm64.tar.gz": {
+        "version": "0.12.6",
+        "url": "https://github.com/neovim/neovim/releases/download/v0.12.6/nvim-macos-arm64.tar.gz",
+        "sha256": "1dbd148222b051ba6c307c4d17a318ed083df018a4f6a5a0ce46955ffc9ab87b"
+      },
+      "downloads/helix-25.07.1-aarch64-macos.tar.xz": {
+        "version": "25.07.1",
+        "url": "https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.07.1-aarch64-macos.tar.xz",
+        "sha256": "00b1651b4fdbbe0a2ae981c8e76b858bd26a7c33f5b3583f3b6bb9137d54f1ff"
+      },
+      "downloads/k9s_Darwin_arm64.tar.gz": {
+        "version": "0.51.0",
+        "url": "https://github.com/derailed/k9s/releases/download/v0.51.0/k9s_Darwin_arm64.tar.gz",
+        "sha256": "9b8c0e8f461e5d33aeee43a67f5ef4aff646a008a786887b8266cbb153c610cc"
+      },
+      "downloads/gh-dash_v4.26.0_darwin-arm64": {
+        "version": "4.26.0",
+        "url": "https://github.com/dlvhdr/gh-dash/releases/download/v4.26.0/gh-dash_v4.26.0_darwin-arm64",
+        "sha256": "3bcb088df5668a1b53f213a7a889b19a0eda59be48d44a3586ec54fc778494d1"
+      },
+      "downloads/k9s-v0.51.0-source.tar.gz": {
+        "version": "0.51.0",
+        "url": "https://api.github.com/repos/derailed/k9s/tarball/v0.51.0",
+        "sha256": "393ffa8bdb3c450677ef68e6926c6d54a181c603667e6cd1b1a88118dede12fa"
+      },
+      "downloads/gh-dash-v4.26.0-source.tar.gz": {
+        "version": "4.26.0",
+        "url": "https://api.github.com/repos/dlvhdr/gh-dash/tarball/v4.26.0",
+        "sha256": "e1dc32c6d04c35ce6bb00ca8ce47993a85b3f46da30edab63da8e73ea537f289"
+      },
+      "downloads/vscode-1.143.1-source.tar.gz": {
+        "version": "1.143.1",
+        "url": "https://github.com/microsoft/vscode/archive/refs/tags/1.143.1.tar.gz",
+        "sha256": "d0aa0fe95602998ecdab87a1f51139455b43486a3a8b50f7f62f6b459ffd31a8"
+      },
+      "downloads/fsyh-v1.67.tar.gz": {
+        "version": "1.67",
+        "url": "https://api.github.com/repos/z-shell/F-Sy-H/tarball/v1.67",
+        "sha256": "209e60d1b377d108e462f1477161652e35f9cb29788722bc83cb1b390f5c23c7"
+      },
+      "upstream/zed-schema.json": {
+        "version": "0.2.0",
+        "url": "https://zed.dev/schema/themes/v0.2.0.json",
+        "sha256": "c5a82ba7b133adfd48f60b88daa472d81ade95b78ce85e9a2ef2aef6ca2ba43e"
+      },
+      "upstream/terminal-schema.json": {
+        "version": "1.25.2733.0",
+        "url": "https://raw.githubusercontent.com/microsoft/terminal/v1.25.2733.0/doc/cascadia/profiles.schema.json",
+        "sha256": "f4cd52374a90f1ab05d6eafc1eb3fa84758a8f10825554de588a7d77c29bf0bd"
+      },
+      "upstream/helix-themes.md": {
+        "version": "25.07.1",
+        "url": "https://raw.githubusercontent.com/helix-editor/helix/25.07.1/book/src/themes.md",
+        "sha256": "29e3fe06c100aba8432d100aa69ee31ef9261aec3c4cb37e2acd7b52ae2f886b"
+      },
+      "upstream/iterm-colors.plist": {
+        "version": "3.6.6",
+        "url": "https://raw.githubusercontent.com/gnachman/iTerm2/v3.6.6/plists/ColorPresets.plist",
+        "sha256": "8815e8e2654a4ab9d6059e72827946cf3fe0768ba3b64310d00b00ee3cb52e71"
+      },
+      "upstream/claude-terminal.md": {
+        "version": "2.1.310; documentation retrieved 2026-10-24",
+        "url": "https://code.claude.com/docs/en/terminal-config.md",
+        "sha256": "72ababcba94144866583daa723b17d737a583e73f2af6f039b3550e1b3054841"
+      },
+      "upstream/vscode-colors.md": {
+        "version": "a03090533810eb02e5b9a2a650e2a3df32192b42",
+        "url": "https://raw.githubusercontent.com/microsoft/vscode-docs/a03090533810eb02e5b9a2a650e2a3df32192b42/api/references/theme-color.md",
+        "sha256": "7a8d4c9dcd7c420b4cc2dfb7db3e4c582000c597508f4ea74df9102c075913a1"
+      }
+    }
+  }
+}

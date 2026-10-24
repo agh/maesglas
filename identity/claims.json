@@ -1,0 +1,1222 @@
+[
+  {
+    "file": "README.md",
+    "checked": "Ghostty 1.3.1, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "Ghostty 1.3.1, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "Starship 1.27.0, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "Starship 1.27.0, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "Vim 9.1, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "bat 0.26.1 and delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "Git 2.56.0, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "nano 9.2, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "fzf 0.74.5, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "tmux 3.8, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "eza 0.23.5, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "glow 3.0.0, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "lazygit 0.66.2, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "yazi 26.9.1, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "Alacritty 0.17.0, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "kitty 0.49.2, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "WezTerm 20240203-110809-5046fc22, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "Neovim 0.12.6, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "Helix 25.07.1, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "VS Code 1.143.1, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "Zed schema 0.2.0, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "iTerm2 3.6.6, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "Windows Terminal 1.25.2733.0, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "k9s 0.51.0, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "gh-dash 4.26.0, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "fast-syntax-highlighting 1.67, 2026-10-24"
+  },
+  {
+    "file": "README.md",
+    "checked": "Commit Mono 1.143, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "Ghostty 1.3.1, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "Ghostty 1.3.1, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "Starship 1.27.0, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "Starship 1.27.0, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "Vim 9.1, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "bat 0.26.1 and delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "Git 2.56.0, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "nano 9.2, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "fzf 0.74.5, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "tmux 3.8, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "eza 0.23.5, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "glow 3.0.0, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "lazygit 0.66.2, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "yazi 26.9.1, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "Alacritty 0.17.0, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "kitty 0.49.2, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "WezTerm 20240203-110809-5046fc22, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "Neovim 0.12.6, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "Helix 25.07.1, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "VS Code 1.143.1, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "Zed schema 0.2.0, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "iTerm2 3.6.6, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "Windows Terminal 1.25.2733.0, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "k9s 0.51.0, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "gh-dash 4.26.0, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "fast-syntax-highlighting 1.67, 2026-10-24"
+  },
+  {
+    "file": "docs/installation.md",
+    "checked": "Commit Mono 1.143, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "Ghostty 1.3.1, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "Starship 1.27.0, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "Vim 9.1, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "bat 0.26.1 and delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "Git 2.56.0, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "nano 9.2, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "fzf 0.74.5, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "tmux 3.8, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "eza 0.23.5, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "glow 3.0.0, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "lazygit 0.66.2, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "yazi 26.9.1, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "Alacritty 0.17.0, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "kitty 0.49.2, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "WezTerm 20240203-110809-5046fc22, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "Neovim 0.12.6, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "Helix 25.07.1, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "VS Code 1.143.1, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "Zed schema 0.2.0, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "iTerm2 3.6.6, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "Windows Terminal 1.25.2733.0, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "k9s 0.51.0, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "gh-dash 4.26.0, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "fast-syntax-highlighting 1.67, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "Alacritty 0.17.0, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "kitty 0.49.2, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "WezTerm 20240203-110809-5046fc22, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "Neovim 0.12.6, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "Helix 25.07.1, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "VS Code 1.143.1, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "Zed schema 0.2.0, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "iTerm2 3.6.6, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "Windows Terminal 1.25.2733.0, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "k9s 0.51.0, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "gh-dash 4.26.0, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "fast-syntax-highlighting 1.67, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "bat 0.26.1 and delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "bat 0.26.1 and delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "nano 9.2, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "fzf 0.74.5, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "glow 3.0.0, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "yazi 26.9.1, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "VS Code 1.143.1, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "Claude Code 2.1.310, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "Claude Code 2.1.310, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "Claude Code 2.1.310, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "k9s 0.51.0, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "gh-dash 4.26.0, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "gh-dash 4.26.0, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "fast-syntax-highlighting 1.67, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "btop 1.4.7, 2026-10-24"
+  },
+  {
+    "file": "docs/ports.md",
+    "checked": "Claude Code 2.1.310, 2026-10-24"
+  },
+  {
+    "file": "docs/typography.md",
+    "checked": "Commit Mono 1.143, 2026-10-24"
+  },
+  {
+    "file": "docs/typography.md",
+    "checked": "Commit Mono 1.143, 2026-10-24"
+  },
+  {
+    "file": "docs/typography.md",
+    "checked": "Ghostty 1.3.1, 2026-10-24"
+  },
+  {
+    "file": "docs/typography.md",
+    "checked": "nano 9.2 and Vim 9.1, 2026-10-24"
+  },
+  {
+    "file": "docs/typography.md",
+    "checked": "Commit Mono 1.143, CoreText on macOS, 2026-10-24"
+  },
+  {
+    "file": "docs/typography.md",
+    "checked": "Commit Mono 1.143 and uharfbuzz 0.57.0, 2026-10-24"
+  },
+  {
+    "file": "docs/verification.md",
+    "checked": "Alacritty 0.17.0, kitty 0.49.2, WezTerm 20240203-110809-5046fc22, Neovim 0.12.6, Helix 25.07.1, and iTerm2 key set 3.6.6, 2026-10-24"
+  },
+  {
+    "file": "docs/verification.md",
+    "checked": "VS Code 1.143.1, Zed schema 0.2.0, Windows Terminal 1.25.2733.0, and iTerm2 key set 3.6.6, 2026-10-24"
+  },
+  {
+    "file": "docs/verification.md",
+    "checked": "Claude Code 2.1.310, 2026-10-24"
+  },
+  {
+    "file": "docs/verification.md",
+    "checked": "k9s 0.51.0, 2026-10-24"
+  },
+  {
+    "file": "docs/verification.md",
+    "checked": "gh-dash 4.26.0, 2026-10-24"
+  },
+  {
+    "file": "docs/verification.md",
+    "checked": "fast-syntax-highlighting 1.67, 2026-10-24"
+  },
+  {
+    "file": "docs/verification.md",
+    "checked": "Commit Mono 1.143, CoreText on macOS, and uharfbuzz 0.57.0, 2026-10-24"
+  },
+  {
+    "file": "site/THIRD_PARTY_NOTICES.md",
+    "checked": "Commit Mono 1.143 archive,\n2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Commit Mono 1.143, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Commit Mono 1.143, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Ghostty 1.3.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "nano 9.2 and Vim 9.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Commit Mono 1.143, CoreText on macOS, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Commit Mono 1.143 and uharfbuzz 0.57.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Ghostty 1.3.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Ghostty 1.3.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Starship 1.27.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Starship 1.27.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Vim 9.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "bat 0.26.1 and delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Git 2.56.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "nano 9.2, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "fzf 0.74.5, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "tmux 3.8, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "eza 0.23.5, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "glow 3.0.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "lazygit 0.66.2, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "yazi 26.9.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Alacritty 0.17.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "kitty 0.49.2, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "WezTerm 20240203-110809-5046fc22, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Neovim 0.12.6, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Helix 25.07.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "VS Code 1.143.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Zed schema 0.2.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "iTerm2 3.6.6, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Windows Terminal 1.25.2733.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "k9s 0.51.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "gh-dash 4.26.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "fast-syntax-highlighting 1.67, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Commit Mono 1.143, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "port set 2026.10.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Ghostty 1.3.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Starship 1.27.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Vim 9.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "bat 0.26.1 and delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Git 2.56.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "nano 9.2, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "fzf 0.74.5, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "tmux 3.8, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "eza 0.23.5, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "glow 3.0.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "lazygit 0.66.2, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "yazi 26.9.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Alacritty 0.17.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "kitty 0.49.2, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "WezTerm 20240203-110809-5046fc22, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Neovim 0.12.6, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Helix 25.07.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "VS Code 1.143.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Zed schema 0.2.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "iTerm2 3.6.6, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Windows Terminal 1.25.2733.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "k9s 0.51.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "gh-dash 4.26.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "fast-syntax-highlighting 1.67, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Alacritty 0.17.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "kitty 0.49.2, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "WezTerm 20240203-110809-5046fc22, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Neovim 0.12.6, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Helix 25.07.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "VS Code 1.143.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Zed schema 0.2.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "iTerm2 3.6.6, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Windows Terminal 1.25.2733.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "k9s 0.51.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "gh-dash 4.26.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "fast-syntax-highlighting 1.67, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "bat 0.26.1 and delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "bat 0.26.1 and delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "nano 9.2, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "fzf 0.74.5, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "glow 3.0.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "yazi 26.9.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "VS Code 1.143.1, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Claude Code 2.1.310, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Claude Code 2.1.310, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Claude Code 2.1.310, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "k9s 0.51.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "gh-dash 4.26.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "gh-dash 4.26.0, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "fast-syntax-highlighting 1.67, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "btop 1.4.7, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Claude Code 2.1.310, 2026-10-24"
+  },
+  {
+    "file": "site/index.html",
+    "checked": "Commit Mono 1.143 archive, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "Ghostty 1.3.1, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "Ghostty 1.3.1, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "Starship 1.27.0, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "Starship 1.27.0, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "Vim 9.1, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "bat 0.26.1 and delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "Git 2.56.0, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "nano 9.2, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "fzf 0.74.5, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "tmux 3.8, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "eza 0.23.5, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "glow 3.0.0, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "lazygit 0.66.2, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "yazi 26.9.1, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "Alacritty 0.17.0, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "kitty 0.49.2, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "WezTerm 20240203-110809-5046fc22, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "Neovim 0.12.6, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "Helix 25.07.1, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "VS Code 1.143.1, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "Zed schema 0.2.0, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "iTerm2 3.6.6, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "Windows Terminal 1.25.2733.0, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "k9s 0.51.0, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "gh-dash 4.26.0, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "fast-syntax-highlighting 1.67, 2026-10-24"
+  },
+  {
+    "file": "site/installation.md",
+    "checked": "Commit Mono 1.143, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "Ghostty 1.3.1, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "Starship 1.27.0, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "Vim 9.1, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "bat 0.26.1 and delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "Git 2.56.0, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "nano 9.2, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "fzf 0.74.5, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "tmux 3.8, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "eza 0.23.5, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "glow 3.0.0, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "lazygit 0.66.2, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "yazi 26.9.1, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "Alacritty 0.17.0, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "kitty 0.49.2, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "WezTerm 20240203-110809-5046fc22, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "Neovim 0.12.6, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "Helix 25.07.1, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "VS Code 1.143.1, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "Zed schema 0.2.0, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "iTerm2 3.6.6, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "Windows Terminal 1.25.2733.0, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "k9s 0.51.0, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "gh-dash 4.26.0, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "fast-syntax-highlighting 1.67, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "Alacritty 0.17.0, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "kitty 0.49.2, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "WezTerm 20240203-110809-5046fc22, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "Neovim 0.12.6, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "Helix 25.07.1, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "VS Code 1.143.1, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "Zed schema 0.2.0, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "iTerm2 3.6.6, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "Windows Terminal 1.25.2733.0, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "k9s 0.51.0, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "gh-dash 4.26.0, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "fast-syntax-highlighting 1.67, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "bat 0.26.1 and delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "bat 0.26.1 and delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "delta 0.20.1, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "nano 9.2, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "fzf 0.74.5, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "glow 3.0.0, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "yazi 26.9.1, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "VS Code 1.143.1, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "Claude Code 2.1.310, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "Claude Code 2.1.310, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "Claude Code 2.1.310, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "k9s 0.51.0, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "gh-dash 4.26.0, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "gh-dash 4.26.0, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "fast-syntax-highlighting 1.67, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "btop 1.4.7, 2026-10-24"
+  },
+  {
+    "file": "site/ports.md",
+    "checked": "Claude Code 2.1.310, 2026-10-24"
+  },
+  {
+    "file": "site/typography.md",
+    "checked": "Commit Mono 1.143, 2026-10-24"
+  },
+  {
+    "file": "site/typography.md",
+    "checked": "Commit Mono 1.143, 2026-10-24"
+  },
+  {
+    "file": "site/typography.md",
+    "checked": "Ghostty 1.3.1, 2026-10-24"
+  },
+  {
+    "file": "site/typography.md",
+    "checked": "nano 9.2 and Vim 9.1, 2026-10-24"
+  },
+  {
+    "file": "site/typography.md",
+    "checked": "Commit Mono 1.143, CoreText on macOS, 2026-10-24"
+  },
+  {
+    "file": "site/typography.md",
+    "checked": "Commit Mono 1.143 and uharfbuzz 0.57.0, 2026-10-24"
+  }
+]

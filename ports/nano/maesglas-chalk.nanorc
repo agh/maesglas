@@ -1,0 +1,88 @@
+set linenumbers
+set tabsize 4
+set softwrap
+set atblanks
+set autoindent
+set stateflags
+set titlecolor bold,normal,normal
+set statuscolor normal,normal
+set promptcolor normal,normal
+set errorcolor bold,red,normal
+set numbercolor gray,normal
+set keycolor bold,blue,normal
+set functioncolor gray,normal
+set selectedcolor bold,normal,normal
+set spotlightcolor bold,yellow,normal
+set scrollercolor cyan,normal
+set stripecolor normal,normal
+set minicolor gray,normal
+
+syntax "python" "\.py$"
+color magenta "\<(def|class|return|if|else|for|in|import|from|with|as|raise|try|except)\>"
+color yellow "\<[0-9]+\>"
+color green ""([^"\\]|\\.)*""
+color gray "#.*$"
+comment "#"
+
+syntax "ruby" "\.rb$"
+color magenta "\<(def|class|module|end|do|if|else|return|require)\>"
+color yellow "\<[0-9]+\>"
+color green ""([^"\\]|\\.)*""
+color gray "#.*$"
+comment "#"
+
+syntax "rust" "\.rs$"
+color magenta "\<(fn|let|mut|pub|use|impl|struct|enum|match|return)\>"
+color yellow "\<[0-9]+\>"
+color green ""([^"\\]|\\.)*""
+color gray "//.*$"
+comment "//"
+
+syntax "shell" "\.(sh|zsh|bash)$"
+color magenta "\<(if|then|else|fi|for|in|do|done|export|case|esac)\>"
+color yellow "\<[0-9]+\>"
+color green ""([^"\\]|\\.)*""
+color gray "#.*$"
+comment "#"
+
+syntax "json" "\.(json|jsonc)$"
+color magenta "\<(true|false|null)\>"
+color yellow "\<[0-9]+\>"
+color green ""([^"\\]|\\.)*""
+color gray "//.*$"
+comment "//"
+
+syntax "yaml" "\.(yml|yaml)$"
+color magenta "\<(true|false|null)\>"
+color yellow "\<[0-9]+\>"
+color green ""([^"\\]|\\.)*""
+color gray "#.*$"
+comment "#"
+
+syntax "toml" "\.toml$"
+color magenta "\<(true|false)\>"
+color yellow "\<[0-9]+\>"
+color green ""([^"\\]|\\.)*""
+color gray "#.*$"
+comment "#"
+
+syntax "markdown" "\.(md|markdown)$"
+color yellow "\<[0-9]+\>"
+color green ""([^"\\]|\\.)*""
+color bold,blue "^#{1,6} .*"
+color cyan "\[[^]]+\]\([^)]+\)"
+
+syntax "makefile" "(^|/)(Makefile|makefile)$"
+color magenta "\<(include|ifdef|ifndef|endif)\>"
+color yellow "\<[0-9]+\>"
+color green ""([^"\\]|\\.)*""
+color gray "#.*$"
+comment "#"
+tabgives "	"
+
+syntax "diff" "\.(diff|patch)$"
+color yellow "\<[0-9]+\>"
+color green ""([^"\\]|\\.)*""
+color green "^\+.*"
+color red "^-.*"
+color cyan "^@@.*"

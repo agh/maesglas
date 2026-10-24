@@ -1,0 +1,126 @@
+[app]
+overall = { fg = "#F1F6F0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+
+[mgr]
+cwd = { fg = "#9FBDD5", bg = "#0D1613", bold = false, italic = false, reversed = false }
+find_keyword = { fg = "#F1F6F0", bg = "#262114", bold = true, italic = false, reversed = false }
+find_position = { fg = "#CDD7D0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+symlink_target = { fg = "#C9EDEE", bg = "#0D1613", bold = false, italic = false, reversed = false }
+marker_copied = { fg = "#B2D8B6", bg = "#0D1613", bold = false, italic = false, reversed = false }
+marker_cut = { fg = "#E99E92", bg = "#0D1613", bold = false, italic = false, reversed = false }
+marker_marked = { fg = "#C9EDEE", bg = "#0D1613", bold = false, italic = false, reversed = false }
+marker_selected = { fg = "#FBDCB2", bg = "#0D1613", bold = false, italic = false, reversed = false }
+marker_symbol = ">"
+count_copied = { fg = "#B2D8B6", bg = "#121D19", bold = false, italic = false, reversed = false }
+count_cut = { fg = "#E99E92", bg = "#121D19", bold = false, italic = false, reversed = false }
+count_selected = { fg = "#FBDCB2", bg = "#121D19", bold = false, italic = false, reversed = false }
+border_style = { fg = "#90A49C", bg = "#0D1613", bold = false, italic = false, reversed = false }
+
+[tabs]
+active = { fg = "#F1F6F0", bg = "#212F2A", bold = true, italic = false, reversed = false }
+inactive = { fg = "#CDD7D0", bg = "#121D19", bold = false, italic = false, reversed = false }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[mode]
+normal_main = { fg = "#F1F6F0", bg = "#121D19", bold = false, italic = false, reversed = false }
+normal_alt = { fg = "#F1F6F0", bg = "#121D19", bold = false, italic = false, reversed = false }
+select_main = { fg = "#F1F6F0", bg = "#121D19", bold = false, italic = false, reversed = false }
+select_alt = { fg = "#F1F6F0", bg = "#121D19", bold = false, italic = false, reversed = false }
+unset_main = { fg = "#F1F6F0", bg = "#121D19", bold = false, italic = false, reversed = false }
+unset_alt = { fg = "#F1F6F0", bg = "#121D19", bold = false, italic = false, reversed = false }
+
+[indicator]
+parent = { fg = "#F1F6F0", bg = "#212F2A", bold = false, italic = false, reversed = false }
+current = { fg = "#F1F6F0", bg = "#212F2A", bold = true, italic = false, reversed = false }
+preview = { fg = "#F1F6F0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+padding = { open = "", close = "" }
+
+[status]
+overall = { fg = "#F1F6F0", bg = "#121D19", bold = false, italic = false, reversed = false }
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+perm_sep = { fg = "#CDD7D0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+perm_type = { fg = "#CDD7D0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+perm_read = { fg = "#CDD7D0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+perm_write = { fg = "#CDD7D0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+perm_exec = { fg = "#CDD7D0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+progress_label = { fg = "#F1F6F0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+progress_normal = { fg = "#B2D8B6", bg = "#121D19", bold = false, italic = false, reversed = false }
+progress_error = { fg = "#E99E92", bg = "#121D19", bold = false, italic = false, reversed = false }
+
+[which]
+border = { fg = "#90A49C", bg = "#0D1613", bold = false, italic = false, reversed = false }
+mask = { fg = "#F1F6F0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+cand = { fg = "#C9EDEE", bg = "#0D1613", bold = false, italic = false, reversed = false }
+rest = { fg = "#CDD7D0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+desc = { fg = "#F1F6F0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+separator = " > "
+separator_style = { fg = "#CDD7D0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+
+[confirm]
+border = { fg = "#90A49C", bg = "#0D1613", bold = false, italic = false, reversed = false }
+title = { fg = "#F1F6F0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+body = { fg = "#F1F6F0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+list = { fg = "#F1F6F0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+btn_yes = { fg = "#F1F6F0", bg = "#212F2A", bold = true, italic = false, reversed = false }
+btn_no = { fg = "#F1F6F0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+
+[spot]
+border = { fg = "#90A49C", bg = "#0D1613", bold = false, italic = false, reversed = false }
+title = { fg = "#F1F6F0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+tbl_col = { fg = "#CDD7D0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+tbl_cell = { fg = "#F1F6F0", bg = "#212F2A", bold = false, italic = false, reversed = false }
+
+[notify]
+title_info = { fg = "#B2D8B6", bg = "#0D1613", bold = false, italic = false, reversed = false }
+title_warn = { fg = "#FBDCB2", bg = "#0D1613", bold = false, italic = false, reversed = false }
+title_error = { fg = "#E99E92", bg = "#0D1613", bold = false, italic = false, reversed = false }
+icon_info = "info"
+icon_warn = "warning"
+icon_error = "error"
+
+[pick]
+border = { fg = "#90A49C", bg = "#0D1613", bold = false, italic = false, reversed = false }
+active = { fg = "#F1F6F0", bg = "#212F2A", bold = true, italic = false, reversed = false }
+inactive = { fg = "#F1F6F0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+
+[input]
+border = { fg = "#90A49C", bg = "#0D1613", bold = false, italic = false, reversed = false }
+title = { fg = "#F1F6F0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+value = { fg = "#F1F6F0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+selected = { fg = "#F1F6F0", bg = "#212F2A", bold = false, italic = false, reversed = false }
+
+[cmp]
+border = { fg = "#90A49C", bg = "#0D1613", bold = false, italic = false, reversed = false }
+active = { fg = "#F1F6F0", bg = "#212F2A", bold = false, italic = false, reversed = false }
+inactive = { fg = "#F1F6F0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+icon_file = "f"
+icon_folder = "d"
+icon_command = ">"
+
+[tasks]
+border = { fg = "#90A49C", bg = "#0D1613", bold = false, italic = false, reversed = false }
+title = { fg = "#F1F6F0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+hovered = { fg = "#F1F6F0", bg = "#212F2A", bold = true, italic = false, reversed = false }
+
+[help]
+border = { fg = "#90A49C", bg = "#0D1613", bold = false, italic = false, reversed = false }
+chord = { fg = "#C9EDEE", bg = "#0D1613", bold = false, italic = false, reversed = false }
+action = { fg = "#F1F6F0", bg = "#0D1613", bold = false, italic = false, reversed = false }
+hovered = { fg = "#F1F6F0", bg = "#212F2A", bold = true, italic = false, reversed = false }
+
+[filetype]
+rules = [
+  { url = "*", is = "orphan", fg = "#E99E92", underline = true },
+  { url = "*", is = "exec", fg = "#B2D8B6" },
+  { url = "*/", fg = "#9FBDD5" },
+  { url = "*", fg = "#F1F6F0" }
+]
+
+[icon]
+globs = []
+dirs = []
+files = []
+exts = []
+conds = [{ if = "dir", text = "d", fg = "#9FBDD5" }, { if = "!dir", text = "f", fg = "#F1F6F0" }]

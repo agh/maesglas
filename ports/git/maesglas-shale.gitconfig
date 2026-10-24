@@ -1,0 +1,25 @@
+[color "diff"]
+    plain = "#F1F6F0"
+    meta = "#CDD7D0"
+    frag = "#9FBDD5"
+    old = "#E99E92"
+    new = "#B2D8B6"
+    commit = "#DECCEA"
+    whitespace = "#E99E92"
+[color "status"]
+    header = "#CDD7D0"
+    added = "#B2D8B6"
+    changed = "#FBDCB2"
+    untracked = "#FBDCB2"
+    deleted = "#E99E92"
+    unmerged = "#E99E92"
+    branch = "#DECCEA"
+[color "branch"]
+    current = "#DECCEA"
+    local = "#DECCEA"
+    remote = "#DECCEA"
+[color "interactive"]
+    prompt = "#F1F6F0"
+    header = "#F1F6F0"
+    help = "#CDD7D0"
+    error = "#E99E92"

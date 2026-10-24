@@ -1,0 +1,120 @@
+@font-face {
+  font-family: CommitMono;
+  src: url("fonts/CommitMono-400-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: CommitMono;
+  src: url("fonts/CommitMono-700-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --canvas: #f1f5f0;
+  --surface: #e9f0e9;
+  --selection: #d9ebe2;
+  --search: #f4ecd8;
+  --search-active: #f0e6cd;
+  --match: #f7f2e3;
+  --match-active: #f6efdd;
+  --added: #e6f1e6;
+  --removed: #fae9e5;
+  --changed: #f3eddc;
+  --added-word: #dcebdc;
+  --removed-word: #f7e1db;
+  --ink: #14231e;
+  --secondary: #404d44;
+  --muted: #47514a;
+  --oxide: #662b24;
+  --bronze: #795a2a;
+  --juniper: #38573c;
+  --slate: #2d475a;
+  --mulberry: #654c75;
+  --petroleum: #366f72;
+  --boundary: #53655e;
+  --foreground: #14231e;
+  --comment: #404d44;
+  --line-number: #47514a;
+  --error: #662b24;
+  --warning: #795a2a;
+  --success: #38573c;
+  --string: #38573c;
+  --function: #2d475a;
+  --directory: #2d475a;
+  --keyword: #654c75;
+  --branch: #654c75;
+  --type: #366f72;
+  --link: #366f72;
+  --number: #795a2a;
+  --space-0: 0.25rem;
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4rem;
+  --space-8: 6rem;
+  --size-0: 1rem;
+  --size-1: 1.25rem;
+  --size-2: 1.5625rem;
+  --size-3: 1.9531rem;
+  --size-4: 2.4414rem;
+  --size-5: 3.0518rem;
+  --size-6: 3.8147rem;
+  --size-7: 4.7684rem;
+  --measure: 70ch;
+  --radius: 0px;
+  --font-mono: "CommitMono", ui-monospace, monospace;
+  --page-width: 1200px;
+  --plate-width: 800px;
+  --font-features: "calt" 1, "ss01" 0, "ss02" 0, "liga" 0, "dlig" 0;
+
+  color-scheme: light;
+}
+
+:root[data-theme="shale"] {
+  --canvas: #0d1613;
+  --surface: #121d19;
+  --selection: #212f2a;
+  --search: #262114;
+  --search-active: #312b1c;
+  --match: #2b2618;
+  --match-active: #332d1e;
+  --added: #1b241b;
+  --removed: #2b1e1b;
+  --changed: #252116;
+  --added-word: #232f23;
+  --removed-word: #372723;
+  --ink: #f1f6f0;
+  --secondary: #cdd7d0;
+  --muted: #c8d3cb;
+  --oxide: #e99e92;
+  --bronze: #fbdcb2;
+  --juniper: #b2d8b6;
+  --slate: #9fbdd5;
+  --mulberry: #deccea;
+  --petroleum: #c9edee;
+  --boundary: #90a49c;
+  --foreground: #f1f6f0;
+  --comment: #cdd7d0;
+  --line-number: #c8d3cb;
+  --error: #e99e92;
+  --warning: #fbdcb2;
+  --success: #b2d8b6;
+  --string: #b2d8b6;
+  --function: #9fbdd5;
+  --directory: #9fbdd5;
+  --keyword: #deccea;
+  --branch: #deccea;
+  --type: #c9edee;
+  --link: #c9edee;
+  --number: #fbdcb2;
+
+  color-scheme: dark;
+}

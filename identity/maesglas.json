@@ -1,0 +1,123 @@
+{
+  "name": "Maesglas",
+  "version": "2026.10.0",
+  "extends": null,
+  "upstream": {
+    "name": "naws",
+    "release": null,
+    "sha256": null,
+    "status": "No published release available on 2026-10-24."
+  },
+  "conversion": "oklab-d65-2021-srgb-half-up-v1",
+  "default": "chalk",
+  "palette": {
+    "chalk": {
+      "canvas": {"type": "color", "value": [0.966, 0.008, 145], "unit": "oklch"},
+      "surface": {"type": "color", "value": [0.948, 0.011, 145], "unit": "oklch"},
+      "selection": {"type": "color", "value": [0.924, 0.023, 165], "unit": "oklch"},
+      "search": {"type": "color", "value": [0.944, 0.028, 90], "unit": "oklch"},
+      "search-active": {"type": "color", "value": [0.926, 0.035, 90], "unit": "oklch"},
+      "match": {"type": "color", "value": [0.96, 0.02, 90], "unit": "oklch"},
+      "match-active": {"type": "color", "value": [0.952, 0.025, 90], "unit": "oklch"},
+      "added": {"type": "color", "value": [0.946, 0.019, 145], "unit": "oklch"},
+      "removed": {"type": "color", "value": [0.946, 0.019, 35], "unit": "oklch"},
+      "changed": {"type": "color", "value": [0.946, 0.023, 90], "unit": "oklch"},
+      "added-word": {"type": "color", "value": [0.925, 0.026, 145], "unit": "oklch"},
+      "removed-word": {"type": "color", "value": [0.925, 0.026, 35], "unit": "oklch"},
+      "ink": {"type": "color", "value": [0.24, 0.022, 170], "unit": "oklch"},
+      "secondary": {"type": "color", "value": [0.405, 0.023, 155], "unit": "oklch"},
+      "muted": {"type": "color", "value": [0.425, 0.018, 155], "unit": "oklch"},
+      "oxide": {"type": "color", "value": [0.37, 0.087, 29], "unit": "oklch"},
+      "bronze": {"type": "color", "value": [0.49, 0.077, 76], "unit": "oklch"},
+      "juniper": {"type": "color", "value": [0.425, 0.058, 148], "unit": "oklch"},
+      "slate": {"type": "color", "value": [0.385, 0.046, 242], "unit": "oklch"},
+      "mulberry": {"type": "color", "value": [0.460, 0.071, 312], "unit": "oklch"},
+      "petroleum": {"type": "color", "value": [0.505, 0.06, 200], "unit": "oklch"},
+      "boundary": {"type": "color", "value": [0.49, 0.025, 170], "unit": "oklch"}
+    },
+    "shale": {
+      "canvas": {"type": "color", "value": [0.19, 0.016, 170], "unit": "oklch"},
+      "surface": {"type": "color", "value": [0.22, 0.018, 170], "unit": "oklch"},
+      "selection": {"type": "color", "value": [0.29, 0.021, 170], "unit": "oklch"},
+      "search": {"type": "color", "value": [0.25, 0.025, 90], "unit": "oklch"},
+      "search-active": {"type": "color", "value": [0.29, 0.027, 90], "unit": "oklch"},
+      "match": {"type": "color", "value": [0.27, 0.025, 90], "unit": "oklch"},
+      "match-active": {"type": "color", "value": [0.30, 0.027, 90], "unit": "oklch"},
+      "added": {"type": "color", "value": [0.25, 0.021, 145], "unit": "oklch"},
+      "removed": {"type": "color", "value": [0.25, 0.021, 35], "unit": "oklch"},
+      "changed": {"type": "color", "value": [0.25, 0.021, 90], "unit": "oklch"},
+      "added-word": {"type": "color", "value": [0.29, 0.026, 145], "unit": "oklch"},
+      "removed-word": {"type": "color", "value": [0.29, 0.026, 35], "unit": "oklch"},
+      "ink": {"type": "color", "value": [0.967, 0.009, 145], "unit": "oklch"},
+      "secondary": {"type": "color", "value": [0.87, 0.014, 155], "unit": "oklch"},
+      "muted": {"type": "color", "value": [0.855, 0.016, 155], "unit": "oklch"},
+      "oxide": {"type": "color", "value": [0.77, 0.092, 29], "unit": "oklch"},
+      "bronze": {"type": "color", "value": [0.91, 0.065, 76], "unit": "oklch"},
+      "juniper": {"type": "color", "value": [0.845, 0.061, 148], "unit": "oklch"},
+      "slate": {"type": "color", "value": [0.785, 0.047, 242], "unit": "oklch"},
+      "mulberry": {"type": "color", "value": [0.870, 0.044, 312], "unit": "oklch"},
+      "petroleum": {"type": "color", "value": [0.92, 0.037, 200], "unit": "oklch"},
+      "boundary": {"type": "color", "value": [0.7, 0.025, 170], "unit": "oklch"}
+    }
+  },
+  "roles": {
+    "foreground": {"type": "color", "value": "{ink}", "unit": "srgb"},
+    "comment": {"type": "color", "value": "{secondary}", "unit": "srgb"},
+    "line-number": {"type": "color", "value": "{muted}", "unit": "srgb"},
+    "error": {"type": "color", "value": "{oxide}", "unit": "srgb"},
+    "warning": {"type": "color", "value": "{bronze}", "unit": "srgb"},
+    "success": {"type": "color", "value": "{juniper}", "unit": "srgb"},
+    "string": {"type": "color", "value": "{juniper}", "unit": "srgb"},
+    "function": {"type": "color", "value": "{slate}", "unit": "srgb"},
+    "directory": {"type": "color", "value": "{slate}", "unit": "srgb"},
+    "keyword": {"type": "color", "value": "{mulberry}", "unit": "srgb"},
+    "branch": {"type": "color", "value": "{mulberry}", "unit": "srgb"},
+    "type": {"type": "color", "value": "{petroleum}", "unit": "srgb"},
+    "link": {"type": "color", "value": "{petroleum}", "unit": "srgb"},
+    "number": {"type": "color", "value": "{bronze}", "unit": "srgb"}
+  },
+  "ansi": ["ink", "oxide", "juniper", "bronze", "slate", "mulberry", "petroleum", "secondary", "muted", "oxide", "juniper", "bronze", "slate", "mulberry", "petroleum", "ink"],
+  "grounds": ["canvas", "surface", "selection", "search", "search-active", "match", "match-active", "added", "removed", "changed", "added-word", "removed-word"],
+  "fonts": {
+    "family": {"type": "font", "value": "CommitMono", "unit": "family"},
+    "regular": {"type": "asset", "value": "site/fonts/CommitMono-400-Regular.otf", "unit": "path"},
+    "bold": {"type": "asset", "value": "site/fonts/CommitMono-700-Regular.otf", "unit": "path"},
+    "archive": {"type": "asset", "value": "https://github.com/eigilnikolajsen/commit-mono/releases/download/v1.143/CommitMono-1.143.zip", "unit": "url"},
+    "archive-sha256": {"type": "digest", "value": "f7d1f26a7c7554800a996f76f5d706bf0648b936ca2a66b5bc4d46e3a2c49ed0", "unit": "sha256"},
+    "advance": {"type": "number", "value": 0.6, "unit": "em"},
+    "terminal": {"type": "dimension", "value": 15, "unit": "pt"},
+    "editor": {"type": "dimension", "value": 16, "unit": "px"},
+    "terminal-web": {"type": "dimension", "value": 15, "unit": "px"},
+    "terminal-x-height": {"type": "dimension", "value": 8.1, "unit": "pt"},
+    "features": {"type": "features", "value": {"calt": 1, "ss01": 0, "ss02": 0, "liga": 0, "dlig": 0}, "unit": "opentype"}
+  },
+  "scale": {
+    "base": {"type": "dimension", "value": 1, "unit": "rem"},
+    "ratio": {"type": "number", "value": 1.25, "unit": "ratio"}
+  },
+  "measure": {"type": "dimension", "value": 70, "unit": "ch"},
+  "spacing": {"type": "scale", "value": [4, 8, 12, 16, 24, 32, 48, 64, 96], "unit": "px"},
+  "radius": {"type": "dimension", "value": 0, "unit": "px"},
+  "components": {
+    "terminal-padding": {"type": "dimension", "value": 12, "unit": "pt"},
+    "cell-height": {"type": "number", "value": 6, "unit": "percent"},
+    "plate-width": {"type": "dimension", "value": 800, "unit": "px"},
+    "plate-inset": {"type": "dimension", "value": 40, "unit": "px"},
+    "plate-leading": {"type": "number", "value": 1.5, "unit": "ratio"},
+    "page-width": {"type": "dimension", "value": 1200, "unit": "px"},
+    "social-width": {"type": "dimension", "value": 1280, "unit": "px"},
+    "social-height": {"type": "dimension", "value": 640, "unit": "px"},
+    "mark-grid": {"type": "dimension", "value": 64, "unit": "unit"},
+    "mark-stroke": {"type": "dimension", "value": 8, "unit": "unit"}
+  },
+  "motion": {
+    "duration": {"type": "duration", "value": 0, "unit": "ms"},
+    "easing": {"type": "curve", "value": "linear", "unit": "css"}
+  },
+  "marks": {
+    "large": {"type": "asset", "value": "identity/mark.svg", "unit": "path"},
+    "small": {"type": "asset", "value": "identity/mark-16.svg", "unit": "path"}
+  },
+  "social": {"type": "asset", "value": "identity/social.png", "unit": "path"},
+  "vocabulary": {"type": "words", "value": ["mineral", "ink", "field", "chalk", "shale"], "unit": "text"}
+}

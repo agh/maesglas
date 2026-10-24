@@ -1,0 +1,9 @@
+{
+  "btop": {
+    "version": "1.4.7",
+    "date": "2026-10-24",
+    "foreground": "#787878",
+    "source": "https://github.com/aristocratos/btop/blob/v1.4.7/src/btop_draw.cpp#L111-L147",
+    "method": "Native PTY startup with a generated theme, truecolor enabled, and no metric boxes; captured SGR foregrounds. The banner generator chooses these colors independently of the theme."
+  }
+}

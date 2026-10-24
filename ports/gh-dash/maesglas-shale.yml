@@ -1,0 +1,32 @@
+{
+  "theme": {
+    "colors": {
+      "text": {
+        "primary": "#F1F6F0",
+        "secondary": "#CDD7D0",
+        "inverted": "#F1F6F0",
+        "faint": "#CDD7D0",
+        "warning": "#FBDCB2",
+        "success": "#B2D8B6",
+        "error": "#E99E92",
+        "actor": "#DECCEA"
+      },
+      "background": {
+        "selected": "#212F2A"
+      },
+      "border": {
+        "primary": "#90A49C",
+        "secondary": "#90A49C",
+        "faint": "#90A49C"
+      },
+      "icon": {
+        "newcontributor": "#CDD7D0",
+        "contributor": "#CDD7D0",
+        "collaborator": "#CDD7D0",
+        "member": "#CDD7D0",
+        "owner": "#CDD7D0",
+        "unknownrole": "#CDD7D0"
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+[colors]
+foreground = "#F1F6F0"
+background = "#0D1613"
+cursor_bg = "#C9EDEE"
+cursor_fg = "#0D1613"
+cursor_border = "#C9EDEE"
+selection_fg = "#F1F6F0"
+selection_bg = "#212F2A"
+split = "#90A49C"
+compose_cursor = "#FBDCB2"
+scrollbar_thumb = "#90A49C"
+ansi = ["#F1F6F0", "#E99E92", "#B2D8B6", "#FBDCB2", "#9FBDD5", "#DECCEA", "#C9EDEE", "#CDD7D0"]
+brights = ["#C8D3CB", "#E99E92", "#B2D8B6", "#FBDCB2", "#9FBDD5", "#DECCEA", "#C9EDEE", "#F1F6F0"]
+
+[metadata]
+name = "Maesglas Shale"

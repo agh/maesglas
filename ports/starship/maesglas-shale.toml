@@ -1,0 +1,66 @@
+add_newline = true
+format = "$username$hostname$directory$git_branch$git_status$git_state$cmd_duration$jobs$line_break$status$character"
+right_format = ""
+
+[username]
+show_always = false
+format = "[$user]($style) "
+style_root = "bold #E99E92"
+style_user = "#CDD7D0"
+
+[hostname]
+ssh_only = true
+format = "[ssh:$hostname]($style) "
+style = "#CDD7D0"
+
+[directory]
+style = "#9FBDD5"
+format = "[$path]($style) "
+truncation_length = 4
+truncate_to_repo = false
+home_symbol = "~"
+
+[git_branch]
+symbol = ""
+style = "#DECCEA"
+format = "[$branch]($style) "
+
+[git_status]
+style = "#FBDCB2"
+format = "([$all_status$ahead_behind]($style) )"
+staged = "+$count "
+modified = "~$count "
+untracked = "?$count "
+deleted = "-$count "
+renamed = ">$count "
+conflicted = "conflict:$count "
+stashed = "stash:$count "
+ahead = "up$count "
+behind = "down$count "
+diverged = "up$ahead_count down$behind_count "
+
+[git_state]
+style = "#FBDCB2"
+format = "[$state( $progress_current/$progress_total)]($style) "
+
+[cmd_duration]
+min_time = 2000
+style = "#CDD7D0"
+format = "[$duration]($style) "
+
+[jobs]
+style = "#CDD7D0"
+format = "[jobs:$number]($style) "
+number_threshold = 1
+symbol_threshold = 1
+
+[status]
+disabled = false
+pipestatus = true
+format = "[exit $status]($style) "
+style = "#E99E92"
+
+[character]
+success_symbol = "[>](bold #F1F6F0)"
+error_symbol = "[>](bold #E99E92)"
+vimcmd_symbol = "[<](bold #F1F6F0)"

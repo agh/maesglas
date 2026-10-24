@@ -1,0 +1,23 @@
+{
+  "name": "Maesglas Shale",
+  "background": "#0D1613",
+  "foreground": "#F1F6F0",
+  "cursorColor": "#C9EDEE",
+  "selectionBackground": "#212F2A",
+  "black": "#F1F6F0",
+  "red": "#E99E92",
+  "green": "#B2D8B6",
+  "yellow": "#FBDCB2",
+  "blue": "#9FBDD5",
+  "purple": "#DECCEA",
+  "cyan": "#C9EDEE",
+  "white": "#CDD7D0",
+  "brightBlack": "#C8D3CB",
+  "brightRed": "#E99E92",
+  "brightGreen": "#B2D8B6",
+  "brightYellow": "#FBDCB2",
+  "brightBlue": "#9FBDD5",
+  "brightPurple": "#DECCEA",
+  "brightCyan": "#C9EDEE",
+  "brightWhite": "#F1F6F0"
+}

@@ -1,0 +1,169 @@
+{
+  "python": "3.14.6",
+  "node": "26.12.0",
+  "npm": "11.20.0",
+  "chromium": "141.0.7390.37",
+  "linux_image": "python:3.14.6-bookworm@sha256:bfa96428c199ebe1bd16b04afef6380d7ab1ded83ffff04099e80d164c4d2f4b",
+  "linux_build": {
+    "cc": "12.2.0",
+    "make": "4.3",
+    "bison": "3.8.2"
+  },
+  "librsvg": "2.63.3",
+  "uv": "0.13.1",
+  "vale": "3.24.0",
+  "crefft": "2026.10.5",
+  "crefft_sha256": "6cde6d3012995a2c82d7ee64e2b563c0cfab8a7e43853fac44145921bef2c3c8",
+  "gitleaks": "8.30.1",
+  "shellcheck": "0.11.0",
+  "shfmt": "3.14.1",
+  "lychee": "0.24.2",
+  "impeccable": "4.7.0",
+  "impeccable_telemetry": "IMPECCABLE_NO_TELEMETRY=1; DO_NOT_TRACK=1",
+  "conversion": "oklab-d65-2021-srgb-half-up-v1",
+  "apca": "SAPC-0.0.98G-4g",
+  "machado": "2009-severity-1.0",
+  "font": "Commit Mono 1.143",
+  "ghostty": "1.3.1",
+  "starship": "1.27.0",
+  "nano": "9.2",
+  "bat": "0.26.1",
+  "delta": "0.20.1",
+  "vim": "9.1",
+  "vim_build": "9.1.1752",
+  "fzf": "0.74.5",
+  "tmux": "3.8",
+  "git": "2.56.0",
+  "eza": "0.23.5",
+  "glow": "3.0.0",
+  "glamour": "2.0.1",
+  "btop": "1.4.7",
+  "lazygit": "0.66.2",
+  "yazi": "26.9.1",
+  "alacritty": "0.17.0",
+  "kitty": "0.49.2",
+  "wezterm": "20240203-110809-5046fc22",
+  "neovim": "0.12.6",
+  "helix": "25.07.1",
+  "vscode": "1.143.1",
+  "zed": "schema 0.2.0",
+  "iterm2": "3.6.6",
+  "windows-terminal": "1.25.2733.0",
+  "claude-code": "2.1.310",
+  "k9s": "0.51.0",
+  "gh-dash": "4.26.0",
+  "fast-syntax-highlighting": "1.67",
+  "go": "1.27.3",
+  "zsh": "5.9",
+  "port_sources": {
+    "downloads/Alacritty-v0.17.0.dmg": {
+      "version": "0.17.0",
+      "url": "https://github.com/alacritty/alacritty/releases/download/v0.17.0/Alacritty-v0.17.0.dmg",
+      "sha256": "ad8d7de35fb38e43184776cac6dfee05ca325caa0b6639a06a55e54e4b026620"
+    },
+    "downloads/kitty-0.49.2.dmg": {
+      "version": "0.49.2",
+      "url": "https://github.com/kovidgoyal/kitty/releases/download/v0.49.2/kitty-0.49.2.dmg",
+      "sha256": "e524b894145d89cb76b584e3a9691196ae56bfa31d51384a44aa774252b7cef7"
+    },
+    "downloads/WezTerm-macos-20240203-110809-5046fc22.zip": {
+      "version": "20240203-110809-5046fc22",
+      "url": "https://github.com/wezterm/wezterm/releases/download/20240203-110809-5046fc22/WezTerm-macos-20240203-110809-5046fc22.zip",
+      "sha256": "e77388cad55f2e9da95a220a89206a6c58f865874a629b7c3ea3c162f5692224"
+    },
+    "downloads/nvim-macos-arm64.tar.gz": {
+      "version": "0.12.6",
+      "url": "https://github.com/neovim/neovim/releases/download/v0.12.6/nvim-macos-arm64.tar.gz",
+      "sha256": "1dbd148222b051ba6c307c4d17a318ed083df018a4f6a5a0ce46955ffc9ab87b"
+    },
+    "downloads/helix-25.07.1-aarch64-macos.tar.xz": {
+      "version": "25.07.1",
+      "url": "https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.07.1-aarch64-macos.tar.xz",
+      "sha256": "00b1651b4fdbbe0a2ae981c8e76b858bd26a7c33f5b3583f3b6bb9137d54f1ff"
+    },
+    "downloads/k9s_Darwin_arm64.tar.gz": {
+      "version": "0.51.0",
+      "url": "https://github.com/derailed/k9s/releases/download/v0.51.0/k9s_Darwin_arm64.tar.gz",
+      "sha256": "9b8c0e8f461e5d33aeee43a67f5ef4aff646a008a786887b8266cbb153c610cc"
+    },
+    "downloads/gh-dash_v4.26.0_darwin-arm64": {
+      "version": "4.26.0",
+      "url": "https://github.com/dlvhdr/gh-dash/releases/download/v4.26.0/gh-dash_v4.26.0_darwin-arm64",
+      "sha256": "3bcb088df5668a1b53f213a7a889b19a0eda59be48d44a3586ec54fc778494d1"
+    },
+    "downloads/k9s-v0.51.0-source.tar.gz": {
+      "version": "0.51.0",
+      "url": "https://api.github.com/repos/derailed/k9s/tarball/v0.51.0",
+      "sha256": "393ffa8bdb3c450677ef68e6926c6d54a181c603667e6cd1b1a88118dede12fa"
+    },
+    "downloads/gh-dash-v4.26.0-source.tar.gz": {
+      "version": "4.26.0",
+      "url": "https://api.github.com/repos/dlvhdr/gh-dash/tarball/v4.26.0",
+      "sha256": "e1dc32c6d04c35ce6bb00ca8ce47993a85b3f46da30edab63da8e73ea537f289"
+    },
+    "downloads/vscode-1.143.1-source.tar.gz": {
+      "version": "1.143.1",
+      "url": "https://github.com/microsoft/vscode/archive/refs/tags/1.143.1.tar.gz",
+      "sha256": "d0aa0fe95602998ecdab87a1f51139455b43486a3a8b50f7f62f6b459ffd31a8"
+    },
+    "downloads/fsyh-v1.67.tar.gz": {
+      "version": "1.67",
+      "url": "https://api.github.com/repos/z-shell/F-Sy-H/tarball/v1.67",
+      "sha256": "209e60d1b377d108e462f1477161652e35f9cb29788722bc83cb1b390f5c23c7"
+    },
+    "upstream/zed-schema.json": {
+      "version": "0.2.0",
+      "url": "https://zed.dev/schema/themes/v0.2.0.json",
+      "sha256": "c5a82ba7b133adfd48f60b88daa472d81ade95b78ce85e9a2ef2aef6ca2ba43e"
+    },
+    "upstream/terminal-schema.json": {
+      "version": "1.25.2733.0",
+      "url": "https://raw.githubusercontent.com/microsoft/terminal/v1.25.2733.0/doc/cascadia/profiles.schema.json",
+      "sha256": "f4cd52374a90f1ab05d6eafc1eb3fa84758a8f10825554de588a7d77c29bf0bd"
+    },
+    "upstream/helix-themes.md": {
+      "version": "25.07.1",
+      "url": "https://raw.githubusercontent.com/helix-editor/helix/25.07.1/book/src/themes.md",
+      "sha256": "29e3fe06c100aba8432d100aa69ee31ef9261aec3c4cb37e2acd7b52ae2f886b"
+    },
+    "upstream/iterm-colors.plist": {
+      "version": "3.6.6",
+      "url": "https://raw.githubusercontent.com/gnachman/iTerm2/v3.6.6/plists/ColorPresets.plist",
+      "sha256": "8815e8e2654a4ab9d6059e72827946cf3fe0768ba3b64310d00b00ee3cb52e71"
+    },
+    "upstream/claude-terminal.md": {
+      "version": "2.1.310; documentation retrieved 2026-10-24",
+      "url": "https://code.claude.com/docs/en/terminal-config.md",
+      "sha256": "72ababcba94144866583daa723b17d737a583e73f2af6f039b3550e1b3054841"
+    },
+    "upstream/vscode-colors.md": {
+      "version": "a03090533810eb02e5b9a2a650e2a3df32192b42",
+      "url": "https://raw.githubusercontent.com/microsoft/vscode-docs/a03090533810eb02e5b9a2a650e2a3df32192b42/api/references/theme-color.md",
+      "sha256": "7a8d4c9dcd7c420b4cc2dfb7db3e4c582000c597508f4ea74df9102c075913a1"
+    }
+  },
+  "checkout": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+  "setup_python": "e797f83bcb11b83ae66e0230d6156d7c80228e7c",
+  "setup_node": "a0853c24544627f65ddf259abe73b1d18a591444",
+  "setup_uv": "1c37ad07a6a961277cf70c0d37d6f313000f5884",
+  "setup_go": "b7ad1dad31e06c5925ef5d2fc7ad053ef454303e",
+  "node_packages": {
+    "@playwright/test": "1.56.1",
+    "impeccable": "4.7.0",
+    "markdownlint-cli2": "0.23.2",
+    "prettier": "3.9.6",
+    "pyright": "1.1.407",
+    "stylelint": "16.25.0",
+    "stylelint-config-standard": "39.0.1"
+  },
+  "python_packages": {
+    "fonttools": "4.60.1",
+    "ruff": "0.14.2",
+    "mypy": "1.18.2",
+    "codespell": "2.4.3",
+    "jsonschema": "4.25.1",
+    "types-jsonschema": "4.25.1.20251009",
+    "uharfbuzz": "0.57.0"
+  },
+  "checked": "2026-10-24"
+}

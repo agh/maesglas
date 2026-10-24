@@ -1,0 +1,18 @@
+[delta "maesglas-shale"]
+    dark = true
+    syntax-theme = maesglas-shale
+    minus-style = "syntax #2B1E1B"
+    plus-style = "syntax #1B241B"
+    minus-emph-style = "#F1F6F0 #372723"
+    plus-emph-style = "#F1F6F0 #232F23"
+    zero-style = "syntax #0D1613"
+    line-numbers-minus-style = "#CDD7D0"
+    line-numbers-plus-style = "#CDD7D0"
+    line-numbers-zero-style = "#CDD7D0"
+    line-numbers-left-style = "#CDD7D0"
+    line-numbers-right-style = "#CDD7D0"
+    file-style = "bold #F1F6F0"
+    file-decoration-style = "#90A49C box"
+    hunk-header-style = "#9FBDD5"
+    hunk-header-decoration-style = "#90A49C box"
+    keep-plus-minus-markers = true

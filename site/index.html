@@ -1,0 +1,1363 @@
+<!doctype html>
+<html lang="en" data-theme="chalk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Maesglas, a terminal design system in mineral and ink.">
+    <title>Maesglas</title>
+    <script src="choice.js"></script>
+    <link rel="icon" href="mark-16.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="appearance.css">
+    <link rel="stylesheet" href="layout.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="masthead">
+      <a href="#main" class="home" aria-label="Maesglas home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Maesglas"><defs><clipPath id="cut"><path d="M6 6H58V54L46 42H18L6 54Z"/></clipPath></defs><path d="M12 50V14L32 34L52 14V50" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="butt" stroke-linejoin="bevel" clip-path="url(#cut)"/></svg>
+
+        <span>Maesglas</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#palette">Palette</a>
+        <a href="#type">Type</a>
+        <a href="#install">Install</a>
+        <button type="button" id="theme">Use Shale</button>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="opening" aria-labelledby="title">
+        <h1 id="title">Maesglas</h1>
+        <p class="intro">A terminal in mineral and ink.</p>
+        <p>Chalk is light. Shale is dark. Both keep color readable.</p>
+      </section>
+      <section class="plates" aria-labelledby="specimen-title">
+        <div class="plate-controls">
+          <h2 id="specimen-title">At the terminal</h2>
+          <label for="scene">View
+            <select id="scene"><option value="home">Home</option>
+<option value="repository">Git status</option>
+<option value="diff">Diff</option>
+<option value="code" selected>Python</option>
+<option value="directory">Directory</option>
+<option value="nano">nano</option>
+<option value="review">Review</option></select>
+          </label>
+        </div>
+        <figure>
+          <div class="plate-scroll" tabindex="0" role="region"
+            aria-label="Scrollable terminal specimen">
+            <img id="plate" src="specimens/chalk/code.svg" width="800" height="372"
+              alt="Synthetic code: upright comments, colored syntax, and literal punctuation.">
+          </div>
+          <figcaption>Drawn from the palette, not captured from an application.
+            macOS reference: 15 CSS px, 9 CSS px cells, and an 8.1 CSS px x-height.
+            <a href="#type-measured-macos-reference">How the size was measured</a>.</figcaption>
+        </figure>
+        <details class="transcript">
+          <summary>Read the specimen as plain text</summary>
+          <pre id="plain"># Keep names upright. Let punctuation stay punctuation.
+from dataclasses import dataclass
+
+@dataclass(frozen=True)
+class Plot:
+    name: str
+    rows: int = 12
+
+def harvest(plot: Plot) -&gt; str:
+    label = f&quot;{plot.name}: {plot.rows} rows&quot;
+    return label
+
+# 0O 1lI  {} [] ()  != &lt;= -&gt;  &#x27;single&#x27; &quot;double&quot;</pre>
+        </details>
+      </section>
+      <section id="palette" aria-labelledby="palette-title">
+        <div class="section-heading">
+          <h2 id="palette-title">Palette</h2>
+          <p>Meaning stays in the words. Color separates the parts.</p>
+        </div>
+        <ul class="palette"><li class="swatch-ink"><span class="swatch" aria-hidden="true"></span><span>Reading</span><code data-color="ink">#14231E</code></li>
+<li class="swatch-slate"><span class="swatch" aria-hidden="true"></span><span>Paths / functions</span><code data-color="slate">#2D475A</code></li>
+<li class="swatch-petroleum"><span class="swatch" aria-hidden="true"></span><span>Links / types</span><code data-color="petroleum">#366F72</code></li>
+<li class="swatch-mulberry"><span class="swatch" aria-hidden="true"></span><span>Branches / keywords</span><code data-color="mulberry">#654C75</code></li>
+<li class="swatch-juniper"><span class="swatch" aria-hidden="true"></span><span>Added / strings</span><code data-color="juniper">#38573C</code></li>
+<li class="swatch-bronze"><span class="swatch" aria-hidden="true"></span><span>Warning / numbers</span><code data-color="bronze">#795A2A</code></li>
+<li class="swatch-oxide"><span class="swatch" aria-hidden="true"></span><span>Error / removed</span><code data-color="oxide">#662B24</code></li></ul>
+        <p>Chalk has a slight green cast. Its dark ink holds a long paragraph.
+          Bronze means attention; oxide means an error.
+          A branch keeps its mulberry identity wherever it appears.</p>
+        <p>Every text role and all sixteen ANSI slots clear 4.5:1 on every
+          authored content ground in both variants. Comments are opaque ink,
+          not text made faint. <a href="#contrast">Read the measured pairs</a>.</p>
+      </section>
+      <section id="type" class="type-section" aria-labelledby="type-title">
+        <div class="section-heading">
+          <h2 id="type-title">Typography</h2>
+          <p>Upright text keeps punctuation distinct.</p>
+        </div>
+        <div class="type-sample" aria-label="Character distinction specimen">
+          <p>0O 1lI</p>
+          <p class="punctuation">{ } [ ] ( ) != &lt;= -&gt;</p>
+        </div>
+        <p>Commit Mono supplies the lettering. Its 600-unit advance on a 1000-unit em gives a predictable cell width; the regular and bold files are real 400 and 700 outlines. [checked: Commit Mono 1.143, 2026-10-24]</p>
+<p>Use upright regular text for comments, paths, and branch names. Reserve bold for focus, headings, and urgent state. Programming ligatures are off so the characters you read are the characters you copy.</p>
+<h3 id="type-install-the-face">Install the face</h3>
+<p>Download the <a href="https://github.com/eigilnikolajsen/commit-mono/releases/download/v1.143/CommitMono-1.143.zip">1.143 archive</a>, verify its SHA-256 below, and install its regular, italic, bold, and bold italic files with your operating system&#x27;s font installer. The family name in the files is <code>CommitMono</code>. [checked: Commit Mono 1.143, 2026-10-24]</p>
+<pre><code>f7d1f26a7c7554800a996f76f5d706bf0648b936ca2a66b5bc4d46e3a2c49ed0</code></pre>
+<p>The page uses only upright regular and bold. Its local copies and the shaped outline cache are covered by <a href="#font-notice">the font notice</a>. Font installation is a separate, explicit step.</p>
+<h3 id="type-size-the-pane-not-the-display">Size the pane, not the display</h3>
+<p>The default is 15 pt with 12 pt horizontal padding on each side of each pane. Fit the content in logical display points, not physical pixels:</p>
+<pre><code>panes * (columns * size * advance + 2 * padding) &lt;= display width
+2 * (80 * 15 * 0.6 + 2 * 12) = 1488 pt</code></pre>
+<div class="table-scroll" tabindex="0" role="region" aria-labelledby="type-size-the-pane-not-the-display"><table>
+<tr><th scope="col">Display width in points</th><th scope="col">Two 80-column panes</th><th scope="col">Recommendation</th></tr>
+<tr><td>1280</td><td>Up to 12.83 pt</td><td>Use one pane at 15 pt</td></tr>
+<tr><td>1440</td><td>Up to 14.50 pt</td><td>Use one pane at 15 pt</td></tr>
+<tr><td>1512</td><td>Up to 15.25 pt</td><td>15 pt; zoom for single-pane reading</td></tr>
+<tr><td>1728</td><td>Up to 17.50 pt</td><td>15 pt; zoom for single-pane reading</td></tr>
+<tr><td>1920</td><td>Up to 19.50 pt</td><td>15 pt; zoom for single-pane reading</td></tr>
+</table></div>
+<p>Two panes at 18 pt need 1776 pt. Shrinking below the default to fit another pane is not the recommended layout.</p>
+<h3 id="type-checked-terminal-settings">Checked terminal settings</h3>
+<p>The Ghostty port sets 15 pt, 12 pt padding, 6% extra cell height, no synthetic styles, and contextual spacing with <code>calt=1</code>. The <code>ss01=0</code>, <code>ss02=0</code>, <code>liga=0</code>, and <code>dlig=0</code> settings preserve the default letterforms without programming ligatures. It binds <code>Super+Shift+Enter</code> to split zoom. This enlarges the active pane, not the font. On macOS, the text-size defaults are <code>Command+=</code> or <code>Command++</code> to increase, <code>Command+-</code> to decrease, and <code>Command+0</code> to reset the active surface. Enlarge the reading pane, then reset its text size before returning to two panes. [checked: Ghostty 1.3.1, 2026-10-24]</p>
+<p>The terminal supplies the face to nano, Vim, and the command-line ports. They do not install or choose a second face. [checked: nano 9.2 and Vim 9.1, 2026-10-24]</p>
+<h3 id="type-unverified-application-settings">Unverified application settings</h3>
+<p>These font settings are starting points, separate from the validated color ports. Each needs a native font and layout check before adoption.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-labelledby="type-unverified-application-settings"><table>
+<tr><th scope="col">Application</th><th scope="col">Intended setting</th><th scope="col">Status</th></tr>
+<tr><td>iTerm2</td><td>Text: CommitMono Regular 15; disable ligatures</td><td>[unchecked]</td></tr>
+<tr><td>Terminal.app</td><td>Profile font: CommitMono Regular 15</td><td>[unchecked]</td></tr>
+<tr><td>Alacritty</td><td><code>font.normal.family = &quot;CommitMono&quot;</code>; <code>font.size = 15</code></td><td>[unchecked]</td></tr>
+<tr><td>kitty</td><td><code>font_family CommitMono</code>; <code>font_size 15</code>; <code>disable_ligatures always</code></td><td>[unchecked]</td></tr>
+<tr><td>WezTerm</td><td><code>font = wezterm.font(&quot;CommitMono&quot;)</code>; <code>font_size = 15</code></td><td>[unchecked]</td></tr>
+<tr><td>Windows Terminal</td><td><code>font.face: &quot;CommitMono&quot;</code>; <code>font.size: 15</code></td><td>[unchecked]</td></tr>
+<tr><td>VS Code</td><td><code>editor.fontFamily: &quot;CommitMono&quot;</code>; size 16; line height 26; ligatures off</td><td>[unchecked]</td></tr>
+<tr><td>Zed</td><td><code>buffer_font_family: &quot;CommitMono&quot;</code>; size 16; ligatures off</td><td>[unchecked]</td></tr>
+<tr><td>Helix and Neovim</td><td>Use the terminal&#x27;s face and cell geometry</td><td>[unchecked]</td></tr>
+</table></div>
+<h3 id="type-measured-macos-reference">Measured macOS reference</h3>
+<p>CoreText measures the settled 15 pt face as 9-point cells with an 8.1-point x-height. The reference specimen therefore uses 15 CSS px: 9 CSS px cells and an 8.1 CSS px x-height on the Mac, where logical points and CSS px agree. A 20 CSS px drawing would have 12 CSS px cells, one-third larger; it is not the macOS terminal reference. [checked: Commit Mono 1.143, CoreText on macOS, 2026-10-24]</p>
+<p>Browser CSS points use a different unit conversion. Other applications and platforms require their own measurement; there is no universal integrated-terminal pixel target. Verify <code>0O</code>, <code>1lI</code>, quotes, braces, and arrow punctuation with the delivered font.</p>
+<p>The site, native font-feature settings, and shaped outlines use <code>calt=1</code>, <code>ss01=0</code>, <code>ss02=0</code>, <code>liga=0</code>, and <code>dlig=0</code>. The outline extractor shapes complete lines before applying syntax colors, so contextual spacing also crosses color boundaries. Every shaped glyph retains its 600-unit advance and every character retains its own glyph; no programming ligatures are introduced. [checked: Commit Mono 1.143 and uharfbuzz 0.57.0, 2026-10-24]</p>
+        <p><a href="typography.md" download>Download the typography source</a>.</p>
+      </section>
+      <section id="install" aria-labelledby="install-title">
+        <h2 id="install-title">Install</h2>
+        <p><a class="download" href="maesglas.zip" download>Download the ports</a>
+          <a href="#port-notes">Validation and limitations</a></p>
+        <p>Choose one variant across the terminal and its tools. The examples use <code>chalk</code>; substitute <code>shale</code> for the dark companion. Set <code>THEME_DIR</code> to the destination you chose for that application. Back up existing files before copying. These files change appearance, not your shell setup.</p>
+<p>Extract the ports archive and run the copy commands from its root, where the <code>ports/</code> directory lives. The same commands work from the repository root.</p>
+<p>Install the face separately using the <a href="#type">typography guide</a>. Fonts are not included in the ports. Maesglas is independent of every tool listed below.</p>
+<details>
+<summary>Ghostty</summary>
+<p>Load the file with <code>config-file</code>. [checked: Ghostty 1.3.1, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/ghostty/maesglas-chalk.conf &quot;$THEME_DIR/maesglas-chalk.conf&quot;</code></pre>
+<p>After copying, load the preset with the following setting. Replace <code>/path/to</code> with your chosen directory when editing a configuration file. [checked: Ghostty 1.3.1, 2026-10-24]</p>
+<pre><code>config-file = /path/to/maesglas-chalk.conf</code></pre>
+</details>
+<details>
+<summary>Starship</summary>
+<p>Point <code>STARSHIP_CONFIG</code> at the preset. [checked: Starship 1.27.0, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/starship/maesglas-chalk.toml &quot;$THEME_DIR/maesglas-chalk.toml&quot;</code></pre>
+<p>After copying, load the preset with the following setting. Replace <code>/path/to</code> with your chosen directory when editing a configuration file. [checked: Starship 1.27.0, 2026-10-24]</p>
+<pre><code>export STARSHIP_CONFIG=&quot;$THEME_DIR/maesglas-chalk.toml&quot;</code></pre>
+</details>
+<details>
+<summary>Vim</summary>
+<p>Source the appearance file after your other settings. [checked: Vim 9.1, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/vim/maesglas-chalk.vim &quot;$THEME_DIR/maesglas-chalk.vim&quot;</code></pre>
+</details>
+<details>
+<summary>bat and delta</summary>
+<p>Build the theme cache before selecting the theme. [checked: bat 0.26.1 and delta 0.20.1, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/textmate/maesglas-chalk.tmTheme &quot;$THEME_DIR/maesglas-chalk.tmTheme&quot;</code></pre>
+</details>
+<details>
+<summary>delta</summary>
+<p>Include the file, then compose the named feature. [checked: delta 0.20.1, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/delta/maesglas-chalk.gitconfig &quot;$THEME_DIR/maesglas-chalk.gitconfig&quot;</code></pre>
+</details>
+<details>
+<summary>Git</summary>
+<p>Include the file; identity and signing remain unchanged. [checked: Git 2.56.0, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/git/maesglas-chalk.gitconfig &quot;$THEME_DIR/maesglas-chalk.gitconfig&quot;</code></pre>
+</details>
+<details>
+<summary>nano</summary>
+<p>Include the file after other appearance settings. [checked: nano 9.2, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/nano/maesglas-chalk.nanorc &quot;$THEME_DIR/maesglas-chalk.nanorc&quot;</code></pre>
+</details>
+<details>
+<summary>fzf</summary>
+<p>Source the file after other picker options. [checked: fzf 0.74.5, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/fzf/maesglas-chalk.sh &quot;$THEME_DIR/maesglas-chalk.sh&quot;</code></pre>
+</details>
+<details>
+<summary>tmux</summary>
+<p>Source the file from your configuration. [checked: tmux 3.8, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/tmux/maesglas-chalk.conf &quot;$THEME_DIR/maesglas-chalk.conf&quot;</code></pre>
+</details>
+<details>
+<summary>eza</summary>
+<p>Copy the file as <code>theme.yml</code> in <code>EZA_CONFIG_DIR</code>. [checked: eza 0.23.5, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/eza/maesglas-chalk.yml &quot;$THEME_DIR/theme.yml&quot;</code></pre>
+</details>
+<details>
+<summary>glow</summary>
+<p>Pass the file to <code>glow --style</code>. [checked: glow 3.0.0, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/glow/maesglas-chalk.json &quot;$THEME_DIR/maesglas-chalk.json&quot;</code></pre>
+</details>
+<details>
+<summary>lazygit</summary>
+<p>Merge the <code>gui</code> mapping into your configuration. [checked: lazygit 0.66.2, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/lazygit/maesglas-chalk.yml &quot;$THEME_DIR/maesglas-chalk.yml&quot;</code></pre>
+</details>
+<details>
+<summary>yazi</summary>
+<p>Copy as <code>theme.toml</code>; use the matching terminal variant. [checked: yazi 26.9.1, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}/flavors&quot;
+cp ports/yazi/maesglas-chalk.toml &quot;$THEME_DIR/theme.toml&quot; &amp;&amp; cp -R ports/yazi/maesglas-chalk.yazi &quot;$THEME_DIR/flavors/&quot;</code></pre>
+</details>
+<details>
+<summary>Alacritty</summary>
+<p>Import the file from <code>[general].import</code>. [checked: Alacritty 0.17.0, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/alacritty/maesglas-chalk.toml &quot;$THEME_DIR/maesglas-chalk.toml&quot;</code></pre>
+</details>
+<details>
+<summary>kitty</summary>
+<p>Include the file from your configuration. [checked: kitty 0.49.2, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/kitty/maesglas-chalk.conf &quot;$THEME_DIR/maesglas-chalk.conf&quot;</code></pre>
+</details>
+<details>
+<summary>WezTerm</summary>
+<p>Put the file in <code>colors/</code>; select <code>Maesglas Chalk</code>. [checked: WezTerm 20240203-110809-5046fc22, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/wezterm/maesglas-chalk.toml &quot;$THEME_DIR/maesglas-chalk.toml&quot;</code></pre>
+</details>
+<details>
+<summary>Neovim</summary>
+<p>Put the file in <code>colors/</code>; run <code>:colorscheme maesglas-chalk</code>. [checked: Neovim 0.12.6, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/neovim/maesglas-chalk.lua &quot;$THEME_DIR/maesglas-chalk.lua&quot;</code></pre>
+</details>
+<details>
+<summary>Helix</summary>
+<p>Put the file in <code>themes/</code>; select <code>maesglas-chalk</code>. [checked: Helix 25.07.1, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/helix/maesglas-chalk.toml &quot;$THEME_DIR/maesglas-chalk.toml&quot;</code></pre>
+</details>
+<details>
+<summary>VS Code</summary>
+<p>Copy the extension folder, then select Maesglas Chalk. [checked: VS Code 1.143.1, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose an extensions directory}/maesglas&quot;
+cp ports/vscode/*.json ports/vscode/LICENSE &quot;$THEME_DIR/maesglas/&quot;</code></pre>
+</details>
+<details>
+<summary>Zed</summary>
+<p>Put the file in <code>themes/</code>, then select Maesglas Chalk. [checked: Zed schema 0.2.0, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/zed/maesglas-chalk.json &quot;$THEME_DIR/maesglas-chalk.json&quot;</code></pre>
+</details>
+<details>
+<summary>iTerm2</summary>
+<p>Import the file through the profile&#x27;s color presets. [checked: iTerm2 3.6.6, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/iterm2/maesglas-chalk.itermcolors &quot;$THEME_DIR/maesglas-chalk.itermcolors&quot;</code></pre>
+</details>
+<details>
+<summary>Windows Terminal</summary>
+<p>Add the object to <code>schemes</code>; select <code>Maesglas Chalk</code>. [checked: Windows Terminal 1.25.2733.0, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/windows-terminal/maesglas-chalk.json &quot;$THEME_DIR/maesglas-chalk.json&quot;</code></pre>
+</details>
+<details>
+<summary>k9s</summary>
+<p>Put the file in <code>skins/</code>; set <code>k9s.ui.skin: maesglas-chalk</code>. [checked: k9s 0.51.0, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/k9s/maesglas-chalk.yaml &quot;$THEME_DIR/maesglas-chalk.yaml&quot;</code></pre>
+</details>
+<details>
+<summary>gh-dash</summary>
+<p>Merge the <code>theme</code> mapping into your configuration. Fixed status icons are not contrast-certified; see the port notes. [checked: gh-dash 4.26.0, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/gh-dash/maesglas-chalk.yml &quot;$THEME_DIR/maesglas-chalk.yml&quot;</code></pre>
+</details>
+<details>
+<summary>fast-syntax-highlighting</summary>
+<p>Source the file after loading the plugin. [checked: fast-syntax-highlighting 1.67, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/fast-syntax-highlighting/maesglas-chalk.zsh &quot;$THEME_DIR/maesglas-chalk.zsh&quot;</code></pre>
+</details>
+<p>For cache setup, feature composition, validation methods, and limitations, read the <a href="#port-notes">port notes</a>. Unverified formats are omitted.</p>
+<h3 id="install-font-setup">Font setup</h3>
+<p>Download the <a href="https://github.com/eigilnikolajsen/commit-mono/releases/download/v1.143/CommitMono-1.143.zip">1.143 archive</a>, verify its SHA-256 below, and install its regular, italic, bold, and bold italic files with your operating system&#x27;s font installer. The family name in the files is <code>CommitMono</code>. [checked: Commit Mono 1.143, 2026-10-24]</p>
+<pre><code>f7d1f26a7c7554800a996f76f5d706bf0648b936ca2a66b5bc4d46e3a2c49ed0</code></pre>
+<p>The page uses only upright regular and bold. Its local copies and the shaped outline cache are covered by <a href="#font-notice">the font notice</a>. Font installation is a separate, explicit step.</p>
+<p>Continue with <a href="#type">font settings and pane arithmetic</a>.</p>
+        <p><a href="installation.md" download>Download the installation source</a>.</p>
+        <details>
+          <summary>Included ports</summary>
+          <p>Ghostty, Starship, Vim, bat and delta, delta, Git, nano, fzf, tmux, eza, glow, lazygit, yazi, Alacritty, kitty, WezTerm, Neovim, Helix, VS Code, Zed, iTerm2, Windows Terminal, k9s, gh-dash, fast-syntax-highlighting. See the installation notes for dated validation methods
+            and limitations. [checked: port set 2026.10.0, 2026-10-24]</p>
+        </details>
+      </section>
+      <section id="port-notes" class="guidance" aria-labelledby="port-notes-title">
+        <h2 id="port-notes-title">Port reference</h2>
+        <details>
+          <summary>Validation, cache setup, and limitations</summary>
+          <p>Every shipped port is generated. The gate runs native parsers, renderers, published schemas, or documented key checks in disposable configuration and cache directories. The method column is the boundary: a schema check does not establish application import or rendering.</p>
+<h3 id="port-notes-tested-scope">Tested scope</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-labelledby="port-notes-tested-scope"><table>
+<tr><th scope="col">Port</th><th scope="col">Validation method</th><th scope="col">Version and date</th></tr>
+<tr><td>Ghostty</td><td><code>+validate-config</code> on both complete files; macOS only</td><td>[checked: Ghostty 1.3.1, 2026-10-24]</td></tr>
+<tr><td>Starship</td><td><code>print-config</code> and prompt rendering in a synthetic repository</td><td>[checked: Starship 1.27.0, 2026-10-24]</td></tr>
+<tr><td>Vim</td><td>Headless load and highlight query</td><td>[checked: Vim 9.1, 2026-10-24]</td></tr>
+<tr><td>bat and delta</td><td>Theme cache build, named-theme listing, and syntax rendering</td><td>[checked: bat 0.26.1 and delta 0.20.1, 2026-10-24]</td></tr>
+<tr><td>delta</td><td>Named-feature diff rendering using the generated syntax theme</td><td>[checked: delta 0.20.1, 2026-10-24]</td></tr>
+<tr><td>Git</td><td>Parse every color with <code>config --get-color</code></td><td>[checked: Git 2.56.0, 2026-10-24]</td></tr>
+<tr><td>nano</td><td>PTY startup for all ten named syntaxes</td><td>[checked: nano 9.2, 2026-10-24]</td></tr>
+<tr><td>fzf</td><td>Native picker startup with generated color options</td><td>[checked: fzf 0.74.5, 2026-10-24]</td></tr>
+<tr><td>tmux</td><td>Independent server, source file, and option queries</td><td>[checked: tmux 3.8, 2026-10-24]</td></tr>
+<tr><td>eza</td><td>Classified fixture listing with the generated theme</td><td>[checked: eza 0.23.5, 2026-10-24]</td></tr>
+<tr><td>glow</td><td>Markdown and code rendering through the style loader</td><td>[checked: glow 3.0.0, 2026-10-24]</td></tr>
+<tr><td>lazygit</td><td>PTY startup in a disposable repository</td><td>[checked: lazygit 0.66.2, 2026-10-24]</td></tr>
+<tr><td>yazi</td><td>PTY startup with isolated configuration</td><td>[checked: yazi 26.9.1, 2026-10-24]</td></tr>
+<tr><td>Alacritty</td><td>Native <code>migrate --dry-run</code> TOML loader</td><td>[checked: Alacritty 0.17.0, 2026-10-24]</td></tr>
+<tr><td>kitty</td><td>Native <code>+runpy</code> and <code>kitty.config.load_config</code>; every color queried</td><td>[checked: kitty 0.49.2, 2026-10-24]</td></tr>
+<tr><td>WezTerm</td><td>Native <code>show-keys</code> with <code>color.load_scheme</code> and exact Lua assertions</td><td>[checked: WezTerm 20240203-110809-5046fc22, 2026-10-24]</td></tr>
+<tr><td>Neovim</td><td><code>--headless</code> colorscheme load; every authored highlight and ANSI slot queried</td><td>[checked: Neovim 0.12.6, 2026-10-24]</td></tr>
+<tr><td>Helix</td><td>Published theme keys and native PTY theme loading</td><td>[checked: Helix 25.07.1, 2026-10-24]</td></tr>
+<tr><td>VS Code</td><td>Official color-theme schema evaluated from pinned source, plus color registry</td><td>[checked: VS Code 1.143.1, 2026-10-24]</td></tr>
+<tr><td>Zed</td><td>Published theme schema 0.2.0; unknown properties rejected</td><td>[checked: Zed schema 0.2.0, 2026-10-24]</td></tr>
+<tr><td>iTerm2</td><td><code>plutil -lint</code>, upstream preset keys, and exact sRGB round-trip</td><td>[checked: iTerm2 3.6.6, 2026-10-24]</td></tr>
+<tr><td>Windows Terminal</td><td>Microsoft settings schema, with the scheme in <code>schemes</code></td><td>[checked: Windows Terminal 1.25.2733.0, 2026-10-24]</td></tr>
+<tr><td>k9s</td><td>Upstream <code>NewStyles().Load</code> parser and embedded schema; all colors queried</td><td>[checked: k9s 0.51.0, 2026-10-24]</td></tr>
+<tr><td>gh-dash</td><td>Upstream <code>ParseConfig</code> and theme initialization; all theme fields queried</td><td>[checked: gh-dash 4.26.0, 2026-10-24]</td></tr>
+<tr><td>fast-syntax-highlighting</td><td>Pinned plugin loaded in isolated Zsh; active and recursive styles</td><td>[checked: fast-syntax-highlighting 1.67, 2026-10-24]</td></tr>
+</table></div>
+<h3 id="port-notes-additional-port-installation">Additional port installation</h3>
+<p>Choose the application-specific destination as <code>THEME_DIR</code>. Each example has one preparation line and one copy line. Substitute <code>shale</code> for <code>chalk</code>, except that the editor extension includes both variants.</p>
+<details>
+<summary>Alacritty</summary>
+<p>Import the file from <code>[general].import</code>. [checked: Alacritty 0.17.0, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/alacritty/maesglas-chalk.toml &quot;$THEME_DIR/maesglas-chalk.toml&quot;</code></pre>
+</details>
+<details>
+<summary>kitty</summary>
+<p>Include the file from your configuration. [checked: kitty 0.49.2, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/kitty/maesglas-chalk.conf &quot;$THEME_DIR/maesglas-chalk.conf&quot;</code></pre>
+</details>
+<details>
+<summary>WezTerm</summary>
+<p>Put the file in <code>colors/</code>; select <code>Maesglas Chalk</code>. [checked: WezTerm 20240203-110809-5046fc22, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/wezterm/maesglas-chalk.toml &quot;$THEME_DIR/maesglas-chalk.toml&quot;</code></pre>
+</details>
+<details>
+<summary>Neovim</summary>
+<p>Put the file in <code>colors/</code>; run <code>:colorscheme maesglas-chalk</code>. [checked: Neovim 0.12.6, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/neovim/maesglas-chalk.lua &quot;$THEME_DIR/maesglas-chalk.lua&quot;</code></pre>
+</details>
+<details>
+<summary>Helix</summary>
+<p>Put the file in <code>themes/</code>; select <code>maesglas-chalk</code>. [checked: Helix 25.07.1, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/helix/maesglas-chalk.toml &quot;$THEME_DIR/maesglas-chalk.toml&quot;</code></pre>
+</details>
+<details>
+<summary>VS Code</summary>
+<p>Copy the extension folder, then select Maesglas Chalk. [checked: VS Code 1.143.1, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose an extensions directory}/maesglas&quot;
+cp ports/vscode/*.json ports/vscode/LICENSE &quot;$THEME_DIR/maesglas/&quot;</code></pre>
+</details>
+<details>
+<summary>Zed</summary>
+<p>Put the file in <code>themes/</code>, then select Maesglas Chalk. [checked: Zed schema 0.2.0, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/zed/maesglas-chalk.json &quot;$THEME_DIR/maesglas-chalk.json&quot;</code></pre>
+</details>
+<details>
+<summary>iTerm2</summary>
+<p>Import the file through the profile&#x27;s color presets. [checked: iTerm2 3.6.6, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/iterm2/maesglas-chalk.itermcolors &quot;$THEME_DIR/maesglas-chalk.itermcolors&quot;</code></pre>
+</details>
+<details>
+<summary>Windows Terminal</summary>
+<p>Add the object to <code>schemes</code>; select <code>Maesglas Chalk</code>. [checked: Windows Terminal 1.25.2733.0, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/windows-terminal/maesglas-chalk.json &quot;$THEME_DIR/maesglas-chalk.json&quot;</code></pre>
+</details>
+<details>
+<summary>k9s</summary>
+<p>Put the file in <code>skins/</code>; set <code>k9s.ui.skin: maesglas-chalk</code>. [checked: k9s 0.51.0, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/k9s/maesglas-chalk.yaml &quot;$THEME_DIR/maesglas-chalk.yaml&quot;</code></pre>
+</details>
+<details>
+<summary>gh-dash</summary>
+<p>Merge the <code>theme</code> mapping into your configuration. [checked: gh-dash 4.26.0, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/gh-dash/maesglas-chalk.yml &quot;$THEME_DIR/maesglas-chalk.yml&quot;</code></pre>
+</details>
+<details>
+<summary>fast-syntax-highlighting</summary>
+<p>Source the file after loading the plugin. [checked: fast-syntax-highlighting 1.67, 2026-10-24]</p>
+<pre><code>mkdir -p &quot;${THEME_DIR:?Choose a destination directory}&quot;
+cp ports/fast-syntax-highlighting/maesglas-chalk.zsh &quot;$THEME_DIR/maesglas-chalk.zsh&quot;</code></pre>
+</details>
+<h3 id="port-notes-cache-and-feature-composition">Cache and feature composition</h3>
+<p>Place the TextMate files in the <code>themes</code> directory below <code>BAT_CONFIG_DIR</code>. Run <code>bat cache --build</code>, then select <code>maesglas-chalk</code> or <code>maesglas-shale</code> through <code>BAT_THEME</code>. A rebuilt cache is required after a palette change. [checked: bat 0.26.1 and delta 0.20.1, 2026-10-24]</p>
+<p>Use the same XDG cache root for both tools. Delta reads <code>XDG_CACHE_HOME/bat</code>, not a custom <code>BAT_CACHE_PATH</code>. Build the cache there when composing the tools. [checked: bat 0.26.1 and delta 0.20.1, 2026-10-24]</p>
+<p>Include the delta file from your Git configuration. Add <code>maesglas-chalk</code> to the existing feature list rather than replacing it. Keep behavior features separate from color features. [checked: delta 0.20.1, 2026-10-24]</p>
+<pre><code>[delta]
+    features = review maesglas-chalk
+[delta &quot;review&quot;]
+    side-by-side = true
+[delta &quot;interactive&quot;]
+    features = maesglas-chalk
+    color-only = true
+    side-by-side = false
+    line-numbers = false</code></pre>
+<p>Interactive patch output must retain its patch structure. The palette does not install a pager, rewrite <code>interactive.diffFilter</code>, or turn on side-by-side output by itself. [checked: delta 0.20.1, 2026-10-24]</p>
+<p>The nano port uses terminal slots and default backgrounds. The selected range is bold rather than inverted onto an ink-colored ANSI background. Search uses bold bronze. All ten syntaxes are small regular-expression rules, not language parsers. [checked: nano 9.2, 2026-10-24]</p>
+<p>The fzf fragment leaves color alone under <code>NO_COLOR</code>, <code>TERM=dumb</code>, or redirected output. Source it in the interactive shell after other options. [checked: fzf 0.74.5, 2026-10-24]</p>
+<p>The glow port renders code blocks in plain ink. Its embedded syntax formatter reduces colors to the fixed 256-color cube, and the CLI does not expose the formatter override. Plain code avoids a second, uncontrolled palette. [checked: glow 3.0.0, 2026-10-24]</p>
+<p>The Yazi file clears the default colored icon tables. File kinds use letters, paths, and permission text instead of private-use glyphs. Its flavor includes the matching syntax theme. Copy the complete flavor directory, not just the selection file. [checked: yazi 26.9.1, 2026-10-24]</p>
+<h3 id="port-notes-rulings-and-limitations">Rulings and limitations</h3>
+<p>LEG-01: the editor extension emits <code>editor.findMatchForeground</code> and <code>editor.findMatchHighlightForeground</code> as ink. Its <code>match</code> and <code>match-active</code> grounds are lighter than the original search grounds. The gate audits every emitted syntax foreground on both actual match fills, not only the replacement ink. [checked: VS Code 1.143.1, 2026-10-24]</p>
+<p>FG-CLAUDE-LIGHTBASE was evaluated against all six installed base registries and all 72 accepted color tokens. A fully overridden candidate fixes every configurable foreground, including the misleadingly named <code>background</code> accent and the two word-diff tokens used for <code>+N</code> and <code>-N</code> counters. The same word tokens also paint inline backgrounds; inline word text inherits the normal text role, with no independent foreground override. Making the counters readable therefore makes word-diff text unreadable, so this format is omitted. [checked: Claude Code 2.1.310, 2026-10-24]</p>
+<p>Claude Code compatibility is a factual product statement, not an endorsement: Maesglas is independent of Anthropic. The format also cannot replace <code>dimColor</code> or <code>faint</code> attributes, literal syntax-formatter colors, or external-tool output. The check inspected the installed renderer without starting an authenticated session. [checked: Claude Code 2.1.310, 2026-10-24]</p>
+<div class="table-scroll" tabindex="0" role="region" aria-labelledby="port-notes-rulings-and-limitations"><table>
+<tr><th scope="col">Shared-token bound</th><th scope="col">Chalk</th><th scope="col">Shale</th></tr>
+<tr><td>Best possible simultaneous counter/word contrast</td><td>3.845:1</td><td>4.100:1</td></tr>
+</table></div>
+<p>The bound is the square root of ink/canvas contrast: a shared color must contrast with the canvas as foreground and with ink as background. Both maxima are below 4.5:1. The gate reproduces this blocker instead of exempting either failing pair. Its inputs and measured candidate pairs are in <code>identity/port-validation.json</code>. [checked: Claude Code 2.1.310, 2026-10-24]</p>
+<p>FG-K9S-TRUECOLOR: every native skin color, including chart arrays, resource maps, help, prompt borders, and logo messages, is palette hex. The parsed skin retains these hex values throughout. The YAML files use JSON syntax, a YAML-compatible representation. [checked: k9s 0.51.0, 2026-10-24]</p>
+<p>FG-GHDASH-KEYS uses the actual 4.26 parser fields: <code>text.actor</code>, <code>background.selected</code>, the three border fields, and the six author association icon fields. FG-GHDASH-INVERTED assigns ink to <code>inverted</code>; COV-05 assigns the warning slot to <code>warning</code>, not the number or error slot. Both parsed values and initialized theme colors are queried. [checked: gh-dash 4.26.0, 2026-10-24]</p>
+<p>FG-GHDASH-ICONS: issue and pull-request state icons, the merged glyph, the logo, and API-supplied label colors are not configurable through the theme. The parser accepts <code>icon.unknownrole</code>, but theme initialization leaves that color at fixed index 178. These upstream colors are not Maesglas colors, and several fail 4.5:1. The port does not make the entire application contrast-compliant. [checked: gh-dash 4.26.0, 2026-10-24]</p>
+<p>COV-01: the shell theme replaces the complete style registry after the plugin loads. Primary, default, and recursive namespaces use semantic ANSI foregrounds; there are no fixed xterm-256 indices, ANSI-background inversions, or unthemed secondary themes. Use the matching terminal variant. [checked: fast-syntax-highlighting 1.67, 2026-10-24]</p>
+<h3 id="port-notes-omitted-formats">Omitted formats</h3>
+<p>Omitted formats have no shipped draft files and make no compatibility claims.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-labelledby="port-notes-omitted-formats"><table>
+<tr><th scope="col">Format</th><th scope="col">Reason</th></tr>
+<tr><td>btop</td><td>Its native banner uses foreground colors that the theme cannot replace. Observed <code>#787878</code> reaches 4.007:1 on Chalk and 4.168:1 on Shale. The input and source are in <code>identity/rejections.json</code>. [checked: btop 1.4.7, 2026-10-24]</td></tr>
+<tr><td>Claude Code</td><td>Counter foregrounds and word-diff backgrounds share tokens; the format cannot override word-diff text independently. Shared colors cannot meet both 4.5:1 pairs with the Maesglas canvas and ink. The installed-registry digest and proof are in <code>identity/port-validation.json</code>. [checked: Claude Code 2.1.310, 2026-10-24]</td></tr>
+<tr><td>Terminal.app</td><td>Archived-color profile import was not verified. [unchecked]</td></tr>
+<tr><td>Sublime Text</td><td>The TextMate file was not loaded in this application. [unchecked]</td></tr>
+</table></div>
+        </details>
+        <p><a href="ports.md" download>Download the port-notes source</a>.</p>
+      </section>
+      <section id="contrast" class="guidance" aria-labelledby="contrast-title">
+        <h2 id="contrast-title">Measured contrast</h2>
+        <details>
+          <summary>Reading pairs and color-vision separation</summary>
+          <p>The source is <code>identity/maesglas.json</code>. Values below are the delivered 8-bit sRGB colors, not unrounded coordinates or sampled antialiasing.</p>
+<p>Every text role and every ANSI foreground is tested on every content ground. The threshold is 4.5:1 without rounding. Boundaries require 3:1. The bright bank repeats its corresponding accent; weight does not change hue.</p>
+<p>APCA uses SAPC 0.0.98G-4g. Positive Lc is dark text on a light ground. Default prose requires absolute Lc 90 on canvas; comments and line numbers require 75. All three require 60 on emphasis grounds. These are project targets, not a font certification or a claim of WCAG 3 conformance.</p>
+<p>The macOS reference plate uses 15 CSS px regular type: the settled 15 pt face has 9-point cells and an 8.1-point x-height, matching 9 CSS px cells and an 8.1 CSS px x-height on the Mac. Editor guidance uses 16 px regular. Captions use 16 px regular, and headings use the real 700 face. The same contrast thresholds hold at each size. Text remains opaque.</p>
+<h3 id="contrast-delivered-colors">Delivered colors</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-labelledby="contrast-delivered-colors"><table>
+<tr><th scope="col">Primitive</th><th scope="col">Chalk</th><th scope="col">Shale</th></tr>
+<tr><td>canvas</td><td><code>#F1F5F0</code></td><td><code>#0D1613</code></td></tr>
+<tr><td>surface</td><td><code>#E9F0E9</code></td><td><code>#121D19</code></td></tr>
+<tr><td>selection</td><td><code>#D9EBE2</code></td><td><code>#212F2A</code></td></tr>
+<tr><td>search</td><td><code>#F4ECD8</code></td><td><code>#262114</code></td></tr>
+<tr><td>search-active</td><td><code>#F0E6CD</code></td><td><code>#312B1C</code></td></tr>
+<tr><td>match</td><td><code>#F7F2E3</code></td><td><code>#2B2618</code></td></tr>
+<tr><td>match-active</td><td><code>#F6EFDD</code></td><td><code>#332D1E</code></td></tr>
+<tr><td>added</td><td><code>#E6F1E6</code></td><td><code>#1B241B</code></td></tr>
+<tr><td>removed</td><td><code>#FAE9E5</code></td><td><code>#2B1E1B</code></td></tr>
+<tr><td>changed</td><td><code>#F3EDDC</code></td><td><code>#252116</code></td></tr>
+<tr><td>added-word</td><td><code>#DCEBDC</code></td><td><code>#232F23</code></td></tr>
+<tr><td>removed-word</td><td><code>#F7E1DB</code></td><td><code>#372723</code></td></tr>
+<tr><td>ink</td><td><code>#14231E</code></td><td><code>#F1F6F0</code></td></tr>
+<tr><td>secondary</td><td><code>#404D44</code></td><td><code>#CDD7D0</code></td></tr>
+<tr><td>muted</td><td><code>#47514A</code></td><td><code>#C8D3CB</code></td></tr>
+<tr><td>oxide</td><td><code>#662B24</code></td><td><code>#E99E92</code></td></tr>
+<tr><td>bronze</td><td><code>#795A2A</code></td><td><code>#FBDCB2</code></td></tr>
+<tr><td>juniper</td><td><code>#38573C</code></td><td><code>#B2D8B6</code></td></tr>
+<tr><td>slate</td><td><code>#2D475A</code></td><td><code>#9FBDD5</code></td></tr>
+<tr><td>mulberry</td><td><code>#654C75</code></td><td><code>#DECCEA</code></td></tr>
+<tr><td>petroleum</td><td><code>#366F72</code></td><td><code>#C9EDEE</code></td></tr>
+<tr><td>boundary</td><td><code>#53655E</code></td><td><code>#90A49C</code></td></tr>
+</table></div>
+<h3 id="contrast-ansi-assignments">ANSI assignments</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-labelledby="contrast-ansi-assignments"><table>
+<tr><th scope="col">Slot</th><th scope="col">Role</th></tr>
+<tr><td>0</td><td>ink</td></tr>
+<tr><td>1</td><td>oxide</td></tr>
+<tr><td>2</td><td>juniper</td></tr>
+<tr><td>3</td><td>bronze</td></tr>
+<tr><td>4</td><td>slate</td></tr>
+<tr><td>5</td><td>mulberry</td></tr>
+<tr><td>6</td><td>petroleum</td></tr>
+<tr><td>7</td><td>secondary</td></tr>
+<tr><td>8</td><td>muted</td></tr>
+<tr><td>9</td><td>oxide</td></tr>
+<tr><td>10</td><td>juniper</td></tr>
+<tr><td>11</td><td>bronze</td></tr>
+<tr><td>12</td><td>slate</td></tr>
+<tr><td>13</td><td>mulberry</td></tr>
+<tr><td>14</td><td>petroleum</td></tr>
+<tr><td>15</td><td>ink</td></tr>
+</table></div>
+<p>All sixteen slots are text colors, including slot 0. A tool that hard-codes a background from these slots needs a dedicated port. Arbitrary foreground/background permutations, faded SGR text, and the fixed 256-color cube are not authored combinations.</p>
+<h3 id="contrast-chalk-reading-pairs">Chalk reading pairs</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-labelledby="contrast-chalk-reading-pairs"><table>
+<tr><th scope="col">Text</th><th scope="col">Ground</th><th scope="col">WCAG 2</th><th scope="col">APCA Lc</th></tr>
+<tr><td>foreground</td><td>canvas</td><td>14.787</td><td>+96.54</td></tr>
+<tr><td>foreground</td><td>surface</td><td>14.047</td><td>+93.14</td></tr>
+<tr><td>foreground</td><td>selection</td><td>13.137</td><td>+88.86</td></tr>
+<tr><td>foreground</td><td>search</td><td>13.838</td><td>+92.18</td></tr>
+<tr><td>foreground</td><td>search-active</td><td>13.116</td><td>+88.76</td></tr>
+<tr><td>foreground</td><td>match</td><td>14.559</td><td>+95.50</td></tr>
+<tr><td>foreground</td><td>match-active</td><td>14.205</td><td>+93.88</td></tr>
+<tr><td>foreground</td><td>added</td><td>14.035</td><td>+93.09</td></tr>
+<tr><td>foreground</td><td>removed</td><td>13.850</td><td>+92.23</td></tr>
+<tr><td>foreground</td><td>changed</td><td>13.933</td><td>+92.62</td></tr>
+<tr><td>foreground</td><td>added-word</td><td>13.158</td><td>+88.96</td></tr>
+<tr><td>foreground</td><td>removed-word</td><td>12.994</td><td>+88.18</td></tr>
+<tr><td>comment</td><td>canvas</td><td>8.066</td><td>+83.69</td></tr>
+<tr><td>comment</td><td>surface</td><td>7.662</td><td>+80.29</td></tr>
+<tr><td>comment</td><td>selection</td><td>7.165</td><td>+76.00</td></tr>
+<tr><td>comment</td><td>search</td><td>7.548</td><td>+79.32</td></tr>
+<tr><td>comment</td><td>search-active</td><td>7.154</td><td>+75.91</td></tr>
+<tr><td>comment</td><td>match</td><td>7.941</td><td>+82.65</td></tr>
+<tr><td>comment</td><td>match-active</td><td>7.748</td><td>+81.03</td></tr>
+<tr><td>comment</td><td>added</td><td>7.655</td><td>+80.24</td></tr>
+<tr><td>comment</td><td>removed</td><td>7.555</td><td>+79.38</td></tr>
+<tr><td>comment</td><td>changed</td><td>7.600</td><td>+79.76</td></tr>
+<tr><td>comment</td><td>added-word</td><td>7.177</td><td>+76.11</td></tr>
+<tr><td>comment</td><td>removed-word</td><td>7.087</td><td>+75.32</td></tr>
+<tr><td>line-number</td><td>canvas</td><td>7.493</td><td>+81.86</td></tr>
+<tr><td>line-number</td><td>surface</td><td>7.118</td><td>+78.47</td></tr>
+<tr><td>line-number</td><td>selection</td><td>6.656</td><td>+74.18</td></tr>
+<tr><td>line-number</td><td>search</td><td>7.012</td><td>+77.50</td></tr>
+<tr><td>line-number</td><td>search-active</td><td>6.646</td><td>+74.08</td></tr>
+<tr><td>line-number</td><td>match</td><td>7.377</td><td>+80.83</td></tr>
+<tr><td>line-number</td><td>match-active</td><td>7.198</td><td>+79.20</td></tr>
+<tr><td>line-number</td><td>added</td><td>7.111</td><td>+78.41</td></tr>
+<tr><td>line-number</td><td>removed</td><td>7.018</td><td>+77.56</td></tr>
+<tr><td>line-number</td><td>changed</td><td>7.060</td><td>+77.94</td></tr>
+<tr><td>line-number</td><td>added-word</td><td>6.667</td><td>+74.28</td></tr>
+<tr><td>line-number</td><td>removed-word</td><td>6.584</td><td>+73.50</td></tr>
+<tr><td>error</td><td>canvas</td><td>9.845</td><td>+87.97</td></tr>
+<tr><td>error</td><td>surface</td><td>9.352</td><td>+84.57</td></tr>
+<tr><td>error</td><td>selection</td><td>8.746</td><td>+80.29</td></tr>
+<tr><td>error</td><td>search</td><td>9.213</td><td>+83.61</td></tr>
+<tr><td>error</td><td>search-active</td><td>8.732</td><td>+80.19</td></tr>
+<tr><td>error</td><td>match</td><td>9.693</td><td>+86.93</td></tr>
+<tr><td>error</td><td>match-active</td><td>9.457</td><td>+85.31</td></tr>
+<tr><td>error</td><td>added</td><td>9.344</td><td>+84.52</td></tr>
+<tr><td>error</td><td>removed</td><td>9.221</td><td>+83.66</td></tr>
+<tr><td>error</td><td>changed</td><td>9.276</td><td>+84.04</td></tr>
+<tr><td>error</td><td>added-word</td><td>8.760</td><td>+80.39</td></tr>
+<tr><td>error</td><td>removed-word</td><td>8.651</td><td>+79.60</td></tr>
+<tr><td>warning</td><td>canvas</td><td>5.760</td><td>+74.78</td></tr>
+<tr><td>warning</td><td>surface</td><td>5.472</td><td>+71.39</td></tr>
+<tr><td>warning</td><td>selection</td><td>5.117</td><td>+67.10</td></tr>
+<tr><td>warning</td><td>search</td><td>5.390</td><td>+70.42</td></tr>
+<tr><td>warning</td><td>search-active</td><td>5.109</td><td>+67.00</td></tr>
+<tr><td>warning</td><td>match</td><td>5.671</td><td>+73.74</td></tr>
+<tr><td>warning</td><td>match-active</td><td>5.533</td><td>+72.12</td></tr>
+<tr><td>warning</td><td>added</td><td>5.467</td><td>+71.33</td></tr>
+<tr><td>warning</td><td>removed</td><td>5.395</td><td>+70.47</td></tr>
+<tr><td>warning</td><td>changed</td><td>5.427</td><td>+70.86</td></tr>
+<tr><td>warning</td><td>added-word</td><td>5.126</td><td>+67.20</td></tr>
+<tr><td>warning</td><td>removed-word</td><td>5.061</td><td>+66.42</td></tr>
+<tr><td>success</td><td>canvas</td><td>7.340</td><td>+81.26</td></tr>
+<tr><td>success</td><td>surface</td><td>6.973</td><td>+77.87</td></tr>
+<tr><td>success</td><td>selection</td><td>6.521</td><td>+73.58</td></tr>
+<tr><td>success</td><td>search</td><td>6.869</td><td>+76.90</td></tr>
+<tr><td>success</td><td>search-active</td><td>6.510</td><td>+73.48</td></tr>
+<tr><td>success</td><td>match</td><td>7.227</td><td>+80.22</td></tr>
+<tr><td>success</td><td>match-active</td><td>7.051</td><td>+78.60</td></tr>
+<tr><td>success</td><td>added</td><td>6.966</td><td>+77.81</td></tr>
+<tr><td>success</td><td>removed</td><td>6.875</td><td>+76.95</td></tr>
+<tr><td>success</td><td>changed</td><td>6.916</td><td>+77.34</td></tr>
+<tr><td>success</td><td>added-word</td><td>6.531</td><td>+73.68</td></tr>
+<tr><td>success</td><td>removed-word</td><td>6.450</td><td>+72.90</td></tr>
+<tr><td>string</td><td>canvas</td><td>7.340</td><td>+81.26</td></tr>
+<tr><td>string</td><td>surface</td><td>6.973</td><td>+77.87</td></tr>
+<tr><td>string</td><td>selection</td><td>6.521</td><td>+73.58</td></tr>
+<tr><td>string</td><td>search</td><td>6.869</td><td>+76.90</td></tr>
+<tr><td>string</td><td>search-active</td><td>6.510</td><td>+73.48</td></tr>
+<tr><td>string</td><td>match</td><td>7.227</td><td>+80.22</td></tr>
+<tr><td>string</td><td>match-active</td><td>7.051</td><td>+78.60</td></tr>
+<tr><td>string</td><td>added</td><td>6.966</td><td>+77.81</td></tr>
+<tr><td>string</td><td>removed</td><td>6.875</td><td>+76.95</td></tr>
+<tr><td>string</td><td>changed</td><td>6.916</td><td>+77.34</td></tr>
+<tr><td>string</td><td>added-word</td><td>6.531</td><td>+73.68</td></tr>
+<tr><td>string</td><td>removed-word</td><td>6.450</td><td>+72.90</td></tr>
+<tr><td>function</td><td>canvas</td><td>8.822</td><td>+85.79</td></tr>
+<tr><td>function</td><td>surface</td><td>8.380</td><td>+82.39</td></tr>
+<tr><td>function</td><td>selection</td><td>7.837</td><td>+78.10</td></tr>
+<tr><td>function</td><td>search</td><td>8.256</td><td>+81.42</td></tr>
+<tr><td>function</td><td>search-active</td><td>7.825</td><td>+78.01</td></tr>
+<tr><td>function</td><td>match</td><td>8.685</td><td>+84.75</td></tr>
+<tr><td>function</td><td>match-active</td><td>8.475</td><td>+83.13</td></tr>
+<tr><td>function</td><td>added</td><td>8.373</td><td>+82.33</td></tr>
+<tr><td>function</td><td>removed</td><td>8.263</td><td>+81.48</td></tr>
+<tr><td>function</td><td>changed</td><td>8.312</td><td>+81.86</td></tr>
+<tr><td>function</td><td>added-word</td><td>7.850</td><td>+78.20</td></tr>
+<tr><td>function</td><td>removed-word</td><td>7.752</td><td>+77.42</td></tr>
+<tr><td>directory</td><td>canvas</td><td>8.822</td><td>+85.79</td></tr>
+<tr><td>directory</td><td>surface</td><td>8.380</td><td>+82.39</td></tr>
+<tr><td>directory</td><td>selection</td><td>7.837</td><td>+78.10</td></tr>
+<tr><td>directory</td><td>search</td><td>8.256</td><td>+81.42</td></tr>
+<tr><td>directory</td><td>search-active</td><td>7.825</td><td>+78.01</td></tr>
+<tr><td>directory</td><td>match</td><td>8.685</td><td>+84.75</td></tr>
+<tr><td>directory</td><td>match-active</td><td>8.475</td><td>+83.13</td></tr>
+<tr><td>directory</td><td>added</td><td>8.373</td><td>+82.33</td></tr>
+<tr><td>directory</td><td>removed</td><td>8.263</td><td>+81.48</td></tr>
+<tr><td>directory</td><td>changed</td><td>8.312</td><td>+81.86</td></tr>
+<tr><td>directory</td><td>added-word</td><td>7.850</td><td>+78.20</td></tr>
+<tr><td>directory</td><td>removed-word</td><td>7.752</td><td>+77.42</td></tr>
+<tr><td>keyword</td><td>canvas</td><td>6.702</td><td>+78.92</td></tr>
+<tr><td>keyword</td><td>surface</td><td>6.366</td><td>+75.52</td></tr>
+<tr><td>keyword</td><td>selection</td><td>5.954</td><td>+71.23</td></tr>
+<tr><td>keyword</td><td>search</td><td>6.272</td><td>+74.55</td></tr>
+<tr><td>keyword</td><td>search-active</td><td>5.944</td><td>+71.13</td></tr>
+<tr><td>keyword</td><td>match</td><td>6.598</td><td>+77.88</td></tr>
+<tr><td>keyword</td><td>match-active</td><td>6.438</td><td>+76.26</td></tr>
+<tr><td>keyword</td><td>added</td><td>6.361</td><td>+75.46</td></tr>
+<tr><td>keyword</td><td>removed</td><td>6.277</td><td>+74.61</td></tr>
+<tr><td>keyword</td><td>changed</td><td>6.314</td><td>+74.99</td></tr>
+<tr><td>keyword</td><td>added-word</td><td>5.963</td><td>+71.33</td></tr>
+<tr><td>keyword</td><td>removed-word</td><td>5.889</td><td>+70.55</td></tr>
+<tr><td>branch</td><td>canvas</td><td>6.702</td><td>+78.92</td></tr>
+<tr><td>branch</td><td>surface</td><td>6.366</td><td>+75.52</td></tr>
+<tr><td>branch</td><td>selection</td><td>5.954</td><td>+71.23</td></tr>
+<tr><td>branch</td><td>search</td><td>6.272</td><td>+74.55</td></tr>
+<tr><td>branch</td><td>search-active</td><td>5.944</td><td>+71.13</td></tr>
+<tr><td>branch</td><td>match</td><td>6.598</td><td>+77.88</td></tr>
+<tr><td>branch</td><td>match-active</td><td>6.438</td><td>+76.26</td></tr>
+<tr><td>branch</td><td>added</td><td>6.361</td><td>+75.46</td></tr>
+<tr><td>branch</td><td>removed</td><td>6.277</td><td>+74.61</td></tr>
+<tr><td>branch</td><td>changed</td><td>6.314</td><td>+74.99</td></tr>
+<tr><td>branch</td><td>added-word</td><td>5.963</td><td>+71.33</td></tr>
+<tr><td>branch</td><td>removed-word</td><td>5.889</td><td>+70.55</td></tr>
+<tr><td>type</td><td>canvas</td><td>5.188</td><td>+71.77</td></tr>
+<tr><td>type</td><td>surface</td><td>4.929</td><td>+68.37</td></tr>
+<tr><td>type</td><td>selection</td><td>4.609</td><td>+64.08</td></tr>
+<tr><td>type</td><td>search</td><td>4.855</td><td>+67.40</td></tr>
+<tr><td>type</td><td>search-active</td><td>4.602</td><td>+63.99</td></tr>
+<tr><td>type</td><td>match</td><td>5.108</td><td>+70.73</td></tr>
+<tr><td>type</td><td>match-active</td><td>4.984</td><td>+69.11</td></tr>
+<tr><td>type</td><td>added</td><td>4.924</td><td>+68.32</td></tr>
+<tr><td>type</td><td>removed</td><td>4.859</td><td>+67.46</td></tr>
+<tr><td>type</td><td>changed</td><td>4.888</td><td>+67.84</td></tr>
+<tr><td>type</td><td>added-word</td><td>4.617</td><td>+64.19</td></tr>
+<tr><td>type</td><td>removed-word</td><td>4.559</td><td>+63.40</td></tr>
+<tr><td>link</td><td>canvas</td><td>5.188</td><td>+71.77</td></tr>
+<tr><td>link</td><td>surface</td><td>4.929</td><td>+68.37</td></tr>
+<tr><td>link</td><td>selection</td><td>4.609</td><td>+64.08</td></tr>
+<tr><td>link</td><td>search</td><td>4.855</td><td>+67.40</td></tr>
+<tr><td>link</td><td>search-active</td><td>4.602</td><td>+63.99</td></tr>
+<tr><td>link</td><td>match</td><td>5.108</td><td>+70.73</td></tr>
+<tr><td>link</td><td>match-active</td><td>4.984</td><td>+69.11</td></tr>
+<tr><td>link</td><td>added</td><td>4.924</td><td>+68.32</td></tr>
+<tr><td>link</td><td>removed</td><td>4.859</td><td>+67.46</td></tr>
+<tr><td>link</td><td>changed</td><td>4.888</td><td>+67.84</td></tr>
+<tr><td>link</td><td>added-word</td><td>4.617</td><td>+64.19</td></tr>
+<tr><td>link</td><td>removed-word</td><td>4.559</td><td>+63.40</td></tr>
+<tr><td>number</td><td>canvas</td><td>5.760</td><td>+74.78</td></tr>
+<tr><td>number</td><td>surface</td><td>5.472</td><td>+71.39</td></tr>
+<tr><td>number</td><td>selection</td><td>5.117</td><td>+67.10</td></tr>
+<tr><td>number</td><td>search</td><td>5.390</td><td>+70.42</td></tr>
+<tr><td>number</td><td>search-active</td><td>5.109</td><td>+67.00</td></tr>
+<tr><td>number</td><td>match</td><td>5.671</td><td>+73.74</td></tr>
+<tr><td>number</td><td>match-active</td><td>5.533</td><td>+72.12</td></tr>
+<tr><td>number</td><td>added</td><td>5.467</td><td>+71.33</td></tr>
+<tr><td>number</td><td>removed</td><td>5.395</td><td>+70.47</td></tr>
+<tr><td>number</td><td>changed</td><td>5.427</td><td>+70.86</td></tr>
+<tr><td>number</td><td>added-word</td><td>5.126</td><td>+67.20</td></tr>
+<tr><td>number</td><td>removed-word</td><td>5.061</td><td>+66.42</td></tr>
+<tr><td>ANSI 0</td><td>canvas</td><td>14.787</td><td>+96.54</td></tr>
+<tr><td>ANSI 0</td><td>surface</td><td>14.047</td><td>+93.14</td></tr>
+<tr><td>ANSI 0</td><td>selection</td><td>13.137</td><td>+88.86</td></tr>
+<tr><td>ANSI 0</td><td>search</td><td>13.838</td><td>+92.18</td></tr>
+<tr><td>ANSI 0</td><td>search-active</td><td>13.116</td><td>+88.76</td></tr>
+<tr><td>ANSI 0</td><td>match</td><td>14.559</td><td>+95.50</td></tr>
+<tr><td>ANSI 0</td><td>match-active</td><td>14.205</td><td>+93.88</td></tr>
+<tr><td>ANSI 0</td><td>added</td><td>14.035</td><td>+93.09</td></tr>
+<tr><td>ANSI 0</td><td>removed</td><td>13.850</td><td>+92.23</td></tr>
+<tr><td>ANSI 0</td><td>changed</td><td>13.933</td><td>+92.62</td></tr>
+<tr><td>ANSI 0</td><td>added-word</td><td>13.158</td><td>+88.96</td></tr>
+<tr><td>ANSI 0</td><td>removed-word</td><td>12.994</td><td>+88.18</td></tr>
+<tr><td>ANSI 1</td><td>canvas</td><td>9.845</td><td>+87.97</td></tr>
+<tr><td>ANSI 1</td><td>surface</td><td>9.352</td><td>+84.57</td></tr>
+<tr><td>ANSI 1</td><td>selection</td><td>8.746</td><td>+80.29</td></tr>
+<tr><td>ANSI 1</td><td>search</td><td>9.213</td><td>+83.61</td></tr>
+<tr><td>ANSI 1</td><td>search-active</td><td>8.732</td><td>+80.19</td></tr>
+<tr><td>ANSI 1</td><td>match</td><td>9.693</td><td>+86.93</td></tr>
+<tr><td>ANSI 1</td><td>match-active</td><td>9.457</td><td>+85.31</td></tr>
+<tr><td>ANSI 1</td><td>added</td><td>9.344</td><td>+84.52</td></tr>
+<tr><td>ANSI 1</td><td>removed</td><td>9.221</td><td>+83.66</td></tr>
+<tr><td>ANSI 1</td><td>changed</td><td>9.276</td><td>+84.04</td></tr>
+<tr><td>ANSI 1</td><td>added-word</td><td>8.760</td><td>+80.39</td></tr>
+<tr><td>ANSI 1</td><td>removed-word</td><td>8.651</td><td>+79.60</td></tr>
+<tr><td>ANSI 2</td><td>canvas</td><td>7.340</td><td>+81.26</td></tr>
+<tr><td>ANSI 2</td><td>surface</td><td>6.973</td><td>+77.87</td></tr>
+<tr><td>ANSI 2</td><td>selection</td><td>6.521</td><td>+73.58</td></tr>
+<tr><td>ANSI 2</td><td>search</td><td>6.869</td><td>+76.90</td></tr>
+<tr><td>ANSI 2</td><td>search-active</td><td>6.510</td><td>+73.48</td></tr>
+<tr><td>ANSI 2</td><td>match</td><td>7.227</td><td>+80.22</td></tr>
+<tr><td>ANSI 2</td><td>match-active</td><td>7.051</td><td>+78.60</td></tr>
+<tr><td>ANSI 2</td><td>added</td><td>6.966</td><td>+77.81</td></tr>
+<tr><td>ANSI 2</td><td>removed</td><td>6.875</td><td>+76.95</td></tr>
+<tr><td>ANSI 2</td><td>changed</td><td>6.916</td><td>+77.34</td></tr>
+<tr><td>ANSI 2</td><td>added-word</td><td>6.531</td><td>+73.68</td></tr>
+<tr><td>ANSI 2</td><td>removed-word</td><td>6.450</td><td>+72.90</td></tr>
+<tr><td>ANSI 3</td><td>canvas</td><td>5.760</td><td>+74.78</td></tr>
+<tr><td>ANSI 3</td><td>surface</td><td>5.472</td><td>+71.39</td></tr>
+<tr><td>ANSI 3</td><td>selection</td><td>5.117</td><td>+67.10</td></tr>
+<tr><td>ANSI 3</td><td>search</td><td>5.390</td><td>+70.42</td></tr>
+<tr><td>ANSI 3</td><td>search-active</td><td>5.109</td><td>+67.00</td></tr>
+<tr><td>ANSI 3</td><td>match</td><td>5.671</td><td>+73.74</td></tr>
+<tr><td>ANSI 3</td><td>match-active</td><td>5.533</td><td>+72.12</td></tr>
+<tr><td>ANSI 3</td><td>added</td><td>5.467</td><td>+71.33</td></tr>
+<tr><td>ANSI 3</td><td>removed</td><td>5.395</td><td>+70.47</td></tr>
+<tr><td>ANSI 3</td><td>changed</td><td>5.427</td><td>+70.86</td></tr>
+<tr><td>ANSI 3</td><td>added-word</td><td>5.126</td><td>+67.20</td></tr>
+<tr><td>ANSI 3</td><td>removed-word</td><td>5.061</td><td>+66.42</td></tr>
+<tr><td>ANSI 4</td><td>canvas</td><td>8.822</td><td>+85.79</td></tr>
+<tr><td>ANSI 4</td><td>surface</td><td>8.380</td><td>+82.39</td></tr>
+<tr><td>ANSI 4</td><td>selection</td><td>7.837</td><td>+78.10</td></tr>
+<tr><td>ANSI 4</td><td>search</td><td>8.256</td><td>+81.42</td></tr>
+<tr><td>ANSI 4</td><td>search-active</td><td>7.825</td><td>+78.01</td></tr>
+<tr><td>ANSI 4</td><td>match</td><td>8.685</td><td>+84.75</td></tr>
+<tr><td>ANSI 4</td><td>match-active</td><td>8.475</td><td>+83.13</td></tr>
+<tr><td>ANSI 4</td><td>added</td><td>8.373</td><td>+82.33</td></tr>
+<tr><td>ANSI 4</td><td>removed</td><td>8.263</td><td>+81.48</td></tr>
+<tr><td>ANSI 4</td><td>changed</td><td>8.312</td><td>+81.86</td></tr>
+<tr><td>ANSI 4</td><td>added-word</td><td>7.850</td><td>+78.20</td></tr>
+<tr><td>ANSI 4</td><td>removed-word</td><td>7.752</td><td>+77.42</td></tr>
+<tr><td>ANSI 5</td><td>canvas</td><td>6.702</td><td>+78.92</td></tr>
+<tr><td>ANSI 5</td><td>surface</td><td>6.366</td><td>+75.52</td></tr>
+<tr><td>ANSI 5</td><td>selection</td><td>5.954</td><td>+71.23</td></tr>
+<tr><td>ANSI 5</td><td>search</td><td>6.272</td><td>+74.55</td></tr>
+<tr><td>ANSI 5</td><td>search-active</td><td>5.944</td><td>+71.13</td></tr>
+<tr><td>ANSI 5</td><td>match</td><td>6.598</td><td>+77.88</td></tr>
+<tr><td>ANSI 5</td><td>match-active</td><td>6.438</td><td>+76.26</td></tr>
+<tr><td>ANSI 5</td><td>added</td><td>6.361</td><td>+75.46</td></tr>
+<tr><td>ANSI 5</td><td>removed</td><td>6.277</td><td>+74.61</td></tr>
+<tr><td>ANSI 5</td><td>changed</td><td>6.314</td><td>+74.99</td></tr>
+<tr><td>ANSI 5</td><td>added-word</td><td>5.963</td><td>+71.33</td></tr>
+<tr><td>ANSI 5</td><td>removed-word</td><td>5.889</td><td>+70.55</td></tr>
+<tr><td>ANSI 6</td><td>canvas</td><td>5.188</td><td>+71.77</td></tr>
+<tr><td>ANSI 6</td><td>surface</td><td>4.929</td><td>+68.37</td></tr>
+<tr><td>ANSI 6</td><td>selection</td><td>4.609</td><td>+64.08</td></tr>
+<tr><td>ANSI 6</td><td>search</td><td>4.855</td><td>+67.40</td></tr>
+<tr><td>ANSI 6</td><td>search-active</td><td>4.602</td><td>+63.99</td></tr>
+<tr><td>ANSI 6</td><td>match</td><td>5.108</td><td>+70.73</td></tr>
+<tr><td>ANSI 6</td><td>match-active</td><td>4.984</td><td>+69.11</td></tr>
+<tr><td>ANSI 6</td><td>added</td><td>4.924</td><td>+68.32</td></tr>
+<tr><td>ANSI 6</td><td>removed</td><td>4.859</td><td>+67.46</td></tr>
+<tr><td>ANSI 6</td><td>changed</td><td>4.888</td><td>+67.84</td></tr>
+<tr><td>ANSI 6</td><td>added-word</td><td>4.617</td><td>+64.19</td></tr>
+<tr><td>ANSI 6</td><td>removed-word</td><td>4.559</td><td>+63.40</td></tr>
+<tr><td>ANSI 7</td><td>canvas</td><td>8.066</td><td>+83.69</td></tr>
+<tr><td>ANSI 7</td><td>surface</td><td>7.662</td><td>+80.29</td></tr>
+<tr><td>ANSI 7</td><td>selection</td><td>7.165</td><td>+76.00</td></tr>
+<tr><td>ANSI 7</td><td>search</td><td>7.548</td><td>+79.32</td></tr>
+<tr><td>ANSI 7</td><td>search-active</td><td>7.154</td><td>+75.91</td></tr>
+<tr><td>ANSI 7</td><td>match</td><td>7.941</td><td>+82.65</td></tr>
+<tr><td>ANSI 7</td><td>match-active</td><td>7.748</td><td>+81.03</td></tr>
+<tr><td>ANSI 7</td><td>added</td><td>7.655</td><td>+80.24</td></tr>
+<tr><td>ANSI 7</td><td>removed</td><td>7.555</td><td>+79.38</td></tr>
+<tr><td>ANSI 7</td><td>changed</td><td>7.600</td><td>+79.76</td></tr>
+<tr><td>ANSI 7</td><td>added-word</td><td>7.177</td><td>+76.11</td></tr>
+<tr><td>ANSI 7</td><td>removed-word</td><td>7.087</td><td>+75.32</td></tr>
+<tr><td>ANSI 8</td><td>canvas</td><td>7.493</td><td>+81.86</td></tr>
+<tr><td>ANSI 8</td><td>surface</td><td>7.118</td><td>+78.47</td></tr>
+<tr><td>ANSI 8</td><td>selection</td><td>6.656</td><td>+74.18</td></tr>
+<tr><td>ANSI 8</td><td>search</td><td>7.012</td><td>+77.50</td></tr>
+<tr><td>ANSI 8</td><td>search-active</td><td>6.646</td><td>+74.08</td></tr>
+<tr><td>ANSI 8</td><td>match</td><td>7.377</td><td>+80.83</td></tr>
+<tr><td>ANSI 8</td><td>match-active</td><td>7.198</td><td>+79.20</td></tr>
+<tr><td>ANSI 8</td><td>added</td><td>7.111</td><td>+78.41</td></tr>
+<tr><td>ANSI 8</td><td>removed</td><td>7.018</td><td>+77.56</td></tr>
+<tr><td>ANSI 8</td><td>changed</td><td>7.060</td><td>+77.94</td></tr>
+<tr><td>ANSI 8</td><td>added-word</td><td>6.667</td><td>+74.28</td></tr>
+<tr><td>ANSI 8</td><td>removed-word</td><td>6.584</td><td>+73.50</td></tr>
+<tr><td>ANSI 9</td><td>canvas</td><td>9.845</td><td>+87.97</td></tr>
+<tr><td>ANSI 9</td><td>surface</td><td>9.352</td><td>+84.57</td></tr>
+<tr><td>ANSI 9</td><td>selection</td><td>8.746</td><td>+80.29</td></tr>
+<tr><td>ANSI 9</td><td>search</td><td>9.213</td><td>+83.61</td></tr>
+<tr><td>ANSI 9</td><td>search-active</td><td>8.732</td><td>+80.19</td></tr>
+<tr><td>ANSI 9</td><td>match</td><td>9.693</td><td>+86.93</td></tr>
+<tr><td>ANSI 9</td><td>match-active</td><td>9.457</td><td>+85.31</td></tr>
+<tr><td>ANSI 9</td><td>added</td><td>9.344</td><td>+84.52</td></tr>
+<tr><td>ANSI 9</td><td>removed</td><td>9.221</td><td>+83.66</td></tr>
+<tr><td>ANSI 9</td><td>changed</td><td>9.276</td><td>+84.04</td></tr>
+<tr><td>ANSI 9</td><td>added-word</td><td>8.760</td><td>+80.39</td></tr>
+<tr><td>ANSI 9</td><td>removed-word</td><td>8.651</td><td>+79.60</td></tr>
+<tr><td>ANSI 10</td><td>canvas</td><td>7.340</td><td>+81.26</td></tr>
+<tr><td>ANSI 10</td><td>surface</td><td>6.973</td><td>+77.87</td></tr>
+<tr><td>ANSI 10</td><td>selection</td><td>6.521</td><td>+73.58</td></tr>
+<tr><td>ANSI 10</td><td>search</td><td>6.869</td><td>+76.90</td></tr>
+<tr><td>ANSI 10</td><td>search-active</td><td>6.510</td><td>+73.48</td></tr>
+<tr><td>ANSI 10</td><td>match</td><td>7.227</td><td>+80.22</td></tr>
+<tr><td>ANSI 10</td><td>match-active</td><td>7.051</td><td>+78.60</td></tr>
+<tr><td>ANSI 10</td><td>added</td><td>6.966</td><td>+77.81</td></tr>
+<tr><td>ANSI 10</td><td>removed</td><td>6.875</td><td>+76.95</td></tr>
+<tr><td>ANSI 10</td><td>changed</td><td>6.916</td><td>+77.34</td></tr>
+<tr><td>ANSI 10</td><td>added-word</td><td>6.531</td><td>+73.68</td></tr>
+<tr><td>ANSI 10</td><td>removed-word</td><td>6.450</td><td>+72.90</td></tr>
+<tr><td>ANSI 11</td><td>canvas</td><td>5.760</td><td>+74.78</td></tr>
+<tr><td>ANSI 11</td><td>surface</td><td>5.472</td><td>+71.39</td></tr>
+<tr><td>ANSI 11</td><td>selection</td><td>5.117</td><td>+67.10</td></tr>
+<tr><td>ANSI 11</td><td>search</td><td>5.390</td><td>+70.42</td></tr>
+<tr><td>ANSI 11</td><td>search-active</td><td>5.109</td><td>+67.00</td></tr>
+<tr><td>ANSI 11</td><td>match</td><td>5.671</td><td>+73.74</td></tr>
+<tr><td>ANSI 11</td><td>match-active</td><td>5.533</td><td>+72.12</td></tr>
+<tr><td>ANSI 11</td><td>added</td><td>5.467</td><td>+71.33</td></tr>
+<tr><td>ANSI 11</td><td>removed</td><td>5.395</td><td>+70.47</td></tr>
+<tr><td>ANSI 11</td><td>changed</td><td>5.427</td><td>+70.86</td></tr>
+<tr><td>ANSI 11</td><td>added-word</td><td>5.126</td><td>+67.20</td></tr>
+<tr><td>ANSI 11</td><td>removed-word</td><td>5.061</td><td>+66.42</td></tr>
+<tr><td>ANSI 12</td><td>canvas</td><td>8.822</td><td>+85.79</td></tr>
+<tr><td>ANSI 12</td><td>surface</td><td>8.380</td><td>+82.39</td></tr>
+<tr><td>ANSI 12</td><td>selection</td><td>7.837</td><td>+78.10</td></tr>
+<tr><td>ANSI 12</td><td>search</td><td>8.256</td><td>+81.42</td></tr>
+<tr><td>ANSI 12</td><td>search-active</td><td>7.825</td><td>+78.01</td></tr>
+<tr><td>ANSI 12</td><td>match</td><td>8.685</td><td>+84.75</td></tr>
+<tr><td>ANSI 12</td><td>match-active</td><td>8.475</td><td>+83.13</td></tr>
+<tr><td>ANSI 12</td><td>added</td><td>8.373</td><td>+82.33</td></tr>
+<tr><td>ANSI 12</td><td>removed</td><td>8.263</td><td>+81.48</td></tr>
+<tr><td>ANSI 12</td><td>changed</td><td>8.312</td><td>+81.86</td></tr>
+<tr><td>ANSI 12</td><td>added-word</td><td>7.850</td><td>+78.20</td></tr>
+<tr><td>ANSI 12</td><td>removed-word</td><td>7.752</td><td>+77.42</td></tr>
+<tr><td>ANSI 13</td><td>canvas</td><td>6.702</td><td>+78.92</td></tr>
+<tr><td>ANSI 13</td><td>surface</td><td>6.366</td><td>+75.52</td></tr>
+<tr><td>ANSI 13</td><td>selection</td><td>5.954</td><td>+71.23</td></tr>
+<tr><td>ANSI 13</td><td>search</td><td>6.272</td><td>+74.55</td></tr>
+<tr><td>ANSI 13</td><td>search-active</td><td>5.944</td><td>+71.13</td></tr>
+<tr><td>ANSI 13</td><td>match</td><td>6.598</td><td>+77.88</td></tr>
+<tr><td>ANSI 13</td><td>match-active</td><td>6.438</td><td>+76.26</td></tr>
+<tr><td>ANSI 13</td><td>added</td><td>6.361</td><td>+75.46</td></tr>
+<tr><td>ANSI 13</td><td>removed</td><td>6.277</td><td>+74.61</td></tr>
+<tr><td>ANSI 13</td><td>changed</td><td>6.314</td><td>+74.99</td></tr>
+<tr><td>ANSI 13</td><td>added-word</td><td>5.963</td><td>+71.33</td></tr>
+<tr><td>ANSI 13</td><td>removed-word</td><td>5.889</td><td>+70.55</td></tr>
+<tr><td>ANSI 14</td><td>canvas</td><td>5.188</td><td>+71.77</td></tr>
+<tr><td>ANSI 14</td><td>surface</td><td>4.929</td><td>+68.37</td></tr>
+<tr><td>ANSI 14</td><td>selection</td><td>4.609</td><td>+64.08</td></tr>
+<tr><td>ANSI 14</td><td>search</td><td>4.855</td><td>+67.40</td></tr>
+<tr><td>ANSI 14</td><td>search-active</td><td>4.602</td><td>+63.99</td></tr>
+<tr><td>ANSI 14</td><td>match</td><td>5.108</td><td>+70.73</td></tr>
+<tr><td>ANSI 14</td><td>match-active</td><td>4.984</td><td>+69.11</td></tr>
+<tr><td>ANSI 14</td><td>added</td><td>4.924</td><td>+68.32</td></tr>
+<tr><td>ANSI 14</td><td>removed</td><td>4.859</td><td>+67.46</td></tr>
+<tr><td>ANSI 14</td><td>changed</td><td>4.888</td><td>+67.84</td></tr>
+<tr><td>ANSI 14</td><td>added-word</td><td>4.617</td><td>+64.19</td></tr>
+<tr><td>ANSI 14</td><td>removed-word</td><td>4.559</td><td>+63.40</td></tr>
+<tr><td>ANSI 15</td><td>canvas</td><td>14.787</td><td>+96.54</td></tr>
+<tr><td>ANSI 15</td><td>surface</td><td>14.047</td><td>+93.14</td></tr>
+<tr><td>ANSI 15</td><td>selection</td><td>13.137</td><td>+88.86</td></tr>
+<tr><td>ANSI 15</td><td>search</td><td>13.838</td><td>+92.18</td></tr>
+<tr><td>ANSI 15</td><td>search-active</td><td>13.116</td><td>+88.76</td></tr>
+<tr><td>ANSI 15</td><td>match</td><td>14.559</td><td>+95.50</td></tr>
+<tr><td>ANSI 15</td><td>match-active</td><td>14.205</td><td>+93.88</td></tr>
+<tr><td>ANSI 15</td><td>added</td><td>14.035</td><td>+93.09</td></tr>
+<tr><td>ANSI 15</td><td>removed</td><td>13.850</td><td>+92.23</td></tr>
+<tr><td>ANSI 15</td><td>changed</td><td>13.933</td><td>+92.62</td></tr>
+<tr><td>ANSI 15</td><td>added-word</td><td>13.158</td><td>+88.96</td></tr>
+<tr><td>ANSI 15</td><td>removed-word</td><td>12.994</td><td>+88.18</td></tr>
+</table></div>
+<h3 id="contrast-chalk-essential-boundaries">Chalk essential boundaries</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-labelledby="contrast-chalk-essential-boundaries"><table>
+<tr><th scope="col">Role</th><th scope="col">Ground</th><th scope="col">WCAG 2</th></tr>
+<tr><td>boundary</td><td>canvas</td><td>5.621</td></tr>
+<tr><td>boundary</td><td>surface</td><td>5.339</td></tr>
+<tr><td>boundary</td><td>selection</td><td>4.993</td></tr>
+<tr><td>boundary</td><td>search</td><td>5.260</td></tr>
+<tr><td>boundary</td><td>search-active</td><td>4.985</td></tr>
+<tr><td>boundary</td><td>match</td><td>5.534</td></tr>
+<tr><td>boundary</td><td>match-active</td><td>5.400</td></tr>
+<tr><td>boundary</td><td>added</td><td>5.335</td></tr>
+<tr><td>boundary</td><td>removed</td><td>5.265</td></tr>
+<tr><td>boundary</td><td>changed</td><td>5.296</td></tr>
+<tr><td>boundary</td><td>added-word</td><td>5.002</td></tr>
+<tr><td>boundary</td><td>removed-word</td><td>4.939</td></tr>
+<tr><td>type</td><td>canvas</td><td>5.188</td></tr>
+<tr><td>type</td><td>surface</td><td>4.929</td></tr>
+<tr><td>type</td><td>selection</td><td>4.609</td></tr>
+<tr><td>type</td><td>search</td><td>4.855</td></tr>
+<tr><td>type</td><td>search-active</td><td>4.602</td></tr>
+<tr><td>type</td><td>match</td><td>5.108</td></tr>
+<tr><td>type</td><td>match-active</td><td>4.984</td></tr>
+<tr><td>type</td><td>added</td><td>4.924</td></tr>
+<tr><td>type</td><td>removed</td><td>4.859</td></tr>
+<tr><td>type</td><td>changed</td><td>4.888</td></tr>
+<tr><td>type</td><td>added-word</td><td>4.617</td></tr>
+<tr><td>type</td><td>removed-word</td><td>4.559</td></tr>
+</table></div>
+<h3 id="contrast-shale-reading-pairs">Shale reading pairs</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-labelledby="contrast-shale-reading-pairs"><table>
+<tr><th scope="col">Text</th><th scope="col">Ground</th><th scope="col">WCAG 2</th><th scope="col">APCA Lc</th></tr>
+<tr><td>foreground</td><td>canvas</td><td>16.806</td><td>-100.22</td></tr>
+<tr><td>foreground</td><td>surface</td><td>15.780</td><td>-99.54</td></tr>
+<tr><td>foreground</td><td>selection</td><td>12.747</td><td>-96.71</td></tr>
+<tr><td>foreground</td><td>search</td><td>14.641</td><td>-98.64</td></tr>
+<tr><td>foreground</td><td>search-active</td><td>12.848</td><td>-96.83</td></tr>
+<tr><td>foreground</td><td>match</td><td>13.768</td><td>-97.82</td></tr>
+<tr><td>foreground</td><td>match-active</td><td>12.497</td><td>-96.41</td></tr>
+<tr><td>foreground</td><td>added</td><td>14.589</td><td>-98.59</td></tr>
+<tr><td>foreground</td><td>removed</td><td>14.706</td><td>-98.68</td></tr>
+<tr><td>foreground</td><td>changed</td><td>14.666</td><td>-98.66</td></tr>
+<tr><td>foreground</td><td>added-word</td><td>12.767</td><td>-96.73</td></tr>
+<tr><td>foreground</td><td>removed-word</td><td>12.987</td><td>-96.97</td></tr>
+<tr><td>comment</td><td>canvas</td><td>12.466</td><td>-79.99</td></tr>
+<tr><td>comment</td><td>surface</td><td>11.704</td><td>-79.31</td></tr>
+<tr><td>comment</td><td>selection</td><td>9.455</td><td>-76.48</td></tr>
+<tr><td>comment</td><td>search</td><td>10.860</td><td>-78.41</td></tr>
+<tr><td>comment</td><td>search-active</td><td>9.530</td><td>-76.60</td></tr>
+<tr><td>comment</td><td>match</td><td>10.212</td><td>-77.59</td></tr>
+<tr><td>comment</td><td>match-active</td><td>9.269</td><td>-76.18</td></tr>
+<tr><td>comment</td><td>added</td><td>10.821</td><td>-78.36</td></tr>
+<tr><td>comment</td><td>removed</td><td>10.908</td><td>-78.45</td></tr>
+<tr><td>comment</td><td>changed</td><td>10.879</td><td>-78.43</td></tr>
+<tr><td>comment</td><td>added-word</td><td>9.470</td><td>-76.50</td></tr>
+<tr><td>comment</td><td>removed-word</td><td>9.633</td><td>-76.74</td></tr>
+<tr><td>line-number</td><td>canvas</td><td>11.948</td><td>-77.40</td></tr>
+<tr><td>line-number</td><td>surface</td><td>11.218</td><td>-76.72</td></tr>
+<tr><td>line-number</td><td>selection</td><td>9.062</td><td>-73.89</td></tr>
+<tr><td>line-number</td><td>search</td><td>10.409</td><td>-75.82</td></tr>
+<tr><td>line-number</td><td>search-active</td><td>9.134</td><td>-74.02</td></tr>
+<tr><td>line-number</td><td>match</td><td>9.788</td><td>-75.01</td></tr>
+<tr><td>line-number</td><td>match-active</td><td>8.884</td><td>-73.60</td></tr>
+<tr><td>line-number</td><td>added</td><td>10.371</td><td>-75.78</td></tr>
+<tr><td>line-number</td><td>removed</td><td>10.455</td><td>-75.86</td></tr>
+<tr><td>line-number</td><td>changed</td><td>10.427</td><td>-75.85</td></tr>
+<tr><td>line-number</td><td>added-word</td><td>9.076</td><td>-73.92</td></tr>
+<tr><td>line-number</td><td>removed-word</td><td>9.233</td><td>-74.15</td></tr>
+<tr><td>error</td><td>canvas</td><td>8.561</td><td>-59.39</td></tr>
+<tr><td>error</td><td>surface</td><td>8.038</td><td>-58.71</td></tr>
+<tr><td>error</td><td>selection</td><td>6.493</td><td>-55.88</td></tr>
+<tr><td>error</td><td>search</td><td>7.458</td><td>-57.81</td></tr>
+<tr><td>error</td><td>search-active</td><td>6.545</td><td>-56.01</td></tr>
+<tr><td>error</td><td>match</td><td>7.013</td><td>-57.00</td></tr>
+<tr><td>error</td><td>match-active</td><td>6.366</td><td>-55.59</td></tr>
+<tr><td>error</td><td>added</td><td>7.431</td><td>-57.77</td></tr>
+<tr><td>error</td><td>removed</td><td>7.491</td><td>-57.85</td></tr>
+<tr><td>error</td><td>changed</td><td>7.471</td><td>-57.84</td></tr>
+<tr><td>error</td><td>added-word</td><td>6.504</td><td>-55.91</td></tr>
+<tr><td>error</td><td>removed-word</td><td>6.615</td><td>-56.14</td></tr>
+<tr><td>warning</td><td>canvas</td><td>14.004</td><td>-87.47</td></tr>
+<tr><td>warning</td><td>surface</td><td>13.148</td><td>-86.79</td></tr>
+<tr><td>warning</td><td>selection</td><td>10.621</td><td>-83.96</td></tr>
+<tr><td>warning</td><td>search</td><td>12.199</td><td>-85.89</td></tr>
+<tr><td>warning</td><td>search-active</td><td>10.705</td><td>-84.08</td></tr>
+<tr><td>warning</td><td>match</td><td>11.472</td><td>-85.07</td></tr>
+<tr><td>warning</td><td>match-active</td><td>10.413</td><td>-83.66</td></tr>
+<tr><td>warning</td><td>added</td><td>12.156</td><td>-85.84</td></tr>
+<tr><td>warning</td><td>removed</td><td>12.254</td><td>-85.93</td></tr>
+<tr><td>warning</td><td>changed</td><td>12.221</td><td>-85.91</td></tr>
+<tr><td>warning</td><td>added-word</td><td>10.638</td><td>-83.98</td></tr>
+<tr><td>warning</td><td>removed-word</td><td>10.821</td><td>-84.22</td></tr>
+<tr><td>success</td><td>canvas</td><td>11.733</td><td>-76.35</td></tr>
+<tr><td>success</td><td>surface</td><td>11.017</td><td>-75.67</td></tr>
+<tr><td>success</td><td>selection</td><td>8.899</td><td>-72.84</td></tr>
+<tr><td>success</td><td>search</td><td>10.222</td><td>-74.77</td></tr>
+<tr><td>success</td><td>search-active</td><td>8.970</td><td>-72.96</td></tr>
+<tr><td>success</td><td>match</td><td>9.612</td><td>-73.95</td></tr>
+<tr><td>success</td><td>match-active</td><td>8.724</td><td>-72.54</td></tr>
+<tr><td>success</td><td>added</td><td>10.185</td><td>-74.72</td></tr>
+<tr><td>success</td><td>removed</td><td>10.267</td><td>-74.81</td></tr>
+<tr><td>success</td><td>changed</td><td>10.239</td><td>-74.79</td></tr>
+<tr><td>success</td><td>added-word</td><td>8.913</td><td>-72.86</td></tr>
+<tr><td>success</td><td>removed-word</td><td>9.067</td><td>-73.10</td></tr>
+<tr><td>string</td><td>canvas</td><td>11.733</td><td>-76.35</td></tr>
+<tr><td>string</td><td>surface</td><td>11.017</td><td>-75.67</td></tr>
+<tr><td>string</td><td>selection</td><td>8.899</td><td>-72.84</td></tr>
+<tr><td>string</td><td>search</td><td>10.222</td><td>-74.77</td></tr>
+<tr><td>string</td><td>search-active</td><td>8.970</td><td>-72.96</td></tr>
+<tr><td>string</td><td>match</td><td>9.612</td><td>-73.95</td></tr>
+<tr><td>string</td><td>match-active</td><td>8.724</td><td>-72.54</td></tr>
+<tr><td>string</td><td>added</td><td>10.185</td><td>-74.72</td></tr>
+<tr><td>string</td><td>removed</td><td>10.267</td><td>-74.81</td></tr>
+<tr><td>string</td><td>changed</td><td>10.239</td><td>-74.79</td></tr>
+<tr><td>string</td><td>added-word</td><td>8.913</td><td>-72.86</td></tr>
+<tr><td>string</td><td>removed-word</td><td>9.067</td><td>-73.10</td></tr>
+<tr><td>function</td><td>canvas</td><td>9.388</td><td>-63.92</td></tr>
+<tr><td>function</td><td>surface</td><td>8.814</td><td>-63.24</td></tr>
+<tr><td>function</td><td>selection</td><td>7.120</td><td>-60.41</td></tr>
+<tr><td>function</td><td>search</td><td>8.178</td><td>-62.34</td></tr>
+<tr><td>function</td><td>search-active</td><td>7.177</td><td>-60.53</td></tr>
+<tr><td>function</td><td>match</td><td>7.690</td><td>-61.53</td></tr>
+<tr><td>function</td><td>match-active</td><td>6.980</td><td>-60.11</td></tr>
+<tr><td>function</td><td>added</td><td>8.149</td><td>-62.29</td></tr>
+<tr><td>function</td><td>removed</td><td>8.215</td><td>-62.38</td></tr>
+<tr><td>function</td><td>changed</td><td>8.192</td><td>-62.37</td></tr>
+<tr><td>function</td><td>added-word</td><td>7.132</td><td>-60.44</td></tr>
+<tr><td>function</td><td>removed-word</td><td>7.254</td><td>-60.67</td></tr>
+<tr><td>directory</td><td>canvas</td><td>9.388</td><td>-63.92</td></tr>
+<tr><td>directory</td><td>surface</td><td>8.814</td><td>-63.24</td></tr>
+<tr><td>directory</td><td>selection</td><td>7.120</td><td>-60.41</td></tr>
+<tr><td>directory</td><td>search</td><td>8.178</td><td>-62.34</td></tr>
+<tr><td>directory</td><td>search-active</td><td>7.177</td><td>-60.53</td></tr>
+<tr><td>directory</td><td>match</td><td>7.690</td><td>-61.53</td></tr>
+<tr><td>directory</td><td>match-active</td><td>6.980</td><td>-60.11</td></tr>
+<tr><td>directory</td><td>added</td><td>8.149</td><td>-62.29</td></tr>
+<tr><td>directory</td><td>removed</td><td>8.215</td><td>-62.38</td></tr>
+<tr><td>directory</td><td>changed</td><td>8.192</td><td>-62.37</td></tr>
+<tr><td>directory</td><td>added-word</td><td>7.132</td><td>-60.44</td></tr>
+<tr><td>directory</td><td>removed-word</td><td>7.254</td><td>-60.67</td></tr>
+<tr><td>keyword</td><td>canvas</td><td>12.207</td><td>-78.71</td></tr>
+<tr><td>keyword</td><td>surface</td><td>11.461</td><td>-78.03</td></tr>
+<tr><td>keyword</td><td>selection</td><td>9.258</td><td>-75.20</td></tr>
+<tr><td>keyword</td><td>search</td><td>10.634</td><td>-77.13</td></tr>
+<tr><td>keyword</td><td>search-active</td><td>9.332</td><td>-75.32</td></tr>
+<tr><td>keyword</td><td>match</td><td>10.000</td><td>-76.32</td></tr>
+<tr><td>keyword</td><td>match-active</td><td>9.076</td><td>-74.90</td></tr>
+<tr><td>keyword</td><td>added</td><td>10.596</td><td>-77.08</td></tr>
+<tr><td>keyword</td><td>removed</td><td>10.681</td><td>-77.17</td></tr>
+<tr><td>keyword</td><td>changed</td><td>10.652</td><td>-77.16</td></tr>
+<tr><td>keyword</td><td>added-word</td><td>9.273</td><td>-75.23</td></tr>
+<tr><td>keyword</td><td>removed-word</td><td>9.433</td><td>-75.46</td></tr>
+<tr><td>branch</td><td>canvas</td><td>12.207</td><td>-78.71</td></tr>
+<tr><td>branch</td><td>surface</td><td>11.461</td><td>-78.03</td></tr>
+<tr><td>branch</td><td>selection</td><td>9.258</td><td>-75.20</td></tr>
+<tr><td>branch</td><td>search</td><td>10.634</td><td>-77.13</td></tr>
+<tr><td>branch</td><td>search-active</td><td>9.332</td><td>-75.32</td></tr>
+<tr><td>branch</td><td>match</td><td>10.000</td><td>-76.32</td></tr>
+<tr><td>branch</td><td>match-active</td><td>9.076</td><td>-74.90</td></tr>
+<tr><td>branch</td><td>added</td><td>10.596</td><td>-77.08</td></tr>
+<tr><td>branch</td><td>removed</td><td>10.681</td><td>-77.17</td></tr>
+<tr><td>branch</td><td>changed</td><td>10.652</td><td>-77.16</td></tr>
+<tr><td>branch</td><td>added-word</td><td>9.273</td><td>-75.23</td></tr>
+<tr><td>branch</td><td>removed-word</td><td>9.433</td><td>-75.46</td></tr>
+<tr><td>type</td><td>canvas</td><td>14.748</td><td>-90.94</td></tr>
+<tr><td>type</td><td>surface</td><td>13.848</td><td>-90.26</td></tr>
+<tr><td>type</td><td>selection</td><td>11.186</td><td>-87.43</td></tr>
+<tr><td>type</td><td>search</td><td>12.848</td><td>-89.36</td></tr>
+<tr><td>type</td><td>search-active</td><td>11.274</td><td>-87.55</td></tr>
+<tr><td>type</td><td>match</td><td>12.082</td><td>-88.54</td></tr>
+<tr><td>type</td><td>match-active</td><td>10.966</td><td>-87.13</td></tr>
+<tr><td>type</td><td>added</td><td>12.802</td><td>-89.31</td></tr>
+<tr><td>type</td><td>removed</td><td>12.905</td><td>-89.40</td></tr>
+<tr><td>type</td><td>changed</td><td>12.870</td><td>-89.39</td></tr>
+<tr><td>type</td><td>added-word</td><td>11.204</td><td>-87.45</td></tr>
+<tr><td>type</td><td>removed-word</td><td>11.397</td><td>-87.69</td></tr>
+<tr><td>link</td><td>canvas</td><td>14.748</td><td>-90.94</td></tr>
+<tr><td>link</td><td>surface</td><td>13.848</td><td>-90.26</td></tr>
+<tr><td>link</td><td>selection</td><td>11.186</td><td>-87.43</td></tr>
+<tr><td>link</td><td>search</td><td>12.848</td><td>-89.36</td></tr>
+<tr><td>link</td><td>search-active</td><td>11.274</td><td>-87.55</td></tr>
+<tr><td>link</td><td>match</td><td>12.082</td><td>-88.54</td></tr>
+<tr><td>link</td><td>match-active</td><td>10.966</td><td>-87.13</td></tr>
+<tr><td>link</td><td>added</td><td>12.802</td><td>-89.31</td></tr>
+<tr><td>link</td><td>removed</td><td>12.905</td><td>-89.40</td></tr>
+<tr><td>link</td><td>changed</td><td>12.870</td><td>-89.39</td></tr>
+<tr><td>link</td><td>added-word</td><td>11.204</td><td>-87.45</td></tr>
+<tr><td>link</td><td>removed-word</td><td>11.397</td><td>-87.69</td></tr>
+<tr><td>number</td><td>canvas</td><td>14.004</td><td>-87.47</td></tr>
+<tr><td>number</td><td>surface</td><td>13.148</td><td>-86.79</td></tr>
+<tr><td>number</td><td>selection</td><td>10.621</td><td>-83.96</td></tr>
+<tr><td>number</td><td>search</td><td>12.199</td><td>-85.89</td></tr>
+<tr><td>number</td><td>search-active</td><td>10.705</td><td>-84.08</td></tr>
+<tr><td>number</td><td>match</td><td>11.472</td><td>-85.07</td></tr>
+<tr><td>number</td><td>match-active</td><td>10.413</td><td>-83.66</td></tr>
+<tr><td>number</td><td>added</td><td>12.156</td><td>-85.84</td></tr>
+<tr><td>number</td><td>removed</td><td>12.254</td><td>-85.93</td></tr>
+<tr><td>number</td><td>changed</td><td>12.221</td><td>-85.91</td></tr>
+<tr><td>number</td><td>added-word</td><td>10.638</td><td>-83.98</td></tr>
+<tr><td>number</td><td>removed-word</td><td>10.821</td><td>-84.22</td></tr>
+<tr><td>ANSI 0</td><td>canvas</td><td>16.806</td><td>-100.22</td></tr>
+<tr><td>ANSI 0</td><td>surface</td><td>15.780</td><td>-99.54</td></tr>
+<tr><td>ANSI 0</td><td>selection</td><td>12.747</td><td>-96.71</td></tr>
+<tr><td>ANSI 0</td><td>search</td><td>14.641</td><td>-98.64</td></tr>
+<tr><td>ANSI 0</td><td>search-active</td><td>12.848</td><td>-96.83</td></tr>
+<tr><td>ANSI 0</td><td>match</td><td>13.768</td><td>-97.82</td></tr>
+<tr><td>ANSI 0</td><td>match-active</td><td>12.497</td><td>-96.41</td></tr>
+<tr><td>ANSI 0</td><td>added</td><td>14.589</td><td>-98.59</td></tr>
+<tr><td>ANSI 0</td><td>removed</td><td>14.706</td><td>-98.68</td></tr>
+<tr><td>ANSI 0</td><td>changed</td><td>14.666</td><td>-98.66</td></tr>
+<tr><td>ANSI 0</td><td>added-word</td><td>12.767</td><td>-96.73</td></tr>
+<tr><td>ANSI 0</td><td>removed-word</td><td>12.987</td><td>-96.97</td></tr>
+<tr><td>ANSI 1</td><td>canvas</td><td>8.561</td><td>-59.39</td></tr>
+<tr><td>ANSI 1</td><td>surface</td><td>8.038</td><td>-58.71</td></tr>
+<tr><td>ANSI 1</td><td>selection</td><td>6.493</td><td>-55.88</td></tr>
+<tr><td>ANSI 1</td><td>search</td><td>7.458</td><td>-57.81</td></tr>
+<tr><td>ANSI 1</td><td>search-active</td><td>6.545</td><td>-56.01</td></tr>
+<tr><td>ANSI 1</td><td>match</td><td>7.013</td><td>-57.00</td></tr>
+<tr><td>ANSI 1</td><td>match-active</td><td>6.366</td><td>-55.59</td></tr>
+<tr><td>ANSI 1</td><td>added</td><td>7.431</td><td>-57.77</td></tr>
+<tr><td>ANSI 1</td><td>removed</td><td>7.491</td><td>-57.85</td></tr>
+<tr><td>ANSI 1</td><td>changed</td><td>7.471</td><td>-57.84</td></tr>
+<tr><td>ANSI 1</td><td>added-word</td><td>6.504</td><td>-55.91</td></tr>
+<tr><td>ANSI 1</td><td>removed-word</td><td>6.615</td><td>-56.14</td></tr>
+<tr><td>ANSI 2</td><td>canvas</td><td>11.733</td><td>-76.35</td></tr>
+<tr><td>ANSI 2</td><td>surface</td><td>11.017</td><td>-75.67</td></tr>
+<tr><td>ANSI 2</td><td>selection</td><td>8.899</td><td>-72.84</td></tr>
+<tr><td>ANSI 2</td><td>search</td><td>10.222</td><td>-74.77</td></tr>
+<tr><td>ANSI 2</td><td>search-active</td><td>8.970</td><td>-72.96</td></tr>
+<tr><td>ANSI 2</td><td>match</td><td>9.612</td><td>-73.95</td></tr>
+<tr><td>ANSI 2</td><td>match-active</td><td>8.724</td><td>-72.54</td></tr>
+<tr><td>ANSI 2</td><td>added</td><td>10.185</td><td>-74.72</td></tr>
+<tr><td>ANSI 2</td><td>removed</td><td>10.267</td><td>-74.81</td></tr>
+<tr><td>ANSI 2</td><td>changed</td><td>10.239</td><td>-74.79</td></tr>
+<tr><td>ANSI 2</td><td>added-word</td><td>8.913</td><td>-72.86</td></tr>
+<tr><td>ANSI 2</td><td>removed-word</td><td>9.067</td><td>-73.10</td></tr>
+<tr><td>ANSI 3</td><td>canvas</td><td>14.004</td><td>-87.47</td></tr>
+<tr><td>ANSI 3</td><td>surface</td><td>13.148</td><td>-86.79</td></tr>
+<tr><td>ANSI 3</td><td>selection</td><td>10.621</td><td>-83.96</td></tr>
+<tr><td>ANSI 3</td><td>search</td><td>12.199</td><td>-85.89</td></tr>
+<tr><td>ANSI 3</td><td>search-active</td><td>10.705</td><td>-84.08</td></tr>
+<tr><td>ANSI 3</td><td>match</td><td>11.472</td><td>-85.07</td></tr>
+<tr><td>ANSI 3</td><td>match-active</td><td>10.413</td><td>-83.66</td></tr>
+<tr><td>ANSI 3</td><td>added</td><td>12.156</td><td>-85.84</td></tr>
+<tr><td>ANSI 3</td><td>removed</td><td>12.254</td><td>-85.93</td></tr>
+<tr><td>ANSI 3</td><td>changed</td><td>12.221</td><td>-85.91</td></tr>
+<tr><td>ANSI 3</td><td>added-word</td><td>10.638</td><td>-83.98</td></tr>
+<tr><td>ANSI 3</td><td>removed-word</td><td>10.821</td><td>-84.22</td></tr>
+<tr><td>ANSI 4</td><td>canvas</td><td>9.388</td><td>-63.92</td></tr>
+<tr><td>ANSI 4</td><td>surface</td><td>8.814</td><td>-63.24</td></tr>
+<tr><td>ANSI 4</td><td>selection</td><td>7.120</td><td>-60.41</td></tr>
+<tr><td>ANSI 4</td><td>search</td><td>8.178</td><td>-62.34</td></tr>
+<tr><td>ANSI 4</td><td>search-active</td><td>7.177</td><td>-60.53</td></tr>
+<tr><td>ANSI 4</td><td>match</td><td>7.690</td><td>-61.53</td></tr>
+<tr><td>ANSI 4</td><td>match-active</td><td>6.980</td><td>-60.11</td></tr>
+<tr><td>ANSI 4</td><td>added</td><td>8.149</td><td>-62.29</td></tr>
+<tr><td>ANSI 4</td><td>removed</td><td>8.215</td><td>-62.38</td></tr>
+<tr><td>ANSI 4</td><td>changed</td><td>8.192</td><td>-62.37</td></tr>
+<tr><td>ANSI 4</td><td>added-word</td><td>7.132</td><td>-60.44</td></tr>
+<tr><td>ANSI 4</td><td>removed-word</td><td>7.254</td><td>-60.67</td></tr>
+<tr><td>ANSI 5</td><td>canvas</td><td>12.207</td><td>-78.71</td></tr>
+<tr><td>ANSI 5</td><td>surface</td><td>11.461</td><td>-78.03</td></tr>
+<tr><td>ANSI 5</td><td>selection</td><td>9.258</td><td>-75.20</td></tr>
+<tr><td>ANSI 5</td><td>search</td><td>10.634</td><td>-77.13</td></tr>
+<tr><td>ANSI 5</td><td>search-active</td><td>9.332</td><td>-75.32</td></tr>
+<tr><td>ANSI 5</td><td>match</td><td>10.000</td><td>-76.32</td></tr>
+<tr><td>ANSI 5</td><td>match-active</td><td>9.076</td><td>-74.90</td></tr>
+<tr><td>ANSI 5</td><td>added</td><td>10.596</td><td>-77.08</td></tr>
+<tr><td>ANSI 5</td><td>removed</td><td>10.681</td><td>-77.17</td></tr>
+<tr><td>ANSI 5</td><td>changed</td><td>10.652</td><td>-77.16</td></tr>
+<tr><td>ANSI 5</td><td>added-word</td><td>9.273</td><td>-75.23</td></tr>
+<tr><td>ANSI 5</td><td>removed-word</td><td>9.433</td><td>-75.46</td></tr>
+<tr><td>ANSI 6</td><td>canvas</td><td>14.748</td><td>-90.94</td></tr>
+<tr><td>ANSI 6</td><td>surface</td><td>13.848</td><td>-90.26</td></tr>
+<tr><td>ANSI 6</td><td>selection</td><td>11.186</td><td>-87.43</td></tr>
+<tr><td>ANSI 6</td><td>search</td><td>12.848</td><td>-89.36</td></tr>
+<tr><td>ANSI 6</td><td>search-active</td><td>11.274</td><td>-87.55</td></tr>
+<tr><td>ANSI 6</td><td>match</td><td>12.082</td><td>-88.54</td></tr>
+<tr><td>ANSI 6</td><td>match-active</td><td>10.966</td><td>-87.13</td></tr>
+<tr><td>ANSI 6</td><td>added</td><td>12.802</td><td>-89.31</td></tr>
+<tr><td>ANSI 6</td><td>removed</td><td>12.905</td><td>-89.40</td></tr>
+<tr><td>ANSI 6</td><td>changed</td><td>12.870</td><td>-89.39</td></tr>
+<tr><td>ANSI 6</td><td>added-word</td><td>11.204</td><td>-87.45</td></tr>
+<tr><td>ANSI 6</td><td>removed-word</td><td>11.397</td><td>-87.69</td></tr>
+<tr><td>ANSI 7</td><td>canvas</td><td>12.466</td><td>-79.99</td></tr>
+<tr><td>ANSI 7</td><td>surface</td><td>11.704</td><td>-79.31</td></tr>
+<tr><td>ANSI 7</td><td>selection</td><td>9.455</td><td>-76.48</td></tr>
+<tr><td>ANSI 7</td><td>search</td><td>10.860</td><td>-78.41</td></tr>
+<tr><td>ANSI 7</td><td>search-active</td><td>9.530</td><td>-76.60</td></tr>
+<tr><td>ANSI 7</td><td>match</td><td>10.212</td><td>-77.59</td></tr>
+<tr><td>ANSI 7</td><td>match-active</td><td>9.269</td><td>-76.18</td></tr>
+<tr><td>ANSI 7</td><td>added</td><td>10.821</td><td>-78.36</td></tr>
+<tr><td>ANSI 7</td><td>removed</td><td>10.908</td><td>-78.45</td></tr>
+<tr><td>ANSI 7</td><td>changed</td><td>10.879</td><td>-78.43</td></tr>
+<tr><td>ANSI 7</td><td>added-word</td><td>9.470</td><td>-76.50</td></tr>
+<tr><td>ANSI 7</td><td>removed-word</td><td>9.633</td><td>-76.74</td></tr>
+<tr><td>ANSI 8</td><td>canvas</td><td>11.948</td><td>-77.40</td></tr>
+<tr><td>ANSI 8</td><td>surface</td><td>11.218</td><td>-76.72</td></tr>
+<tr><td>ANSI 8</td><td>selection</td><td>9.062</td><td>-73.89</td></tr>
+<tr><td>ANSI 8</td><td>search</td><td>10.409</td><td>-75.82</td></tr>
+<tr><td>ANSI 8</td><td>search-active</td><td>9.134</td><td>-74.02</td></tr>
+<tr><td>ANSI 8</td><td>match</td><td>9.788</td><td>-75.01</td></tr>
+<tr><td>ANSI 8</td><td>match-active</td><td>8.884</td><td>-73.60</td></tr>
+<tr><td>ANSI 8</td><td>added</td><td>10.371</td><td>-75.78</td></tr>
+<tr><td>ANSI 8</td><td>removed</td><td>10.455</td><td>-75.86</td></tr>
+<tr><td>ANSI 8</td><td>changed</td><td>10.427</td><td>-75.85</td></tr>
+<tr><td>ANSI 8</td><td>added-word</td><td>9.076</td><td>-73.92</td></tr>
+<tr><td>ANSI 8</td><td>removed-word</td><td>9.233</td><td>-74.15</td></tr>
+<tr><td>ANSI 9</td><td>canvas</td><td>8.561</td><td>-59.39</td></tr>
+<tr><td>ANSI 9</td><td>surface</td><td>8.038</td><td>-58.71</td></tr>
+<tr><td>ANSI 9</td><td>selection</td><td>6.493</td><td>-55.88</td></tr>
+<tr><td>ANSI 9</td><td>search</td><td>7.458</td><td>-57.81</td></tr>
+<tr><td>ANSI 9</td><td>search-active</td><td>6.545</td><td>-56.01</td></tr>
+<tr><td>ANSI 9</td><td>match</td><td>7.013</td><td>-57.00</td></tr>
+<tr><td>ANSI 9</td><td>match-active</td><td>6.366</td><td>-55.59</td></tr>
+<tr><td>ANSI 9</td><td>added</td><td>7.431</td><td>-57.77</td></tr>
+<tr><td>ANSI 9</td><td>removed</td><td>7.491</td><td>-57.85</td></tr>
+<tr><td>ANSI 9</td><td>changed</td><td>7.471</td><td>-57.84</td></tr>
+<tr><td>ANSI 9</td><td>added-word</td><td>6.504</td><td>-55.91</td></tr>
+<tr><td>ANSI 9</td><td>removed-word</td><td>6.615</td><td>-56.14</td></tr>
+<tr><td>ANSI 10</td><td>canvas</td><td>11.733</td><td>-76.35</td></tr>
+<tr><td>ANSI 10</td><td>surface</td><td>11.017</td><td>-75.67</td></tr>
+<tr><td>ANSI 10</td><td>selection</td><td>8.899</td><td>-72.84</td></tr>
+<tr><td>ANSI 10</td><td>search</td><td>10.222</td><td>-74.77</td></tr>
+<tr><td>ANSI 10</td><td>search-active</td><td>8.970</td><td>-72.96</td></tr>
+<tr><td>ANSI 10</td><td>match</td><td>9.612</td><td>-73.95</td></tr>
+<tr><td>ANSI 10</td><td>match-active</td><td>8.724</td><td>-72.54</td></tr>
+<tr><td>ANSI 10</td><td>added</td><td>10.185</td><td>-74.72</td></tr>
+<tr><td>ANSI 10</td><td>removed</td><td>10.267</td><td>-74.81</td></tr>
+<tr><td>ANSI 10</td><td>changed</td><td>10.239</td><td>-74.79</td></tr>
+<tr><td>ANSI 10</td><td>added-word</td><td>8.913</td><td>-72.86</td></tr>
+<tr><td>ANSI 10</td><td>removed-word</td><td>9.067</td><td>-73.10</td></tr>
+<tr><td>ANSI 11</td><td>canvas</td><td>14.004</td><td>-87.47</td></tr>
+<tr><td>ANSI 11</td><td>surface</td><td>13.148</td><td>-86.79</td></tr>
+<tr><td>ANSI 11</td><td>selection</td><td>10.621</td><td>-83.96</td></tr>
+<tr><td>ANSI 11</td><td>search</td><td>12.199</td><td>-85.89</td></tr>
+<tr><td>ANSI 11</td><td>search-active</td><td>10.705</td><td>-84.08</td></tr>
+<tr><td>ANSI 11</td><td>match</td><td>11.472</td><td>-85.07</td></tr>
+<tr><td>ANSI 11</td><td>match-active</td><td>10.413</td><td>-83.66</td></tr>
+<tr><td>ANSI 11</td><td>added</td><td>12.156</td><td>-85.84</td></tr>
+<tr><td>ANSI 11</td><td>removed</td><td>12.254</td><td>-85.93</td></tr>
+<tr><td>ANSI 11</td><td>changed</td><td>12.221</td><td>-85.91</td></tr>
+<tr><td>ANSI 11</td><td>added-word</td><td>10.638</td><td>-83.98</td></tr>
+<tr><td>ANSI 11</td><td>removed-word</td><td>10.821</td><td>-84.22</td></tr>
+<tr><td>ANSI 12</td><td>canvas</td><td>9.388</td><td>-63.92</td></tr>
+<tr><td>ANSI 12</td><td>surface</td><td>8.814</td><td>-63.24</td></tr>
+<tr><td>ANSI 12</td><td>selection</td><td>7.120</td><td>-60.41</td></tr>
+<tr><td>ANSI 12</td><td>search</td><td>8.178</td><td>-62.34</td></tr>
+<tr><td>ANSI 12</td><td>search-active</td><td>7.177</td><td>-60.53</td></tr>
+<tr><td>ANSI 12</td><td>match</td><td>7.690</td><td>-61.53</td></tr>
+<tr><td>ANSI 12</td><td>match-active</td><td>6.980</td><td>-60.11</td></tr>
+<tr><td>ANSI 12</td><td>added</td><td>8.149</td><td>-62.29</td></tr>
+<tr><td>ANSI 12</td><td>removed</td><td>8.215</td><td>-62.38</td></tr>
+<tr><td>ANSI 12</td><td>changed</td><td>8.192</td><td>-62.37</td></tr>
+<tr><td>ANSI 12</td><td>added-word</td><td>7.132</td><td>-60.44</td></tr>
+<tr><td>ANSI 12</td><td>removed-word</td><td>7.254</td><td>-60.67</td></tr>
+<tr><td>ANSI 13</td><td>canvas</td><td>12.207</td><td>-78.71</td></tr>
+<tr><td>ANSI 13</td><td>surface</td><td>11.461</td><td>-78.03</td></tr>
+<tr><td>ANSI 13</td><td>selection</td><td>9.258</td><td>-75.20</td></tr>
+<tr><td>ANSI 13</td><td>search</td><td>10.634</td><td>-77.13</td></tr>
+<tr><td>ANSI 13</td><td>search-active</td><td>9.332</td><td>-75.32</td></tr>
+<tr><td>ANSI 13</td><td>match</td><td>10.000</td><td>-76.32</td></tr>
+<tr><td>ANSI 13</td><td>match-active</td><td>9.076</td><td>-74.90</td></tr>
+<tr><td>ANSI 13</td><td>added</td><td>10.596</td><td>-77.08</td></tr>
+<tr><td>ANSI 13</td><td>removed</td><td>10.681</td><td>-77.17</td></tr>
+<tr><td>ANSI 13</td><td>changed</td><td>10.652</td><td>-77.16</td></tr>
+<tr><td>ANSI 13</td><td>added-word</td><td>9.273</td><td>-75.23</td></tr>
+<tr><td>ANSI 13</td><td>removed-word</td><td>9.433</td><td>-75.46</td></tr>
+<tr><td>ANSI 14</td><td>canvas</td><td>14.748</td><td>-90.94</td></tr>
+<tr><td>ANSI 14</td><td>surface</td><td>13.848</td><td>-90.26</td></tr>
+<tr><td>ANSI 14</td><td>selection</td><td>11.186</td><td>-87.43</td></tr>
+<tr><td>ANSI 14</td><td>search</td><td>12.848</td><td>-89.36</td></tr>
+<tr><td>ANSI 14</td><td>search-active</td><td>11.274</td><td>-87.55</td></tr>
+<tr><td>ANSI 14</td><td>match</td><td>12.082</td><td>-88.54</td></tr>
+<tr><td>ANSI 14</td><td>match-active</td><td>10.966</td><td>-87.13</td></tr>
+<tr><td>ANSI 14</td><td>added</td><td>12.802</td><td>-89.31</td></tr>
+<tr><td>ANSI 14</td><td>removed</td><td>12.905</td><td>-89.40</td></tr>
+<tr><td>ANSI 14</td><td>changed</td><td>12.870</td><td>-89.39</td></tr>
+<tr><td>ANSI 14</td><td>added-word</td><td>11.204</td><td>-87.45</td></tr>
+<tr><td>ANSI 14</td><td>removed-word</td><td>11.397</td><td>-87.69</td></tr>
+<tr><td>ANSI 15</td><td>canvas</td><td>16.806</td><td>-100.22</td></tr>
+<tr><td>ANSI 15</td><td>surface</td><td>15.780</td><td>-99.54</td></tr>
+<tr><td>ANSI 15</td><td>selection</td><td>12.747</td><td>-96.71</td></tr>
+<tr><td>ANSI 15</td><td>search</td><td>14.641</td><td>-98.64</td></tr>
+<tr><td>ANSI 15</td><td>search-active</td><td>12.848</td><td>-96.83</td></tr>
+<tr><td>ANSI 15</td><td>match</td><td>13.768</td><td>-97.82</td></tr>
+<tr><td>ANSI 15</td><td>match-active</td><td>12.497</td><td>-96.41</td></tr>
+<tr><td>ANSI 15</td><td>added</td><td>14.589</td><td>-98.59</td></tr>
+<tr><td>ANSI 15</td><td>removed</td><td>14.706</td><td>-98.68</td></tr>
+<tr><td>ANSI 15</td><td>changed</td><td>14.666</td><td>-98.66</td></tr>
+<tr><td>ANSI 15</td><td>added-word</td><td>12.767</td><td>-96.73</td></tr>
+<tr><td>ANSI 15</td><td>removed-word</td><td>12.987</td><td>-96.97</td></tr>
+</table></div>
+<h3 id="contrast-shale-essential-boundaries">Shale essential boundaries</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-labelledby="contrast-shale-essential-boundaries"><table>
+<tr><th scope="col">Role</th><th scope="col">Ground</th><th scope="col">WCAG 2</th></tr>
+<tr><td>boundary</td><td>canvas</td><td>6.989</td></tr>
+<tr><td>boundary</td><td>surface</td><td>6.562</td></tr>
+<tr><td>boundary</td><td>selection</td><td>5.301</td></tr>
+<tr><td>boundary</td><td>search</td><td>6.088</td></tr>
+<tr><td>boundary</td><td>search-active</td><td>5.343</td></tr>
+<tr><td>boundary</td><td>match</td><td>5.725</td></tr>
+<tr><td>boundary</td><td>match-active</td><td>5.197</td></tr>
+<tr><td>boundary</td><td>added</td><td>6.066</td></tr>
+<tr><td>boundary</td><td>removed</td><td>6.115</td></tr>
+<tr><td>boundary</td><td>changed</td><td>6.099</td></tr>
+<tr><td>boundary</td><td>added-word</td><td>5.309</td></tr>
+<tr><td>boundary</td><td>removed-word</td><td>5.400</td></tr>
+<tr><td>type</td><td>canvas</td><td>14.748</td></tr>
+<tr><td>type</td><td>surface</td><td>13.848</td></tr>
+<tr><td>type</td><td>selection</td><td>11.186</td></tr>
+<tr><td>type</td><td>search</td><td>12.848</td></tr>
+<tr><td>type</td><td>search-active</td><td>11.274</td></tr>
+<tr><td>type</td><td>match</td><td>12.082</td></tr>
+<tr><td>type</td><td>match-active</td><td>10.966</td></tr>
+<tr><td>type</td><td>added</td><td>12.802</td></tr>
+<tr><td>type</td><td>removed</td><td>12.905</td></tr>
+<tr><td>type</td><td>changed</td><td>12.870</td></tr>
+<tr><td>type</td><td>added-word</td><td>11.204</td></tr>
+<tr><td>type</td><td>removed-word</td><td>11.397</td></tr>
+</table></div>
+<h3 id="contrast-color-vision-separation">Color-vision separation</h3>
+<p>Machado severity 1.0 matrices act on linear sRGB; simulated channels are clamped to the display gamut before conversion to OKLab. Each pair must remain at least 5 units apart in Euclidean OKLab distance multiplied by 100. Status words, diff signs, and syntax remain present without color.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-labelledby="contrast-color-vision-separation"><table>
+<tr><th scope="col">Variant</th><th scope="col">Pair</th><th scope="col">Protanopia</th><th scope="col">Deuteranopia</th><th scope="col">Tritanopia</th></tr>
+<tr><td>Chalk</td><td>error / warning</td><td>14.690</td><td>12.161</td><td>12.734</td></tr>
+<tr><td>Chalk</td><td>type / function</td><td>13.058</td><td>12.141</td><td>12.308</td></tr>
+<tr><td>Chalk</td><td>keyword / function</td><td>5.611</td><td>7.538</td><td>10.843</td></tr>
+<tr><td>Chalk</td><td>keyword / type</td><td>9.117</td><td>5.209</td><td>11.734</td></tr>
+<tr><td>Chalk</td><td>keyword / number</td><td>13.496</td><td>13.227</td><td>5.931</td></tr>
+<tr><td>Shale</td><td>error / warning</td><td>16.580</td><td>13.924</td><td>15.033</td></tr>
+<tr><td>Shale</td><td>type / function</td><td>14.089</td><td>14.190</td><td>13.777</td></tr>
+<tr><td>Shale</td><td>keyword / function</td><td>6.500</td><td>8.848</td><td>11.107</td></tr>
+<tr><td>Shale</td><td>keyword / type</td><td>7.866</td><td>5.393</td><td>8.397</td></tr>
+<tr><td>Shale</td><td>keyword / number</td><td>10.240</td><td>10.739</td><td>5.150</td></tr>
+</table></div>
+        </details>
+        <p><a href="palette.md" download>Download the contrast source</a>.</p>
+      </section>
+      <section id="font-notice" class="guidance" aria-labelledby="font-notice-title">
+        <h2 id="font-notice-title">Font rights and source</h2>
+        <h3 id="font-notice-commit-mono">Commit Mono</h3>
+<p>The two font files are unmodified files from Commit Mono 1.143, released under the SIL Open Font License 1.1. Copyright belongs to the Commit Mono project authors. The complete upstream notice is in <a href="fonts/OFL.txt">`site/fonts/OFL.txt`</a>. [checked: Commit Mono 1.143 archive, 2026-10-24]</p>
+<p>Source: <a href="https://github.com/eigilnikolajsen/commit-mono/releases/download/v1.143/CommitMono-1.143.zip">https://github.com/eigilnikolajsen/commit-mono/releases/download/v1.143/CommitMono-1.143.zip</a></p>
+<div class="table-scroll" tabindex="0" role="region" aria-labelledby="font-notice-commit-mono"><table>
+<tr><th scope="col">File</th><th scope="col">SHA-256</th><th scope="col">License</th></tr>
+<tr><td><code>site/fonts/CommitMono-400-Regular.otf</code></td><td><code>a0031e19949b928b6ef749775fbd229adb43f4b96a30175d3098fa1fd92e58ee</code></td><td>OFL-1.1</td></tr>
+<tr><td><code>site/fonts/CommitMono-700-Regular.otf</code></td><td><code>658d3920e788196d6be9c4f444bb7c305acfbe3b247a527be1424af5ddc3ee6d</code></td><td>OFL-1.1</td></tr>
+<tr><td><code>site/fonts/OFL.txt</code></td><td><code>2e2dc937707819086e7631d02e6183fbe52316a89da0a611d9b09d3be7d4bd72</code></td><td>OFL-1.1</td></tr>
+</table></div>
+<p><code>identity/letterforms.json</code> contains derived, flattened outlines and shaped ASCII runs from those two files. It is an internal drawing cache, not an installable font. Curves use sixteen subdivisions. Complete lines are shaped with <code>calt=1</code>, <code>ss01=0</code>, <code>ss02=0</code>, <code>liga=0</code>, and <code>dlig=0</code>, including context across syntax-color boundaries. The original fonts are not renamed or modified; specimens contain their outlines. The cache retains source file digests, features, and glyph positions and is checked by <code>scripts/outline_face.py</code>.</p>
+        <p><a href="THIRD_PARTY_NOTICES.md" download>Download the complete notices</a>.</p>
+      </section>
+    </main>
+    <footer>
+      <p>Maesglas joins <span lang="cy">maes</span>, a field, and
+        <span lang="cy">glas</span>, a word for blue, green, and gray.</p>
+      <p>Privacy: no analytics, cookies, or third-party requests.
+        Theme and shortcut choices stay in this browser. This page is not deployed;
+        a hosting provider's request logging has not been assessed.</p>
+      <p id="storage-notice" role="status" hidden></p>
+      <button type="button" id="help">Help</button>
+      <p>2026.10.0 / <a href="LICENSE.txt">MIT</a></p>
+    </footer>
+    <dialog id="shortcuts" aria-labelledby="help-title">
+      <h2 id="help-title">Keyboard shortcuts</h2>
+      <dl id="shortcut-list"></dl>
+      <label class="shortcut-setting">
+        <input type="checkbox" id="shortcuts-enabled" checked>
+        Enable single-key shortcuts
+      </label>
+      <p>Shortcuts pause while typing, using modifiers, or holding a key.</p>
+      <button type="button" id="close-help" autofocus>Close help</button>
+    </dialog>
+  </body>
+</html>
