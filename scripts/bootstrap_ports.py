@@ -115,6 +115,8 @@ def probes() -> None:
                 "build",
                 "-mod=readonly",
                 "-trimpath",
+                # CI's checkout belongs to another user, so Git refuses VCS stamping.
+                "-buildvcs=false",
                 "-o",
                 str(output),
                 "./cmd/maesglas-validate",
