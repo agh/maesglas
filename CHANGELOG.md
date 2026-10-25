@@ -5,6 +5,11 @@ zero. Release headings use the Keep a Changelog structure.
 
 ## [Unreleased]
 
+### Security
+
+- Planned `2026.10.1`: security updates to build-only dependencies. The ports,
+  palette, specimen outlines, and generated downloads are unchanged.
+
 ## [2026.10.0] - 2026-10-24
 
 ### Added
