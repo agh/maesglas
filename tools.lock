@@ -1,9 +1,37 @@
 {
   "python": "3.14.6",
-  "node": "26.12.0",
-  "npm": "11.20.0",
+  "node": "24.22.1",
+  "npm": "11.19.1",
   "chromium": "141.0.7390.37",
-  "linux_image": "python:3.14.6-bookworm@sha256:bfa96428c199ebe1bd16b04afef6380d7ab1ded83ffff04099e80d164c4d2f4b",
+  "linux_image": "python:3.14.6-bookworm@sha256:ec1b01f92099324b965a51c8547d9a3b71fedc99f6991a89662e7358f9b167c9",
+  "linux_binaries": {
+    "vale_3.24.0_Linux_64-bit.tar.gz": {"version": "3.24.0", "url": "https://github.com/vale-cli/vale/releases/download/v3.24.0/vale_3.24.0_Linux_64-bit.tar.gz", "sha256": "867534ddb678abca7f214bc4706ead0922bd5252ffe8035fc227013f66c8b214"},
+    "vale_3.24.0_Linux_arm64.tar.gz": {"version": "3.24.0", "url": "https://github.com/vale-cli/vale/releases/download/v3.24.0/vale_3.24.0_Linux_arm64.tar.gz", "sha256": "104cbd349279e50c4cb40adb70adf345d93cc4a3a0191f9e68bdccb97086b582"},
+    "gitleaks_8.30.1_linux_x64.tar.gz": {"version": "8.30.1", "url": "https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz", "sha256": "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb"},
+    "gitleaks_8.30.1_linux_arm64.tar.gz": {"version": "8.30.1", "url": "https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_arm64.tar.gz", "sha256": "e4a487ee7ccd7d3a7f7ec08657610aa3606637dab924210b3aee62570fb4b080"},
+    "shellcheck-v0.11.0.linux.x86_64.tar.xz": {"version": "0.11.0", "url": "https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v0.11.0.linux.x86_64.tar.xz", "sha256": "8c3be12b05d5c177a04c29e3c78ce89ac86f1595681cab149b65b97c4e227198"},
+    "shellcheck-v0.11.0.linux.aarch64.tar.xz": {"version": "0.11.0", "url": "https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v0.11.0.linux.aarch64.tar.xz", "sha256": "12b331c1d2db6b9eb13cfca64306b1b157a86eb69db83023e261eaa7e7c14588"},
+    "shfmt_v3.14.1_linux_amd64": {"version": "3.14.1", "url": "https://github.com/mvdan/sh/releases/download/v3.14.1/shfmt_v3.14.1_linux_amd64", "sha256": "76e77641faa025814b77f153b29796b8e6fa2fca03e0c76a691608b86c7ea7bf"},
+    "shfmt_v3.14.1_linux_arm64": {"version": "3.14.1", "url": "https://github.com/mvdan/sh/releases/download/v3.14.1/shfmt_v3.14.1_linux_arm64", "sha256": "5f2db09dae91fca848f7adbdd014632e921a383863a2ad7e0450ad3aba0c6489"},
+    "lychee-x86_64-unknown-linux-musl.tar.gz": {"version": "0.24.2", "url": "https://github.com/lycheeverse/lychee/releases/download/lychee-v0.24.2/lychee-x86_64-unknown-linux-musl.tar.gz", "sha256": "73657a111819a30c47c08352896796f23d64e4eb2b3ed39b6d32149241566fc5"},
+    "lychee-aarch64-unknown-linux-musl.tar.gz": {"version": "0.24.2", "url": "https://github.com/lycheeverse/lychee/releases/download/lychee-v0.24.2/lychee-aarch64-unknown-linux-musl.tar.gz", "sha256": "5d0b0e3aeab240f41920c633a6eaf97599be6eedda034b36e858ede7dba5e535"},
+    "starship-x86_64-unknown-linux-musl.tar.gz": {"version": "1.27.0", "url": "https://github.com/starship/starship/releases/download/v1.27.0/starship-x86_64-unknown-linux-musl.tar.gz", "sha256": "10c8eb4cb3b761d9bf59ea828444c2dab36c900b7d69a69e08814b286969df89"},
+    "starship-aarch64-unknown-linux-musl.tar.gz": {"version": "1.27.0", "url": "https://github.com/starship/starship/releases/download/v1.27.0/starship-aarch64-unknown-linux-musl.tar.gz", "sha256": "341f5cbf24699fa0b27ec88965ad25f862ea09e15d35a543fd6ffdff1d2aa00d"},
+    "bat-v0.26.1-x86_64-unknown-linux-musl.tar.gz": {"version": "0.26.1", "url": "https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-x86_64-unknown-linux-musl.tar.gz", "sha256": "0dcd8ac79732c0d5b136f11f4ee00e581440e16a44eab5b3105b611bbf2cf191"},
+    "bat-v0.26.1-aarch64-unknown-linux-musl.tar.gz": {"version": "0.26.1", "url": "https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-aarch64-unknown-linux-musl.tar.gz", "sha256": "6369242c584065f195fb20cb36fbd7cb63ae690605bbe89868a7596b596c2c23"},
+    "delta-0.20.1-x86_64-unknown-linux-gnu.tar.gz": {"version": "0.20.1", "url": "https://github.com/dandavison/delta/releases/download/0.20.1/delta-0.20.1-x86_64-unknown-linux-gnu.tar.gz", "sha256": "50f08c879f84c81ceb220e476491a7f492d2c9c671e79918cc44badf961a6240"},
+    "delta-0.20.1-aarch64-unknown-linux-gnu.tar.gz": {"version": "0.20.1", "url": "https://github.com/dandavison/delta/releases/download/0.20.1/delta-0.20.1-aarch64-unknown-linux-gnu.tar.gz", "sha256": "da7f4338f593572ff426ae153e0870e2fdc72729416eff551b40cdeb67940db8"},
+    "fzf-0.74.5-linux_amd64.tar.gz": {"version": "0.74.5", "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-linux_amd64.tar.gz", "sha256": "d47d7f882972c7d674dbbba998ffa4116e68379616ffac7695d0671e9a722c5f"},
+    "fzf-0.74.5-linux_arm64.tar.gz": {"version": "0.74.5", "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-linux_arm64.tar.gz", "sha256": "cf058001da21724a469b714a29cf4aab9cbe860d218a0d6c1b5b661efad7784c"},
+    "eza_x86_64-unknown-linux-gnu.tar.gz": {"version": "0.23.5", "url": "https://github.com/eza-community/eza/releases/download/v0.23.5/eza_x86_64-unknown-linux-gnu.tar.gz", "sha256": "35c70c5c43c29108075e58b893234c67ef585f0b53a7eaf8e9e7d4eec9f339b4"},
+    "eza_aarch64-unknown-linux-gnu.tar.gz": {"version": "0.23.5", "url": "https://github.com/eza-community/eza/releases/download/v0.23.5/eza_aarch64-unknown-linux-gnu.tar.gz", "sha256": "40b87ae8628aa2ff0f0d2dc24ab52f689631366385c3da630bae745671fd71ec"},
+    "glow_3.0.0_Linux_x86_64.tar.gz": {"version": "3.0.0", "url": "https://github.com/charmbracelet/glow/releases/download/v3.0.0/glow_3.0.0_Linux_x86_64.tar.gz", "sha256": "13e05e4b2acc18d2aee44291aefe6325b077ec321b631a0cfa780e8e3bc33f78"},
+    "glow_3.0.0_Linux_arm64.tar.gz": {"version": "3.0.0", "url": "https://github.com/charmbracelet/glow/releases/download/v3.0.0/glow_3.0.0_Linux_arm64.tar.gz", "sha256": "810c39f4691feb75e675a5f5f54b9fa091354e7599d9cf9c9fc9b97e47a99759"},
+    "lazygit_0.66.2_linux_x86_64.tar.gz": {"version": "0.66.2", "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.66.2/lazygit_0.66.2_linux_x86_64.tar.gz", "sha256": "158efc9ddfa1241fab5fb3526bb442c8dc6c4b1904d73213b9e4e93e03c52034"},
+    "lazygit_0.66.2_linux_arm64.tar.gz": {"version": "0.66.2", "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.66.2/lazygit_0.66.2_linux_arm64.tar.gz", "sha256": "79a3161eeb642f0473e23db6341f7baabd4a5933e921a9c1167c5d5c765c41a4"},
+    "yazi-x86_64-unknown-linux-musl.zip": {"version": "26.9.1", "url": "https://github.com/sxyazi/yazi/releases/download/v26.9.1/yazi-x86_64-unknown-linux-musl.zip", "sha256": "9b9c39decccf8cb0ff53a7d637d38f8a79d93bbd0099f4ea9c619ef6bb392f5d"},
+    "yazi-aarch64-unknown-linux-musl.zip": {"version": "26.9.1", "url": "https://github.com/sxyazi/yazi/releases/download/v26.9.1/yazi-aarch64-unknown-linux-musl.zip", "sha256": "dd569daecaae914185f295634109295ccd25c1b42b02eb89a74f651970024f2e"}
+  },
   "linux_build": {
     "cc": "12.2.0",
     "make": "4.3",
@@ -57,39 +85,70 @@
   "zsh": "5.9",
   "port_sources": {
     "downloads/Alacritty-v0.17.0.dmg": {
+      "platforms": ["darwin-arm64"],
       "version": "0.17.0",
       "url": "https://github.com/alacritty/alacritty/releases/download/v0.17.0/Alacritty-v0.17.0.dmg",
       "sha256": "ad8d7de35fb38e43184776cac6dfee05ca325caa0b6639a06a55e54e4b026620"
     },
     "downloads/kitty-0.49.2.dmg": {
+      "platforms": ["darwin-arm64"],
       "version": "0.49.2",
       "url": "https://github.com/kovidgoyal/kitty/releases/download/v0.49.2/kitty-0.49.2.dmg",
       "sha256": "e524b894145d89cb76b584e3a9691196ae56bfa31d51384a44aa774252b7cef7"
     },
     "downloads/WezTerm-macos-20240203-110809-5046fc22.zip": {
+      "platforms": ["darwin-arm64"],
       "version": "20240203-110809-5046fc22",
       "url": "https://github.com/wezterm/wezterm/releases/download/20240203-110809-5046fc22/WezTerm-macos-20240203-110809-5046fc22.zip",
       "sha256": "e77388cad55f2e9da95a220a89206a6c58f865874a629b7c3ea3c162f5692224"
     },
     "downloads/nvim-macos-arm64.tar.gz": {
+      "platforms": ["darwin-arm64"],
       "version": "0.12.6",
       "url": "https://github.com/neovim/neovim/releases/download/v0.12.6/nvim-macos-arm64.tar.gz",
       "sha256": "1dbd148222b051ba6c307c4d17a318ed083df018a4f6a5a0ce46955ffc9ab87b"
     },
     "downloads/helix-25.07.1-aarch64-macos.tar.xz": {
+      "platforms": ["darwin-arm64"],
       "version": "25.07.1",
       "url": "https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.07.1-aarch64-macos.tar.xz",
       "sha256": "00b1651b4fdbbe0a2ae981c8e76b858bd26a7c33f5b3583f3b6bb9137d54f1ff"
     },
     "downloads/k9s_Darwin_arm64.tar.gz": {
+      "platforms": ["darwin-arm64"],
       "version": "0.51.0",
       "url": "https://github.com/derailed/k9s/releases/download/v0.51.0/k9s_Darwin_arm64.tar.gz",
       "sha256": "9b8c0e8f461e5d33aeee43a67f5ef4aff646a008a786887b8266cbb153c610cc"
     },
     "downloads/gh-dash_v4.26.0_darwin-arm64": {
+      "platforms": ["darwin-arm64"],
       "version": "4.26.0",
       "url": "https://github.com/dlvhdr/gh-dash/releases/download/v4.26.0/gh-dash_v4.26.0_darwin-arm64",
       "sha256": "3bcb088df5668a1b53f213a7a889b19a0eda59be48d44a3586ec54fc778494d1"
+    },
+    "downloads/k9s_Linux_amd64.tar.gz": {
+      "platforms": ["linux-amd64"],
+      "version": "0.51.0",
+      "url": "https://github.com/derailed/k9s/releases/download/v0.51.0/k9s_Linux_amd64.tar.gz",
+      "sha256": "c3752ad51a5a4015a113819c4eeb6e55a4d0e4b8e652494797532f6fc8161dd7"
+    },
+    "downloads/k9s_Linux_arm64.tar.gz": {
+      "platforms": ["linux-arm64"],
+      "version": "0.51.0",
+      "url": "https://github.com/derailed/k9s/releases/download/v0.51.0/k9s_Linux_arm64.tar.gz",
+      "sha256": "3ee05c82e5f9198928a4e86133608ba6a2c10a2244d6a7789e820f78319d640c"
+    },
+    "downloads/gh-dash_v4.26.0_linux-amd64": {
+      "platforms": ["linux-amd64"],
+      "version": "4.26.0",
+      "url": "https://github.com/dlvhdr/gh-dash/releases/download/v4.26.0/gh-dash_v4.26.0_linux-amd64",
+      "sha256": "469012a8c607a503a4e873bc3862adedbc2c1c31878c62a396cd9874555f25ac"
+    },
+    "downloads/gh-dash_v4.26.0_linux-arm64": {
+      "platforms": ["linux-arm64"],
+      "version": "4.26.0",
+      "url": "https://github.com/dlvhdr/gh-dash/releases/download/v4.26.0/gh-dash_v4.26.0_linux-arm64",
+      "sha256": "eb73585f0d873e1039729bd9bc5b2c2dcdfc22ab30b47f96aece51270a5332d4"
     },
     "downloads/k9s-v0.51.0-source.tar.gz": {
       "version": "0.51.0",
@@ -131,15 +190,17 @@
       "url": "https://raw.githubusercontent.com/gnachman/iTerm2/v3.6.6/plists/ColorPresets.plist",
       "sha256": "8815e8e2654a4ab9d6059e72827946cf3fe0768ba3b64310d00b00ee3cb52e71"
     },
-    "upstream/claude-terminal.md": {
-      "version": "2.1.310; documentation retrieved 2026-10-24",
-      "url": "https://code.claude.com/docs/en/terminal-config.md",
-      "sha256": "72ababcba94144866583daa723b17d737a583e73f2af6f039b3550e1b3054841"
-    },
     "upstream/vscode-colors.md": {
       "version": "a03090533810eb02e5b9a2a650e2a3df32192b42",
       "url": "https://raw.githubusercontent.com/microsoft/vscode-docs/a03090533810eb02e5b9a2a650e2a3df32192b42/api/references/theme-color.md",
       "sha256": "7a8d4c9dcd7c420b4cc2dfb7db3e4c582000c597508f4ea74df9102c075913a1"
+    }
+  },
+  "historical_references": {
+    "claude-code-documentation": {
+      "version": "2.1.310; documentation retrieved 2026-10-24",
+      "url": "https://code.claude.com/docs/en/terminal-config.md",
+      "sha256": "72ababcba94144866583daa723b17d737a583e73f2af6f039b3550e1b3054841"
     }
   },
   "checkout": "3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -147,6 +208,9 @@
   "setup_node": "a0853c24544627f65ddf259abe73b1d18a591444",
   "setup_uv": "1c37ad07a6a961277cf70c0d37d6f313000f5884",
   "setup_go": "b7ad1dad31e06c5925ef5d2fc7ad053ef454303e",
+  "configure_pages": "45bfe0192ca1faeb007ade9deae92b16b8254a0d",
+  "upload_pages_artifact": "fc324d3547104276b827a68afc52ff2a11cc49c9",
+  "deploy_pages": "368f82528645a54fb793d4d04e342629a3f51346",
   "node_packages": {
     "@playwright/test": "1.56.1",
     "impeccable": "4.7.0",

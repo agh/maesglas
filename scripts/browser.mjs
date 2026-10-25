@@ -7,6 +7,7 @@ import { chromium } from "@playwright/test";
 
 const root = resolve("site");
 const captures = resolve(".cache/visual");
+const basePath = "/maesglas/";
 await mkdir(captures, { recursive: true });
 const types = {
   ".html": "text/html",
@@ -18,7 +19,12 @@ const types = {
 };
 const server = createServer(async (request, response) => {
   const pathname = new URL(request.url, "http://localhost").pathname;
-  const path = resolve(root, `.${pathname === "/" ? "/index.html" : pathname}`);
+  if (!pathname.startsWith(basePath)) {
+    response.writeHead(404).end();
+    return;
+  }
+  const relative = pathname.slice(basePath.length);
+  const path = resolve(root, relative || "index.html");
   if (!path.startsWith(root + sep)) {
     response.writeHead(403).end();
     return;
@@ -35,7 +41,7 @@ const server = createServer(async (request, response) => {
   }
 });
 await new Promise((accept) => server.listen(0, "localhost", accept));
-const origin = `http://localhost:${server.address().port}`;
+const origin = `http://localhost:${server.address().port}/maesglas`;
 const browser = await chromium.launch({
   executablePath: chromium.executablePath(),
 });
@@ -62,7 +68,7 @@ async function settled() {
 }
 
 try {
-  await page.goto(origin);
+  await page.goto(`${origin}/`);
   await settled();
   assert.equal(await page.getAttribute("html", "data-theme"), "chalk");
   assert.equal(
@@ -117,7 +123,10 @@ try {
           .slice(0, 8),
       };
     });
-    assert.equal(measurement.cellWidth, 9);
+    assert(
+      Math.abs(measurement.cellWidth - 9) < 1 / 1024,
+      "Canvas cell width must match 9 CSS px within rasterizer subpixel precision",
+    );
     for (const [name, value] of [
       ["calt", 1],
       ["ss01", 0],
@@ -137,6 +146,23 @@ try {
       assert(
         measurement.firstGlyphTop < viewport.height - 120,
         "Phone opening must show several lines of the specimen, not only its frame",
+      );
+      assert.deepEqual(
+        await context.cookies(),
+        [],
+        "The specimen site must not set cookies",
+      );
+      assert.match(
+        await page.locator("#privacy").textContent(),
+        /GitHub Pages hosts this site/,
+      );
+      assert.match(
+        await page.locator("#privacy").textContent(),
+        /IP addresses/,
+      );
+      assert.equal(
+        await page.locator("#privacy a").getAttribute("href"),
+        "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection",
       );
     } else {
       assert(
@@ -410,7 +436,7 @@ try {
   await downloadContext.close();
   const fresh = await browser.newContext({ colorScheme: "dark" });
   const freshPage = await fresh.newPage();
-  await freshPage.goto(origin);
+  await freshPage.goto(`${origin}/`);
   assert.equal(await freshPage.getAttribute("html", "data-theme"), "shale");
   await fresh.close();
 
@@ -423,11 +449,11 @@ try {
     });
   });
   const blockedPage = await blocked.newPage();
-  await blockedPage.goto(origin);
+  await blockedPage.goto(`${origin}/`);
   await blockedPage.locator("#storage-notice").waitFor({ state: "visible" });
   await blocked.close();
   console.log(
-    "PASS browser: 390x844 and 1512x982 openings, themed guidance, font download, choice, keyboard, focus, 14 plates, and local requests",
+    "PASS browser: /maesglas/ project path, no cookies or third-party page requests, 390x844 and 1512x982 openings, themed guidance, font download, choice, keyboard, focus, and 14 plates",
   );
 } finally {
   await browser.close();

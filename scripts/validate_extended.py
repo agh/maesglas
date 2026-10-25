@@ -282,6 +282,9 @@ def claude_rejection(keys: set[str]) -> dict[str, object]:
         }
     return {
         "version": load_json(ROOT / "tools.lock")["claude-code"],
+        "documentation": mapping(load_json(ROOT / "tools.lock")["historical_references"])[
+            "claude-code-documentation"
+        ],
         "overridden_tokens": len(keys),
         "method": (
             "All six installed base registries and shared renderer roles inspected; "

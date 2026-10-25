@@ -67,6 +67,10 @@ and shared-token rejection are recorded without a personal path.
 and inline backgrounds, but the format has no separate word-text color.
 The maximum simultaneous contrast is 3.845:1 in Chalk and 4.100:1 in
 Shale. Both fail 4.5:1; no candidate file is shipped or exempted.
+The original live documentation URL and digest remain historical
+references in `tools.lock`; its mutable page is not a CI dependency.
+The rejection gate uses the exact installed registry or its recorded
+keys and the measured shared-token proof, not a fresh documentation fetch.
 No authenticated session, transcript, external syntax formatter, or
 dimmed rendering path is certified.
 [checked: Claude Code 2.1.310, 2026-10-24]
@@ -103,4 +107,6 @@ The macOS reference metrics were reproduced with
 cells, and an 8.1-point x-height. The outline check shapes full lines
 with the authored features, checks 600-unit advances and one glyph per
 character, and retains context across syntax colors.
+Browser canvas measurements allow less than 1/1024 CSS px of platform
+rounding around the 9 CSS px cell; outline advances remain exact.
 [checked: Commit Mono 1.143, CoreText on macOS, and uharfbuzz 0.57.0, 2026-10-24]

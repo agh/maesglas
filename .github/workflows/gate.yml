@@ -1,9 +1,8 @@
 name: Gate
 
 on:
-  push:
-    branches: [main]
   pull_request:
+  workflow_call:
 
 permissions:
   contents: read
@@ -12,7 +11,7 @@ jobs:
   gate:
     runs-on: ubuntu-24.04
     container:
-      image: python:3.14.6-bookworm@sha256:bfa96428c199ebe1bd16b04afef6380d7ab1ded83ffff04099e80d164c4d2f4b
+      image: python:3.14.6-bookworm@sha256:ec1b01f92099324b965a51c8547d9a3b71fedc99f6991a89662e7358f9b167c9
     timeout-minutes: 30
     defaults:
       run:
@@ -20,6 +19,8 @@ jobs:
     env:
       DO_NOT_TRACK: "1"
       IMPECCABLE_NO_TELEMETRY: "1"
+      GOTOOLCHAIN: local
+      GOTELEMETRY: "off"
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -52,8 +53,6 @@ jobs:
           apt-get update -qq
           apt-get install -y --no-install-recommends libncurses-dev libevent-dev zlib1g-dev bison zsh
       - name: Install pinned checks
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
           uv sync --locked
           npm ci --ignore-scripts --no-audit --no-fund

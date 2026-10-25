@@ -1,7 +1,6 @@
 # Security
 
-Only the latest published release receives best-effort security fixes. No
-release is published yet.
+Only the latest release receives best-effort security fixes.
 
 Do not report vulnerabilities in public issues or attach sensitive
 configuration. A private reporting channel must be enabled and verified before

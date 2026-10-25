@@ -70,10 +70,10 @@ Contributors certify the
 email, not the maintainer's identity. When signing is unavailable, stop rather
 than making an unsigned commit.
 
-Before the first release, resolve the missing upstream identity pin, approve the
-unverified omissions, enable a private reporting channel, and assess the site's
-hosting privacy. Record the actual release date in `CHANGELOG.md`; do not turn a
-reserved version into a claim of publication.
+Before publishing, review the upstream identity pin, approve the documented
+omissions, and verify the private reporting channel. Release preparation and
+Pages setup are documented in [publishing](docs/publishing.md). Record the
+release date in `CHANGELOG.md`.
 
 Verify the name against a Welsh dictionary and with a Welsh speaker before
 publishing a pronunciation or recording.
@@ -97,5 +97,6 @@ Browser setup downloads from `cdn.playwright.dev` and
 contacts its configured mirrors.
 
 The specimen page makes only same-origin requests. It stores theme and shortcut
-preferences in browser storage. There are no analytics or cookies. No hosting
-provider has been selected.
+preferences in browser storage. There are no analytics or cookies. GitHub Pages
+hosts the specimen page; its IP-address logging is described in the generated
+[privacy notice](docs/privacy.md).

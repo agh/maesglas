@@ -5,6 +5,8 @@ zero. Release headings use the Keep a Changelog structure.
 
 ## [Unreleased]
 
+## [2026.10.0] - 2026-10-24
+
 ### Added
 
 - Chalk and Shale, with audited text, surface, and boundary colors.
@@ -29,6 +31,8 @@ zero. Release headings use the Keep a Changelog structure.
   recursive highlighting. [checked: fast-syntax-highlighting 1.67, 2026-10-24]
 - Lighter editor match fills, explicit match foregrounds, and syntax contrast
   checks on the delivered fills.
+- A GitHub Pages deployment gated by validation, with a short hosting and
+  privacy notice.
 
 ### Fixed
 
@@ -46,6 +50,11 @@ zero. Release headings use the Keep a Changelog structure.
   setup, and archive-relative reference links.
 - Contextual spacing stays enabled in native font-feature settings, web text,
   and shaped specimen outlines without programming ligatures.
+- Linux CI selects its container architecture from the pinned image index,
+  verifies architecture-specific downloads, and builds native parser probes for
+  the selected target.
+- Browser installation uses pinned Node.js 24 LTS rather than a Node.js 26
+  runtime that stalls the pinned ZIP extractor.
 
-The first release number is reserved as `2026.10.0`. No release has been
-published.
+[Unreleased]: https://github.com/agh/maesglas/compare/v2026.10.0...HEAD
+[2026.10.0]: https://github.com/agh/maesglas/releases/tag/v2026.10.0

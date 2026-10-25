@@ -11,14 +11,25 @@ import urllib.request
 import zipfile
 from pathlib import Path
 
-from model import ROOT, load_json, mapping, text
+from model import ROOT, load_json, mapping, sequence, text
 
 CACHE = ROOT / ".cache"
 
 
+def target() -> tuple[str, str]:
+    system = {"Darwin": "darwin", "Linux": "linux"}.get(platform.system())
+    arch = {"arm64": "arm64", "aarch64": "arm64", "x86_64": "amd64"}.get(platform.machine())
+    if system is None or arch is None or (system == "darwin" and arch != "arm64"):
+        raise ValueError("Unsupported port-validation platform")
+    return system, arch
+
+
 def sources(fetch: bool = False) -> None:
+    system, arch = target()
     for name, value in mapping(load_json(ROOT / "tools.lock")["port_sources"]).items():
         record = mapping(value)
+        if "platforms" in record and f"{system}-{arch}" not in sequence(record["platforms"]):
+            continue
         path = CACHE / name
         if not path.is_file() and fetch:
             path.parent.mkdir(parents=True, exist_ok=True)
@@ -73,6 +84,7 @@ def probes() -> None:
     result = subprocess.run(["go", "version"], capture_output=True, text=True, check=True)
     if text(lock["go"]) not in result.stdout:
         raise ValueError("Wrong Go version for native parser probes")
+    system, arch = target()
     home = CACHE / "probe-build"
     home.mkdir(exist_ok=True)
     env = os.environ | {
@@ -86,6 +98,9 @@ def probes() -> None:
         "GOENV": "off",
         "GOTOOLCHAIN": "local",
         "GOTELEMETRY": "off",
+        "GOOS": system,
+        "GOARCH": arch,
+        "CGO_ENABLED": "0",
     }
     for port, probe in (("k9s", "k9s"), ("gh-dash", "gh_dash")):
         source = CACHE / "apps" / f"{port}-source"
@@ -108,6 +123,7 @@ def probes() -> None:
             env=env,
             check=True,
         )
+        print(f"Built {port} parser for {system}/{arch}", flush=True)
 
 
 def main() -> None:
@@ -116,22 +132,46 @@ def main() -> None:
     args = parser.parse_args()
     sources(fetch=not args.check)
     if not args.check:
-        for archive, target in (
+        for archive, destination in (
             ("k9s-v0.51.0-source.tar.gz", "k9s-source"),
             ("gh-dash-v4.26.0-source.tar.gz", "gh-dash-source"),
             ("vscode-1.143.1-source.tar.gz", "vscode-source"),
             ("fsyh-v1.67.tar.gz", "fsyh"),
         ):
-            unpack(archive, target, strip_root=True)
+            unpack(archive, destination, strip_root=True)
         if platform.system() == "Darwin":
-            for archive, target in (
+            for archive, destination in (
                 ("Alacritty-v0.17.0.dmg", "alacritty"),
                 ("kitty-0.49.2.dmg", "kitty"),
                 ("WezTerm-macos-20240203-110809-5046fc22.zip", "wezterm"),
                 ("nvim-macos-arm64.tar.gz", "neovim"),
                 ("helix-25.07.1-aarch64-macos.tar.xz", "helix"),
             ):
-                unpack(archive, target)
+                unpack(archive, destination)
+        else:
+            _, arch = target()
+            unpack(f"k9s_Linux_{arch}.tar.gz", f"k9s-linux-{arch}")
+            run_k9s = CACHE / f"apps/k9s-linux-{arch}/k9s"
+            run_k9s.chmod(0o755)
+            result = subprocess.run(
+                [str(run_k9s), "version"],
+                capture_output=True,
+                text=True,
+                check=True,
+            )
+            lock = load_json(ROOT / "tools.lock")
+            if text(lock["k9s"]) not in result.stdout + result.stderr:
+                raise ValueError("Wrong native k9s release version")
+            dash = CACHE / f"downloads/gh-dash_v4.26.0_linux-{arch}"
+            dash.chmod(0o755)
+            result = subprocess.run(
+                [str(dash), "--version"],
+                capture_output=True,
+                text=True,
+                check=True,
+            )
+            if text(lock["gh-dash"]) not in result.stdout + result.stderr:
+                raise ValueError("Wrong native gh-dash release version")
         probes()
     print("PASS pinned port references")
 

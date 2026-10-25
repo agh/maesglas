@@ -7,11 +7,12 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import urllib.error
 import urllib.request
 from pathlib import Path
 
 from check import public_files
-from model import ROOT, load_json, mapping, text
+from model import ROOT, load, load_json, mapping, text
 
 
 def command(args: list[str], label: str) -> None:
@@ -96,6 +97,35 @@ def scan() -> None:
         raise SystemExit("History scan requires a Git checkout")
 
 
+def link_exclusions() -> list[str]:
+    # The site's own output is exercised at /maesglas/ by the local browser gate.
+    exclusions = [r"^https://agh\.github\.io/maesglas/$"]
+    version = load().version
+    request = urllib.request.Request(
+        f"https://api.github.com/repos/agh/maesglas/git/ref/tags/v{version}",
+        headers={"User-Agent": "maesglas-gate", "Accept": "application/vnd.github+json"},
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=30):
+            return [argument for pattern in exclusions for argument in ("--exclude", pattern)]
+    except urllib.error.HTTPError as error:
+        if error.code != 404:
+            raise SystemExit("Could not determine whether the public release tag exists") from error
+        print(
+            f"PENDING public release links: owner has not pushed v{version}; "
+            "the tag run checks them without exclusions",
+            flush=True,
+        )
+        escaped = version.replace(".", r"\.")
+        exclusions.extend(
+            [
+                rf"^https://github\.com/agh/maesglas/compare/v{escaped}\.\.\.HEAD$",
+                rf"^https://github\.com/agh/maesglas/releases/tag/v{escaped}$",
+            ]
+        )
+    return [argument for pattern in exclusions for argument in ("--exclude", pattern)]
+
+
 def main() -> None:
     (ROOT / ".cache").mkdir(exist_ok=True)
     versions()
@@ -157,7 +187,10 @@ def main() -> None:
         ],
         "design detector",
     )
-    command(["lychee", "--no-progress", "--max-retries", "2", *prose], "links")
+    command(
+        ["lychee", "--no-progress", "--max-retries", "2", *link_exclusions(), *prose],
+        "links",
+    )
     print("PASS gate", flush=True)
 
 

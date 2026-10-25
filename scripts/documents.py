@@ -274,7 +274,9 @@ def readme(d: Design) -> str:
             "The gate uses the versions in `tools.lock`; see",
             "[contributing](CONTRIBUTING.md) for setup.",
             "",
-            "[MIT license](LICENSE). First release number reserved: `2026.10.0`.",
+            "[MIT license](LICENSE). Version `2026.10.0`.",
+            "[Specimen site](https://agh.github.io/maesglas/) and "
+            "[release preparation](docs/publishing.md).",
         ]
     )
     return "\n".join(lines) + "\n"
@@ -676,6 +678,7 @@ def page(d: Design) -> str:
     notes = guidance.render(port_notes(d), "port-notes", targets)
     notice = (ROOT / "THIRD_PARTY_NOTICES.md").read_text().split("## Color calculations", 1)[0]
     notice_html = guidance.render(notice, "font-notice", targets)
+    privacy_html = guidance.render(privacy(), "privacy", {})
     width, height = dimensions(d, "code")
     return f"""<!doctype html>
 <html lang="en" data-theme="chalk">
@@ -794,9 +797,10 @@ def page(d: Design) -> str:
     <footer>
       <p>Maesglas joins <span lang="cy">maes</span>, a field, and
         <span lang="cy">glas</span>, a word for blue, green, and gray.</p>
-      <p>Privacy: no analytics, cookies, or third-party requests.
-        Theme and shortcut choices stay in this browser. This page is not deployed;
-        a hosting provider's request logging has not been assessed.</p>
+      <section id="privacy" aria-labelledby="privacy-title">
+        <h2 id="privacy-title">Privacy</h2>
+        {privacy_html}
+      </section>
       <p id="storage-notice" role="status" hidden></p>
       <button type="button" id="help">Help</button>
       <p>2026.10.0 / <a href="LICENSE.txt">MIT</a></p>
@@ -836,6 +840,9 @@ def render(d: Design) -> dict[str, bytes]:
         "docs/typography.md": type_guide,
         "docs/ports.md": notes,
         "docs/installation.md": setup,
+        "docs/privacy.md": privacy(),
+        "site/privacy.md": privacy(),
+        "site/.nojekyll": "",
         "site/installation.md": setup.replace(
             "../THIRD_PARTY_NOTICES.md", "THIRD_PARTY_NOTICES.md"
         ),
@@ -861,6 +868,25 @@ def render(d: Design) -> dict[str, bytes]:
     }
     outputs["docs/verification.md"] = verification()
     return {path: value.encode() for path, value in outputs.items()}
+
+
+def privacy() -> str:
+    return "\n".join(
+        [
+            "# Privacy",
+            "",
+            "This site sets no cookies, uses no analytics, and makes no third-party",
+            "requests. Theme and shortcut preferences stay in this browser.",
+            "",
+            "GitHub Pages hosts this site. GitHub logs and stores visitors' IP addresses",
+            "for security, whether or not they are signed in. "
+            "[GitHub's data-collection notice]"
+            "(https://docs.github.com/en/pages/getting-started-with-github-pages/"
+            "what-is-github-pages#data-collection).",
+            "[checked: GitHub Docs, About GitHub Pages, Data collection, 2026-10-24]",
+            "",
+        ]
+    )
 
 
 def verification() -> str:
@@ -948,6 +974,10 @@ def verification() -> str:
             "and inline backgrounds, but the format has no separate word-text color.",
             "The maximum simultaneous contrast is 3.845:1 in Chalk and 4.100:1 in",
             "Shale. Both fail 4.5:1; no candidate file is shipped or exempted.",
+            "The original live documentation URL and digest remain historical",
+            "references in `tools.lock`; its mutable page is not a CI dependency.",
+            "The rejection gate uses the exact installed registry or its recorded",
+            "keys and the measured shared-token proof, not a fresh documentation fetch.",
             "No authenticated session, transcript, external syntax formatter, or",
             "dimmed rendering path is certified.",
             f"{stamp('claude-code')}",
@@ -984,6 +1014,8 @@ def verification() -> str:
             "cells, and an 8.1-point x-height. The outline check shapes full lines",
             "with the authored features, checks 600-unit advances and one glyph per",
             "character, and retains context across syntax colors.",
+            "Browser canvas measurements allow less than 1/1024 CSS px of platform",
+            "rounding around the 9 CSS px cell; outline advances remain exact.",
             "[checked: Commit Mono 1.143, CoreText on macOS, and uharfbuzz 0.57.0, 2026-10-24]",
         ]
     )
