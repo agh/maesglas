@@ -17,8 +17,11 @@ jobs:
       contents: read
     uses: ./.github/workflows/gate.yml
 
+  # A version tag runs the gate, which checks its release links; only main
+  # deploys, because the github-pages environment admits the default branch.
   package:
     needs: gate
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
     permissions:
       contents: read
