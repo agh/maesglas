@@ -74,7 +74,7 @@ wheels = [
 
 [[package]]
 name = "maesglas"
-version = "2026.10.0"
+version = "2026.10.1"
 source = { virtual = "." }
 
 [package.dev-dependencies]

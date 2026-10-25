@@ -1,6 +1,6 @@
 # Publishing
 
-The owner publishes version `2026.10.0` with tag `v2026.10.0`. Preparing the
+The owner publishes version `2026.10.1` with tag `v2026.10.1`. Preparing the
 changelog, workflows, or archive does not create a release or change GitHub.
 
 ## Release
@@ -11,7 +11,7 @@ Run `scripts/gate.sh` on the exact revision being published. Review
 and both variants of every shipped port.
 
 After approval, the owner commits with a signature and their DCO sign-off,
-creates the signed `v2026.10.0` tag, and pushes. Create the GitHub release from
+creates the signed `v2026.10.1` tag, and pushes. Create the GitHub release from
 that tag using the prepared installer-facing notes, and attach
 `site/maesglas.zip` with its SHA-256. Tags never move.
 
@@ -48,7 +48,7 @@ are still checked; a documentation-site edit cannot break unrelated ports.
 
 The browser gate checks the site's own URL through its local project-path
 server, not by contacting a deployment that does not exist yet. The link gate
-reports the two future changelog URLs as pending until `v2026.10.0` exists on
+reports the two future changelog URLs as pending until `v2026.10.1` exists on
 the public remote. After the owner pushes the tag, those links receive the
 normal live check; other external links are never exempted by this rule.
 

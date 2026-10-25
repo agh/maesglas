@@ -174,7 +174,7 @@
       "ports/vscode/LICENSE": "25b8f9feeba970a004c644cc308b0ac5bdfb86f4d1e09c6a8042915b32d2af81",
       "ports/vscode/maesglas-chalk.json": "42e3240fcb6db90de715d4075793e7fa2c106e4b509ec801c79cd38d30f40400",
       "ports/vscode/maesglas-shale.json": "ee02c93006096f621a67f8fbd0df610606b7e0a0d8c66b194ec5d9b6130322e1",
-      "ports/vscode/package.json": "513c2eb1d9d5e3c7f834d6d1490160fa76d908cfc3423010ca5f0867c506a182",
+      "ports/vscode/package.json": "a2161b104e3020fec4fa99bb3de2c52726eca42442968963278ed615dd644121",
       "ports/wezterm/maesglas-chalk.toml": "8151228efb961396726af8b4fbfb6e82f6a142eac49743561f53e014cf419792",
       "ports/wezterm/maesglas-shale.toml": "d264360bddf1f6715a12f064a68fad54004fe974ddb64a40fa83cb6c93f1ee5c",
       "ports/windows-terminal/maesglas-chalk.json": "0a30c175aa22687c03eec128e795a69523e4fb863e9a622f3ad17c24d528eacc",

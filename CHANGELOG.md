@@ -5,10 +5,19 @@ zero. Release headings use the Keep a Changelog structure.
 
 ## [Unreleased]
 
+## [2026.10.1] - 2026-10-24
+
 ### Security
 
-- Planned `2026.10.1`: security updates to build-only dependencies. The ports,
-  palette, specimen outlines, and generated downloads are unchanged.
+- Security updates to build-only dependencies. The ports, palette, specimen
+  outlines, and generated downloads are unchanged.
+- Report vulnerabilities privately through GitHub's private vulnerability
+  reporting, as `SECURITY.md` now says.
+
+### Fixed
+
+- The specimen site now publishes to GitHub Pages; the deployment for 2026.10.0
+  stopped before it was published.
 
 ## [2026.10.0] - 2026-10-24
 
@@ -61,5 +70,6 @@ zero. Release headings use the Keep a Changelog structure.
 - Browser installation uses pinned Node.js 24 LTS rather than a Node.js 26
   runtime that stalls the pinned ZIP extractor.
 
-[Unreleased]: https://github.com/agh/maesglas/compare/v2026.10.0...HEAD
+[Unreleased]: https://github.com/agh/maesglas/compare/v2026.10.1...HEAD
+[2026.10.1]: https://github.com/agh/maesglas/releases/tag/v2026.10.1
 [2026.10.0]: https://github.com/agh/maesglas/releases/tag/v2026.10.0

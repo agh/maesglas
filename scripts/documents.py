@@ -274,7 +274,7 @@ def readme(d: Design) -> str:
             "The gate uses the versions in `tools.lock`; see",
             "[contributing](CONTRIBUTING.md) for setup.",
             "",
-            "[MIT license](LICENSE). Version `2026.10.0`.",
+            "[MIT license](LICENSE). Version `2026.10.1`.",
             "[Specimen site](https://agh.github.io/maesglas/) and "
             "[release preparation](docs/publishing.md).",
         ]
@@ -803,7 +803,7 @@ def page(d: Design) -> str:
       </section>
       <p id="storage-notice" role="status" hidden></p>
       <button type="button" id="help">Help</button>
-      <p>2026.10.0 / <a href="LICENSE.txt">MIT</a></p>
+      <p>2026.10.1 / <a href="LICENSE.txt">MIT</a></p>
     </footer>
     <dialog id="shortcuts" aria-labelledby="help-title">
       <h2 id="help-title">Keyboard shortcuts</h2>

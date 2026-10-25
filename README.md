@@ -392,5 +392,5 @@ Generation has no package dependencies and makes no network requests.
 The gate uses the versions in `tools.lock`; see
 [contributing](CONTRIBUTING.md) for setup.
 
-[MIT license](LICENSE). Version `2026.10.0`.
+[MIT license](LICENSE). Version `2026.10.1`.
 [Specimen site](https://agh.github.io/maesglas/) and [release preparation](docs/publishing.md).
