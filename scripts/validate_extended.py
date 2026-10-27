@@ -225,8 +225,10 @@ def check_iterm(path: Path, p: dict[str, str], env: dict[str, str], root: Path) 
         raise ValueError("iTerm2 color round-trip changed a palette value")
 
 
-def claude_registry() -> tuple[set[str], str]:
-    if platform.system() != "Darwin":
+def claude_registry(live: bool) -> tuple[set[str], str]:
+    # The installed Claude Code updates itself, so only a recording reads it;
+    # every other run checks the recorded registry like a foreign platform.
+    if not live:
         record = mapping(load_json(ROOT / "identity/port-validation.json")["Darwin"])
         return (
             {text(role) for role in sequence(record["claude_roles"])},
@@ -596,11 +598,11 @@ def main() -> None:
             result_text = run([str(CACHE / EXECUTABLES[port]), "--version"], env, root)
             if text(lock[port]) not in result_text:
                 raise SystemExit(f"Wrong native validator version: {port}")
-        if platform.system() == "Darwin":
+        if args.record:
             claude_version = run(["claude", "--version"], env, root)
             if text(lock["claude-code"]) not in claude_version:
                 raise SystemExit("Wrong Claude Code version")
-        roles, binary_digest = claude_registry()
+        roles, binary_digest = claude_registry(args.record)
         executables["installed:claude-code"] = binary_digest
         rejected = claude_rejection(roles)
         results = validate(root / "cases", selected)

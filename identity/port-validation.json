@@ -1,6 +1,6 @@
 {
   "Darwin": {
-    "date": "2026-10-26",
+    "date": "2026-10-27",
     "checks": {
       "alacritty/chalk": "PASS",
       "fast-syntax-highlighting/chalk": "PASS",
@@ -184,7 +184,7 @@
       "scripts/bootstrap_ports.py": "2b73a2c7dc76a0ce7f4dd78d94e82ded92a83553053bdb8024c09c19a1b185ed",
       "scripts/probes/gh_dash.go": "a9200cb0371238b5ec1edd30e0e8f6974486461875f4366c6504f24f2ebc5554",
       "scripts/probes/k9s.go": "77c68dd59f44064ceacf26857941080f8de0d58e9321a1a46b666f5d8cae2f86",
-      "scripts/validate_extended.py": "04df69d2577ea8e8d2d4442ca2bf0e4873ac125d736d59af08b88b2e39a17e08",
+      "scripts/validate_extended.py": "0d625e98aab0723d13a3432adcdbd9415c043cb095eb2f0b8c605e4fe956fe91",
       "scripts/vscode_schema.mjs": "34cc3b4425b6049303029b5f4e30418d22603667c38e04a32cacf6f803b1020c"
     },
     "executables": {

@@ -15,7 +15,7 @@ record remains intact. Both records are required by the gate.
 
 | Additional checks | Date | Port and variant cases |
 | --- | --- | ---: |
-| Darwin | 2026-10-26 | 24 |
+| Darwin | 2026-10-27 | 24 |
 
 ```sh
 python3 scripts/bootstrap_ports.py
@@ -69,8 +69,10 @@ The maximum simultaneous contrast is 3.845:1 in Chalk and 4.100:1 in
 Shale. Both fail 4.5:1; no candidate file is shipped or exempted.
 The original live documentation URL and digest remain historical
 references in `tools.lock`; its mutable page is not a CI dependency.
-The rejection gate uses the exact installed registry or its recorded
-keys and the measured shared-token proof, not a fresh documentation fetch.
+The rejection gate checks the recorded registry keys and recomputes the
+shared-token proof, not a fresh documentation fetch. Only a recording
+reads the installed registry, so a Claude Code update needs a deliberate
+recheck.
 No authenticated session, transcript, external syntax formatter, or
 dimmed rendering path is certified.
 [checked: Claude Code 2.1.311, 2026-10-26]
