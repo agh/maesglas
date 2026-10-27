@@ -1,7 +1,8 @@
 # Publishing
 
-The owner publishes version `2026.10.1` with tag `v2026.10.1`. Preparing the
-changelog, workflows, or archive does not create a release or change GitHub.
+The owner publishes the version in `identity/maesglas.json` with a matching `v`
+tag. Preparing the changelog, workflows, or archive does not create a release or
+change GitHub.
 
 ## Release
 
@@ -11,24 +12,24 @@ Run `scripts/gate.sh` on the exact revision being published. Review
 and both variants of every shipped port.
 
 After approval, the owner commits with a signature and their DCO sign-off,
-creates the signed `v2026.10.1` tag, and pushes. Create the GitHub release from
-that tag using the prepared installer-facing notes, and attach
+creates the signed tag for that version, and pushes. Create the GitHub release
+from that tag using the prepared installer-facing notes, and attach
 `site/maesglas.zip` with its SHA-256. Tags never move.
 
-The upstream identity release pin and the private vulnerability-reporting
-channel still need the owner's review before publication. Neither is enabled or
-invented by the release preparation.
+The owner reviews the upstream identity release pin before each publication;
+release preparation does not change it. Private vulnerability reporting is
+enabled in the repository settings, as `SECURITY.md` describes.
 
 ## GitHub Pages
 
 In the repository's Pages settings, the owner selects **GitHub Actions** as the
 publishing source. The workflow does not enable Pages automatically. The
-`github-pages` environment must allow deployment from `main` and the approved
-`v*` tags.
+`github-pages` environment admits deployment from `main` only.
 
-`.github/workflows/pages.yml` runs on pushes to `main` and `v*` tags. It calls
-the reusable gate, packages the checked-in `site/` only after the gate passes,
-and deploys that artifact. Only the deployment job can write Pages or request an
+`.github/workflows/pages.yml` runs on pushes to `main` and `v*` tags. Both call
+the reusable gate. Only `main` then packages the checked-in `site/` and deploys
+that artifact; a release tag points at a `main` revision that has already
+deployed the same site. Only the deployment job can write Pages or request an
 identity token; the gate cannot publish.
 
 The project URL is <https://agh.github.io/maesglas/>. Assets, specimens,
@@ -47,10 +48,11 @@ not a required download. The corresponding native registry and contrast proof
 are still checked; a documentation-site edit cannot break unrelated ports.
 
 The browser gate checks the site's own URL through its local project-path
-server, not by contacting a deployment that does not exist yet. The link gate
-reports the two future changelog URLs as pending until `v2026.10.1` exists on
-the public remote. After the owner pushes the tag, those links receive the
-normal live check; other external links are never exempted by this rule.
+server, not by contacting a deployment that does not exist yet. Until the tag
+for the current version exists on the public remote, the link gate reports that
+version's changelog compare and release URLs as pending. After the owner pushes
+the tag, those links receive the normal live check; other external links are
+never exempted by this rule.
 
 The gate uses the multi-architecture Python image index in `tools.lock`. Linux
 AMD64 and ARM64 release artifacts have separate digest pins; bootstrap selects
