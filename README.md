@@ -61,6 +61,22 @@ config-file = /path/to/maesglas-chalk.conf
 </details>
 
 <details>
+<summary>Rex</summary>
+
+Rex reuses the Ghostty files unchanged. Import
+`ports/ghostty/maesglas-chalk.conf` and
+`ports/ghostty/maesglas-shale.conf` through **Settings > Themes > Import Theme**.
+Chalk appears under **Light Mode** and Shale under **Dark Mode**.
+[checked: Rex Beta 0.1.0 (1408), 2026-10-26]
+
+Rename the numbered "Imported Theme" entries `Maesglas Chalk` and
+`Maesglas Shale` in **Settings > Themes**, and select each in its mode's row
+if needed. With **Interface > Color scheme** on **Auto**, Rex follows macOS.
+[checked: Rex Beta 0.1.0 (1408), 2026-10-26]
+
+</details>
+
+<details>
 <summary>Starship</summary>
 
 Point `STARSHIP_CONFIG` at the preset. [checked: Starship 1.27.0, 2026-10-24]

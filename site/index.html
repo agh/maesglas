@@ -127,6 +127,7 @@ def harvest(plot: Plot) -&gt; str:
 <div class="table-scroll" tabindex="0" role="region" aria-labelledby="type-unverified-application-settings"><table>
 <tr><th scope="col">Application</th><th scope="col">Intended setting</th><th scope="col">Status</th></tr>
 <tr><td>iTerm2</td><td>Text: CommitMono Regular 15; disable ligatures</td><td>[unchecked]</td></tr>
+<tr><td>Rex</td><td>Settings &gt; Terminal: CommitMono; 15 pt; Regular; line height 6%</td><td>[unchecked]</td></tr>
 <tr><td>Terminal.app</td><td>Profile font: CommitMono Regular 15</td><td>[unchecked]</td></tr>
 <tr><td>Alacritty</td><td><code>font.normal.family = &quot;CommitMono&quot;</code>; <code>font.size = 15</code></td><td>[unchecked]</td></tr>
 <tr><td>kitty</td><td><code>font_family CommitMono</code>; <code>font_size 15</code>; <code>disable_ligatures always</code></td><td>[unchecked]</td></tr>
@@ -156,6 +157,11 @@ def harvest(plot: Plot) -&gt; str:
 cp ports/ghostty/maesglas-chalk.conf &quot;$THEME_DIR/maesglas-chalk.conf&quot;</code></pre>
 <p>After copying, load the preset with the following setting. Replace <code>/path/to</code> with your chosen directory when editing a configuration file. [checked: Ghostty 1.3.1, 2026-10-24]</p>
 <pre><code>config-file = /path/to/maesglas-chalk.conf</code></pre>
+</details>
+<details>
+<summary>Rex</summary>
+<p>Rex reuses the Ghostty files unchanged. Import <code>ports/ghostty/maesglas-chalk.conf</code> and <code>ports/ghostty/maesglas-shale.conf</code> through **Settings &gt; Themes &gt; Import Theme**. Chalk appears under **Light Mode** and Shale under **Dark Mode**. [checked: Rex Beta 0.1.0 (1408), 2026-10-26]</p>
+<p>Rename the numbered &quot;Imported Theme&quot; entries <code>Maesglas Chalk</code> and <code>Maesglas Shale</code> in **Settings &gt; Themes**, and select each in its mode&#x27;s row if needed. With **Interface &gt; Color scheme** on **Auto**, Rex follows macOS. [checked: Rex Beta 0.1.0 (1408), 2026-10-26]</p>
 </details>
 <details>
 <summary>Starship</summary>
@@ -321,10 +327,12 @@ cp ports/fast-syntax-highlighting/maesglas-chalk.zsh &quot;$THEME_DIR/maesglas-c
         <details>
           <summary>Validation, cache setup, and limitations</summary>
           <p>Every shipped port is generated. The gate runs native parsers, renderers, published schemas, or documented key checks in disposable configuration and cache directories. The method column is the boundary: a schema check does not establish application import or rendering.</p>
+<p>Rex&#x27;s Settings import was checked manually, outside the gate. [checked: Rex Beta 0.1.0 (1408), 2026-10-26]</p>
 <h3 id="port-notes-tested-scope">Tested scope</h3>
 <div class="table-scroll" tabindex="0" role="region" aria-labelledby="port-notes-tested-scope"><table>
 <tr><th scope="col">Port</th><th scope="col">Validation method</th><th scope="col">Version and date</th></tr>
 <tr><td>Ghostty</td><td><code>+validate-config</code> on both complete files; macOS only</td><td>[checked: Ghostty 1.3.1, 2026-10-24]</td></tr>
+<tr><td>Rex</td><td>Settings import of both Ghostty port files; names, appearance, and all 21 colors read back from the stored theme</td><td>[checked: Rex Beta 0.1.0 (1408), 2026-10-26]</td></tr>
 <tr><td>Starship</td><td><code>print-config</code> and prompt rendering in a synthetic repository</td><td>[checked: Starship 1.27.0, 2026-10-24]</td></tr>
 <tr><td>Vim</td><td>Headless load and highlight query</td><td>[checked: Vim 9.1, 2026-10-24]</td></tr>
 <tr><td>bat and delta</td><td>Theme cache build, named-theme listing, and syntax rendering</td><td>[checked: bat 0.26.1 and delta 0.20.1, 2026-10-24]</td></tr>
@@ -351,7 +359,12 @@ cp ports/fast-syntax-highlighting/maesglas-chalk.zsh &quot;$THEME_DIR/maesglas-c
 <tr><td>fast-syntax-highlighting</td><td>Pinned plugin loaded in isolated Zsh; active and recursive styles</td><td>[checked: fast-syntax-highlighting 1.67, 2026-10-24]</td></tr>
 </table></div>
 <h3 id="port-notes-additional-port-installation">Additional port installation</h3>
-<p>Choose the application-specific destination as <code>THEME_DIR</code>. Each example has one preparation line and one copy line. Substitute <code>shale</code> for <code>chalk</code>, except that the editor extension includes both variants.</p>
+<p>For copy examples, choose the application-specific destination as <code>THEME_DIR</code>. Each has one preparation line and one copy line. Substitute <code>shale</code> for <code>chalk</code>, except that the editor extension includes both variants.</p>
+<details>
+<summary>Rex</summary>
+<p>Rex reuses the Ghostty files unchanged. Import <code>ports/ghostty/maesglas-chalk.conf</code> and <code>ports/ghostty/maesglas-shale.conf</code> through **Settings &gt; Themes &gt; Import Theme**. Chalk appears under **Light Mode** and Shale under **Dark Mode**. [checked: Rex Beta 0.1.0 (1408), 2026-10-26]</p>
+<p>Rename the numbered &quot;Imported Theme&quot; entries <code>Maesglas Chalk</code> and <code>Maesglas Shale</code> in **Settings &gt; Themes**, and select each in its mode&#x27;s row if needed. With **Interface &gt; Color scheme** on **Auto**, Rex follows macOS. [checked: Rex Beta 0.1.0 (1408), 2026-10-26]</p>
+</details>
 <details>
 <summary>Alacritty</summary>
 <p>Import the file from <code>[general].import</code>. [checked: Alacritty 0.17.0, 2026-10-24]</p>

@@ -12,6 +12,8 @@ from plates import SCENES, dimensions, mark, plain
 from port_renderers import ALL_PORTS as PORTS
 from port_renderers import DROPPED
 
+REX_CHECKED = "[checked: Rex Beta 0.1.0 (1408), 2026-10-26]"
+
 
 def stamp(port: str) -> str:
     lock = load_json(ROOT / "tools.lock")
@@ -82,6 +84,27 @@ def port_installation(port: str) -> list[str]:
     return [*lines, "</details>", ""]
 
 
+def rex_installation() -> list[str]:
+    return [
+        "<details>",
+        "<summary>Rex</summary>",
+        "",
+        "Rex reuses the Ghostty files unchanged. Import",
+        "`ports/ghostty/maesglas-chalk.conf` and",
+        "`ports/ghostty/maesglas-shale.conf` through **Settings > Themes > Import Theme**.",
+        "Chalk appears under **Light Mode** and Shale under **Dark Mode**.",
+        REX_CHECKED,
+        "",
+        'Rename the numbered "Imported Theme" entries `Maesglas Chalk` and',
+        "`Maesglas Shale` in **Settings > Themes**, and select each in its mode's row",
+        "if needed. With **Interface > Color scheme** on **Auto**, Rex follows macOS.",
+        REX_CHECKED,
+        "",
+        "</details>",
+        "",
+    ]
+
+
 def installation(d: Design) -> str:
     lines = [
         "# Installation",
@@ -101,6 +124,8 @@ def installation(d: Design) -> str:
     ]
     for port in PORTS:
         lines.extend(port_installation(port))
+        if port == "ghostty":
+            lines.extend(rex_installation())
     lines.extend(
         [
             "For cache setup, feature composition, validation methods, and limitations,",
@@ -363,6 +388,8 @@ def typography(d: Design) -> str:
             "| Application | Intended setting | Status |",
             "| --- | --- | --- |",
             "| iTerm2 | Text: CommitMono Regular 15; disable ligatures | [unchecked] |",
+            "| Rex | Settings > Terminal: CommitMono; 15 pt; Regular; line height 6% | "
+            "[unchecked] |",
             "| Terminal.app | Profile font: CommitMono Regular 15 | [unchecked] |",
             '| Alacritty | `font.normal.family = "CommitMono"`; `font.size = 15` | [unchecked] |',
             "| kitty | `font_family CommitMono`; `font_size 15`; "
@@ -409,6 +436,9 @@ def port_notes(d: Design) -> str:
         "configuration and cache directories. The method column is the boundary:",
         "a schema check does not establish application import or rendering.",
         "",
+        "Rex's Settings import was checked manually, outside the gate.",
+        REX_CHECKED,
+        "",
         "## Tested scope",
         "",
         "| Port | Validation method | Version and date |",
@@ -431,15 +461,21 @@ def port_notes(d: Design) -> str:
     } | extra_ports.METHODS
     for port, (name, _, _) in PORTS.items():
         lines.append(f"| {name} | {methods[port]} | {stamp(port)} |")
+        if port == "ghostty":
+            lines.append(
+                "| Rex | Settings import of both Ghostty port files; names, appearance, "
+                f"and all 21 colors read back from the stored theme | {REX_CHECKED} |"
+            )
     lines.extend(
         [
             "",
             "## Additional port installation",
             "",
-            "Choose the application-specific destination as `THEME_DIR`. Each example",
-            "has one preparation line and one copy line. Substitute `shale` for",
+            "For copy examples, choose the application-specific destination as `THEME_DIR`.",
+            "Each has one preparation line and one copy line. Substitute `shale` for",
             "`chalk`, except that the editor extension includes both variants.",
             "",
+            *rex_installation(),
         ]
     )
     for port, (name, _, note) in extra_ports.PORTS.items():

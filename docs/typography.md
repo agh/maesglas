@@ -70,6 +70,7 @@ color ports. Each needs a native font and layout check before adoption.
 | Application | Intended setting | Status |
 | --- | --- | --- |
 | iTerm2 | Text: CommitMono Regular 15; disable ligatures | [unchecked] |
+| Rex | Settings > Terminal: CommitMono; 15 pt; Regular; line height 6% | [unchecked] |
 | Terminal.app | Profile font: CommitMono Regular 15 | [unchecked] |
 | Alacritty | `font.normal.family = "CommitMono"`; `font.size = 15` | [unchecked] |
 | kitty | `font_family CommitMono`; `font_size 15`; `disable_ligatures always` | [unchecked] |

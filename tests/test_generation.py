@@ -32,6 +32,53 @@ class GenerationTests(unittest.TestCase):
             for mode in MODES:
                 self.assertIn(f"ports/{name}/maesglas-{mode}.{extension}", self.files)
 
+    def test_rex_reuses_ghostty_files_without_a_port(self) -> None:
+        self.assertNotIn("rex", PORTS)
+        self.assertFalse(any(name.startswith("ports/rex/") for name in self.files))
+        for name in (
+            "README.md",
+            "docs/installation.md",
+            "docs/ports.md",
+            "site/installation.md",
+            "site/ports.md",
+        ):
+            with self.subTest(name=name):
+                content = self.files[name].decode()
+                section = content.split("<summary>Rex</summary>\n", 1)[1].split("</details>", 1)[0]
+                for mode in MODES:
+                    self.assertIn(f"ports/ghostty/maesglas-{mode}.conf", section)
+                    self.assertIn(f"`Maesglas {mode.title()}`", section)
+                self.assertIn("**Settings > Themes > Import Theme**", section)
+                self.assertIn("**Light Mode**", section)
+                self.assertIn("**Dark Mode**", section)
+                self.assertIn("**Auto**", section)
+                for paragraph in section.strip().split("\n\n"):
+                    self.assertIn("[checked: Rex Beta 0.1.0 (1408), 2026-10-26]", paragraph)
+                if name != "docs/ports.md" and name != "site/ports.md":
+                    self.assertLess(
+                        content.index("<summary>Ghostty</summary>"),
+                        content.index("<summary>Rex</summary>"),
+                    )
+                    self.assertLess(
+                        content.index("<summary>Rex</summary>"),
+                        content.index("<summary>Starship</summary>"),
+                    )
+
+    def test_rex_scope_is_checked_and_typography_unchecked(self) -> None:
+        checked = "[checked: Rex Beta 0.1.0 (1408), 2026-10-26]"
+        for name in ("docs/ports.md", "site/ports.md"):
+            self.assertIn(
+                "| Rex | Settings import of both Ghostty port files; names, appearance, "
+                f"and all 21 colors read back from the stored theme | {checked} |",
+                self.files[name].decode(),
+            )
+        for name in ("docs/typography.md", "site/typography.md"):
+            self.assertIn(
+                "| Rex | Settings > Terminal: CommitMono; 15 pt; Regular; line height 6% | "
+                "[unchecked] |",
+                self.files[name].decode(),
+            )
+
     def test_every_plate_is_outlined(self) -> None:
         plates = [value for key, value in self.files.items() if key.startswith("specimens/")]
         self.assertEqual(len(plates), 14)

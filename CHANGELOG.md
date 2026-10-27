@@ -5,6 +5,11 @@ zero. Release headings use the Keep a Changelog structure.
 
 ## [Unreleased]
 
+### Added
+
+- Rex instructions that reuse the Ghostty port files. [checked: Rex Beta 0.1.0
+  (1408), 2026-10-26]
+
 ### Changed
 
 - The Claude Code contrast blocker is reproduced on the current release; no

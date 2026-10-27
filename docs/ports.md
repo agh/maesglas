@@ -5,11 +5,15 @@ renderers, published schemas, or documented key checks in disposable
 configuration and cache directories. The method column is the boundary:
 a schema check does not establish application import or rendering.
 
+Rex's Settings import was checked manually, outside the gate.
+[checked: Rex Beta 0.1.0 (1408), 2026-10-26]
+
 ## Tested scope
 
 | Port | Validation method | Version and date |
 | --- | --- | --- |
 | Ghostty | `+validate-config` on both complete files; macOS only | [checked: Ghostty 1.3.1, 2026-10-24] |
+| Rex | Settings import of both Ghostty port files; names, appearance, and all 21 colors read back from the stored theme | [checked: Rex Beta 0.1.0 (1408), 2026-10-26] |
 | Starship | `print-config` and prompt rendering in a synthetic repository | [checked: Starship 1.27.0, 2026-10-24] |
 | Vim | Headless load and highlight query | [checked: Vim 9.1, 2026-10-24] |
 | bat and delta | Theme cache build, named-theme listing, and syntax rendering | [checked: bat 0.26.1 and delta 0.20.1, 2026-10-24] |
@@ -37,9 +41,25 @@ a schema check does not establish application import or rendering.
 
 ## Additional port installation
 
-Choose the application-specific destination as `THEME_DIR`. Each example
-has one preparation line and one copy line. Substitute `shale` for
+For copy examples, choose the application-specific destination as `THEME_DIR`.
+Each has one preparation line and one copy line. Substitute `shale` for
 `chalk`, except that the editor extension includes both variants.
+
+<details>
+<summary>Rex</summary>
+
+Rex reuses the Ghostty files unchanged. Import
+`ports/ghostty/maesglas-chalk.conf` and
+`ports/ghostty/maesglas-shale.conf` through **Settings > Themes > Import Theme**.
+Chalk appears under **Light Mode** and Shale under **Dark Mode**.
+[checked: Rex Beta 0.1.0 (1408), 2026-10-26]
+
+Rename the numbered "Imported Theme" entries `Maesglas Chalk` and
+`Maesglas Shale` in **Settings > Themes**, and select each in its mode's row
+if needed. With **Interface > Color scheme** on **Auto**, Rex follows macOS.
+[checked: Rex Beta 0.1.0 (1408), 2026-10-26]
+
+</details>
 
 <details>
 <summary>Alacritty</summary>
