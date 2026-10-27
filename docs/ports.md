@@ -251,14 +251,14 @@ word-diff tokens used for `+N` and `-N` counters. The same word tokens
 also paint inline backgrounds; inline word text inherits the normal
 text role, with no independent foreground override. Making the counters
 readable therefore makes word-diff text unreadable, so this format is omitted.
-[checked: Claude Code 2.1.310, 2026-10-24]
+[checked: Claude Code 2.1.311, 2026-10-26]
 
 Claude Code compatibility is a factual product statement, not an
 endorsement: Maesglas is independent of Anthropic. The format also
 cannot replace `dimColor` or `faint` attributes, literal syntax-formatter
 colors, or external-tool output. The check inspected the installed
 renderer without starting an authenticated session.
-[checked: Claude Code 2.1.310, 2026-10-24]
+[checked: Claude Code 2.1.311, 2026-10-26]
 
 | Shared-token bound | Chalk | Shale |
 | --- | ---: | ---: |
@@ -269,7 +269,7 @@ must contrast with the canvas as foreground and with ink as background.
 Both maxima are below 4.5:1. The gate reproduces this blocker instead
 of exempting either failing pair. Its inputs and measured candidate
 pairs are in `identity/port-validation.json`.
-[checked: Claude Code 2.1.310, 2026-10-24]
+[checked: Claude Code 2.1.311, 2026-10-26]
 
 FG-K9S-TRUECOLOR: every native skin color, including chart arrays,
 resource maps, help, prompt borders, and logo messages, is palette hex.
@@ -303,6 +303,6 @@ Omitted formats have no shipped draft files and make no compatibility claims.
 | Format | Reason |
 | --- | --- |
 | btop | Its native banner uses foreground colors that the theme cannot replace. Observed `#787878` reaches 4.007:1 on Chalk and 4.168:1 on Shale. The input and source are in `identity/rejections.json`. [checked: btop 1.4.7, 2026-10-24] |
-| Claude Code | Counter foregrounds and word-diff backgrounds share tokens; the format cannot override word-diff text independently. Shared colors cannot meet both 4.5:1 pairs with the Maesglas canvas and ink. The installed-registry digest and proof are in `identity/port-validation.json`. [checked: Claude Code 2.1.310, 2026-10-24] |
+| Claude Code | Counter foregrounds and word-diff backgrounds share tokens; the format cannot override word-diff text independently. Shared colors cannot meet both 4.5:1 pairs with the Maesglas canvas and ink. The installed-registry digest and proof are in `identity/port-validation.json`. [checked: Claude Code 2.1.311, 2026-10-26] |
 | Terminal.app | Archived-color profile import was not verified. [unchecked] |
 | Sublime Text | The TextMate file was not loaded in this application. [unchecked] |

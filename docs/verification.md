@@ -15,7 +15,7 @@ record remains intact. Both records are required by the gate.
 
 | Additional checks | Date | Port and variant cases |
 | --- | --- | ---: |
-| Darwin | 2026-10-24 | 24 |
+| Darwin | 2026-10-26 | 24 |
 
 ```sh
 python3 scripts/bootstrap_ports.py
@@ -73,7 +73,7 @@ The rejection gate uses the exact installed registry or its recorded
 keys and the measured shared-token proof, not a fresh documentation fetch.
 No authenticated session, transcript, external syntax formatter, or
 dimmed rendering path is certified.
-[checked: Claude Code 2.1.310, 2026-10-24]
+[checked: Claude Code 2.1.311, 2026-10-26]
 
 The k9s probe calls `NewStyles().Load`, including its embedded schema,
 and compares every parsed skin field. The gh-dash probe calls

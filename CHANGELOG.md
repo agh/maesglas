@@ -5,6 +5,11 @@ zero. Release headings use the Keep a Changelog structure.
 
 ## [Unreleased]
 
+### Changed
+
+- The Claude Code contrast blocker is reproduced on the current release; no
+  theme is shipped. [checked: Claude Code 2.1.311, 2026-10-26]
+
 ## [2026.10.1] - 2026-10-24
 
 ### Security

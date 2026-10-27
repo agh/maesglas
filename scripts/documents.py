@@ -22,7 +22,8 @@ def stamp(port: str) -> str:
         )
     key = "bat" if port == "textmate" else port
     label = "Claude Code" if port == "claude-code" else PORTS[port][0]
-    return f"[checked: {label} {text(lock[key])}, {text(lock['checked'])}]"
+    date = mapping(lock["rechecked"]).get(port, lock["checked"])
+    return f"[checked: {label} {text(lock[key])}, {text(date)}]"
 
 
 def install_lines(port: str) -> list[str]:

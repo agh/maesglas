@@ -1,6 +1,6 @@
 {
   "Darwin": {
-    "date": "2026-10-24",
+    "date": "2026-10-26",
     "checks": {
       "alacritty/chalk": "PASS",
       "fast-syntax-highlighting/chalk": "PASS",
@@ -117,7 +117,7 @@
     ],
     "rejections": {
       "claude-code": {
-        "version": "2.1.310",
+        "version": "2.1.311",
         "documentation": {
           "version": "2.1.310; documentation retrieved 2026-10-24",
           "url": "https://code.claude.com/docs/en/terminal-config.md",
@@ -195,7 +195,7 @@
       "apps/kitty/kitty.app/Contents/MacOS/kitty": "0c06e98053133d29dcf32731e86bc0e72089bef8ae47877d475060db4f37d0cd",
       "apps/neovim/nvim-macos-arm64/bin/nvim": "8edbda120babd8c8963ecc28b69a76cc7e5cf0897bc688645133a2bf5588abe6",
       "apps/wezterm/WezTerm-macos-20240203-110809-5046fc22/WezTerm.app/Contents/MacOS/wezterm": "ab71a230b6c65d52b611deadcb7188a79fb4b87831d88647c75b641afebfa920",
-      "installed:claude-code": "ffb64331bc0ee1b69efb7c2c428bd3ab516bc31b75bf60886b356c97c1c25ffd"
+      "installed:claude-code": "85d8c08707fcfd1e78ffa0204eefbc6ec9e4fe22f375fb2767ef85d957ed3161"
     },
     "versions": {
       "alacritty": "0.17.0",

@@ -77,7 +77,7 @@
   "zed": "schema 0.2.0",
   "iterm2": "3.6.6",
   "windows-terminal": "1.25.2733.0",
-  "claude-code": "2.1.310",
+  "claude-code": "2.1.311",
   "k9s": "0.51.0",
   "gh-dash": "4.26.0",
   "fast-syntax-highlighting": "1.67",
@@ -229,5 +229,8 @@
     "types-jsonschema": "4.25.1.20251009",
     "uharfbuzz": "0.57.0"
   },
-  "checked": "2026-10-24"
+  "checked": "2026-10-24",
+  "rechecked": {
+    "claude-code": "2026-10-26"
+  }
 }
